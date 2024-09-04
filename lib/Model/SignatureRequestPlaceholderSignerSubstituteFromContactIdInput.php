@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * SignatureRequestPlaceholderSignerSubstituteFromContactIdInput Class Doc Comment
  *
  * @category Class
  * @description Create a placeholder signer substitute from a contact
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,9 +61,9 @@ class SignatureRequestPlaceholderSignerSubstituteFromContactIdInput implements M
         'contact_id' => 'string',
         'signature_level' => 'string',
         'signature_authentication_mode' => 'string',
-        'redirect_urls' => '\Swagger\Client\Model\FromScratch1RedirectUrls',
-        'custom_text' => '\Swagger\Client\Model\FromScratch1CustomText',
-        'delivery_mode' => '\Swagger\Client\Model\SignerDeliveryMode'
+        'redirect_urls' => '\Yousign\Client\Model\FromScratch1RedirectUrls',
+        'custom_text' => '\Yousign\Client\Model\FromScratch1CustomText',
+        'delivery_mode' => '\Yousign\Client\Model\SignerDeliveryMode'
     ];
 
     /**
@@ -415,7 +415,7 @@ class SignatureRequestPlaceholderSignerSubstituteFromContactIdInput implements M
     /**
      * Gets redirect_urls
      *
-     * @return \Swagger\Client\Model\FromScratch1RedirectUrls
+     * @return \Yousign\Client\Model\FromScratch1RedirectUrls
      */
     public function getRedirectUrls()
     {
@@ -425,7 +425,7 @@ class SignatureRequestPlaceholderSignerSubstituteFromContactIdInput implements M
     /**
      * Sets redirect_urls
      *
-     * @param \Swagger\Client\Model\FromScratch1RedirectUrls $redirect_urls redirect_urls
+     * @param \Yousign\Client\Model\FromScratch1RedirectUrls $redirect_urls redirect_urls
      *
      * @return $this
      */
@@ -439,7 +439,7 @@ class SignatureRequestPlaceholderSignerSubstituteFromContactIdInput implements M
     /**
      * Gets custom_text
      *
-     * @return \Swagger\Client\Model\FromScratch1CustomText
+     * @return \Yousign\Client\Model\FromScratch1CustomText
      */
     public function getCustomText()
     {
@@ -449,7 +449,7 @@ class SignatureRequestPlaceholderSignerSubstituteFromContactIdInput implements M
     /**
      * Sets custom_text
      *
-     * @param \Swagger\Client\Model\FromScratch1CustomText $custom_text custom_text
+     * @param \Yousign\Client\Model\FromScratch1CustomText $custom_text custom_text
      *
      * @return $this
      */
@@ -463,7 +463,7 @@ class SignatureRequestPlaceholderSignerSubstituteFromContactIdInput implements M
     /**
      * Gets delivery_mode
      *
-     * @return \Swagger\Client\Model\SignerDeliveryMode
+     * @return \Yousign\Client\Model\SignerDeliveryMode
      */
     public function getDeliveryMode()
     {
@@ -473,7 +473,7 @@ class SignatureRequestPlaceholderSignerSubstituteFromContactIdInput implements M
     /**
      * Sets delivery_mode
      *
-     * @param \Swagger\Client\Model\SignerDeliveryMode $delivery_mode delivery_mode
+     * @param \Yousign\Client\Model\SignerDeliveryMode $delivery_mode delivery_mode
      *
      * @return $this
      */

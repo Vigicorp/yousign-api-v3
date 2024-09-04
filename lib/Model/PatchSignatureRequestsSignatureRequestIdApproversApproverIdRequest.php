@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequest Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequest impleme
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'info' => '\Swagger\Client\Model\PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequestInfo'
+        'info' => '\Yousign\Client\Model\PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequestInfo'
     ];
 
     /**
@@ -204,7 +204,7 @@ class PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequest impleme
     /**
      * Gets info
      *
-     * @return \Swagger\Client\Model\PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequestInfo
+     * @return \Yousign\Client\Model\PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequestInfo
      */
     public function getInfo()
     {
@@ -214,7 +214,7 @@ class PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequest impleme
     /**
      * Sets info
      *
-     * @param \Swagger\Client\Model\PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequestInfo $info info
+     * @param \Yousign\Client\Model\PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequestInfo $info info
      *
      * @return $this
      */

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Yousign\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Yousign\Client\ApiException;
+use Yousign\Client\Configuration;
+use Yousign\Client\HeaderSelector;
+use Yousign\Client\ObjectSerializer;
 
 /**
  * ApproverApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,7 +94,7 @@ class ApproverApi
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $approver_id Approver Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -111,7 +111,7 @@ class ApproverApi
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $approver_id Approver Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -155,7 +155,7 @@ class ApproverApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -163,7 +163,7 @@ class ApproverApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -374,9 +374,9 @@ class ApproverApi
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $approver_id Approver Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Approver
+     * @return \Yousign\Client\Model\Approver
      */
     public function getSignatureRequestsSignatureRequestIdApproversApproverId($signature_request_id, $approver_id)
     {
@@ -392,13 +392,13 @@ class ApproverApi
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $approver_id Approver Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Approver, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\Approver, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSignatureRequestsSignatureRequestIdApproversApproverIdWithHttpInfo($signature_request_id, $approver_id)
     {
-        $returnType = '\Swagger\Client\Model\Approver';
+        $returnType = '\Yousign\Client\Model\Approver';
         $request = $this->getSignatureRequestsSignatureRequestIdApproversApproverIdRequest($signature_request_id, $approver_id);
 
         try {
@@ -450,7 +450,7 @@ class ApproverApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Approver',
+                        '\Yousign\Client\Model\Approver',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -458,7 +458,7 @@ class ApproverApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -518,7 +518,7 @@ class ApproverApi
      */
     public function getSignatureRequestsSignatureRequestIdApproversApproverIdAsyncWithHttpInfo($signature_request_id, $approver_id)
     {
-        $returnType = '\Swagger\Client\Model\Approver';
+        $returnType = '\Yousign\Client\Model\Approver';
         $request = $this->getSignatureRequestsSignatureRequestIdApproversApproverIdRequest($signature_request_id, $approver_id);
 
         return $this->client
@@ -682,11 +682,11 @@ class ApproverApi
      *
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $approver_id Approver Id (required)
-     * @param  \Swagger\Client\Model\PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequest $body body (optional)
+     * @param  \Yousign\Client\Model\PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequest $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Approver
+     * @return \Yousign\Client\Model\Approver
      */
     public function patchSignatureRequestsSignatureRequestIdApproversApproverId($signature_request_id, $approver_id, $body = null)
     {
@@ -701,15 +701,15 @@ class ApproverApi
      *
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $approver_id Approver Id (required)
-     * @param  \Swagger\Client\Model\PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequest $body (optional)
+     * @param  \Yousign\Client\Model\PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequest $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Approver, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\Approver, HTTP status code, HTTP response headers (array of strings)
      */
     public function patchSignatureRequestsSignatureRequestIdApproversApproverIdWithHttpInfo($signature_request_id, $approver_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\Approver';
+        $returnType = '\Yousign\Client\Model\Approver';
         $request = $this->patchSignatureRequestsSignatureRequestIdApproversApproverIdRequest($signature_request_id, $approver_id, $body);
 
         try {
@@ -761,7 +761,7 @@ class ApproverApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Approver',
+                        '\Yousign\Client\Model\Approver',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -769,7 +769,7 @@ class ApproverApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -777,7 +777,7 @@ class ApproverApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -801,7 +801,7 @@ class ApproverApi
                 case 415:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -818,7 +818,7 @@ class ApproverApi
      *
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $approver_id Approver Id (required)
-     * @param  \Swagger\Client\Model\PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequest $body (optional)
+     * @param  \Yousign\Client\Model\PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequest $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -840,14 +840,14 @@ class ApproverApi
      *
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $approver_id Approver Id (required)
-     * @param  \Swagger\Client\Model\PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequest $body (optional)
+     * @param  \Yousign\Client\Model\PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequest $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function patchSignatureRequestsSignatureRequestIdApproversApproverIdAsyncWithHttpInfo($signature_request_id, $approver_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\Approver';
+        $returnType = '\Yousign\Client\Model\Approver';
         $request = $this->patchSignatureRequestsSignatureRequestIdApproversApproverIdRequest($signature_request_id, $approver_id, $body);
 
         return $this->client
@@ -892,7 +892,7 @@ class ApproverApi
      *
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $approver_id Approver Id (required)
-     * @param  \Swagger\Client\Model\PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequest $body (optional)
+     * @param  \Yousign\Client\Model\PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequest $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1014,11 +1014,11 @@ class ApproverApi
      * Create a new Approver
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \Swagger\Client\Model\PostSignatureRequestsSignatureRequestIdApproversRequest $body An Approver object to be added to the Signature Request. (optional)
+     * @param  \Yousign\Client\Model\PostSignatureRequestsSignatureRequestIdApproversRequest $body An Approver object to be added to the Signature Request. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Approver
+     * @return \Yousign\Client\Model\Approver
      */
     public function postSignatureRequestsSignatureRequestIdApprovers($signature_request_id, $body = null)
     {
@@ -1032,15 +1032,15 @@ class ApproverApi
      * Create a new Approver
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \Swagger\Client\Model\PostSignatureRequestsSignatureRequestIdApproversRequest $body An Approver object to be added to the Signature Request. (optional)
+     * @param  \Yousign\Client\Model\PostSignatureRequestsSignatureRequestIdApproversRequest $body An Approver object to be added to the Signature Request. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Approver, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\Approver, HTTP status code, HTTP response headers (array of strings)
      */
     public function postSignatureRequestsSignatureRequestIdApproversWithHttpInfo($signature_request_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\Approver';
+        $returnType = '\Yousign\Client\Model\Approver';
         $request = $this->postSignatureRequestsSignatureRequestIdApproversRequest($signature_request_id, $body);
 
         try {
@@ -1092,7 +1092,7 @@ class ApproverApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Approver',
+                        '\Yousign\Client\Model\Approver',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1100,7 +1100,7 @@ class ApproverApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1108,7 +1108,7 @@ class ApproverApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1132,7 +1132,7 @@ class ApproverApi
                 case 415:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1148,7 +1148,7 @@ class ApproverApi
      * Create a new Approver
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \Swagger\Client\Model\PostSignatureRequestsSignatureRequestIdApproversRequest $body An Approver object to be added to the Signature Request. (optional)
+     * @param  \Yousign\Client\Model\PostSignatureRequestsSignatureRequestIdApproversRequest $body An Approver object to be added to the Signature Request. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1169,14 +1169,14 @@ class ApproverApi
      * Create a new Approver
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \Swagger\Client\Model\PostSignatureRequestsSignatureRequestIdApproversRequest $body An Approver object to be added to the Signature Request. (optional)
+     * @param  \Yousign\Client\Model\PostSignatureRequestsSignatureRequestIdApproversRequest $body An Approver object to be added to the Signature Request. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function postSignatureRequestsSignatureRequestIdApproversAsyncWithHttpInfo($signature_request_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\Approver';
+        $returnType = '\Yousign\Client\Model\Approver';
         $request = $this->postSignatureRequestsSignatureRequestIdApproversRequest($signature_request_id, $body);
 
         return $this->client
@@ -1220,7 +1220,7 @@ class ApproverApi
      * Create request for operation 'postSignatureRequestsSignatureRequestIdApprovers'
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \Swagger\Client\Model\PostSignatureRequestsSignatureRequestIdApproversRequest $body An Approver object to be added to the Signature Request. (optional)
+     * @param  \Yousign\Client\Model\PostSignatureRequestsSignatureRequestIdApproversRequest $body An Approver object to be added to the Signature Request. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1330,7 +1330,7 @@ class ApproverApi
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $approver_id Approver Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1347,7 +1347,7 @@ class ApproverApi
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $approver_id Approver Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1391,7 +1391,7 @@ class ApproverApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1399,7 +1399,7 @@ class ApproverApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

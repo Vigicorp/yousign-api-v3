@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * CreateContact Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class CreateContact implements ModelInterface, ArrayAccess
         'first_name' => 'string',
         'last_name' => 'string',
         'email' => 'string',
-        'locale' => '\Swagger\Client\Model\Locale',
+        'locale' => '\Yousign\Client\Model\Locale',
         'phone_number' => 'string',
         'company_name' => 'string',
         'job_title' => 'string',
@@ -360,7 +360,7 @@ class CreateContact implements ModelInterface, ArrayAccess
     /**
      * Gets locale
      *
-     * @return \Swagger\Client\Model\Locale
+     * @return \Yousign\Client\Model\Locale
      */
     public function getLocale()
     {
@@ -370,7 +370,7 @@ class CreateContact implements ModelInterface, ArrayAccess
     /**
      * Sets locale
      *
-     * @param \Swagger\Client\Model\Locale $locale locale
+     * @param \Yousign\Client\Model\Locale $locale locale
      *
      * @return $this
      */

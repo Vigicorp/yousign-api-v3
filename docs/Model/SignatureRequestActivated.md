@@ -9,17 +9,16 @@ Name | Type | Description | Notes
 **delivery_mode** | **string** |  | 
 **created_at** | [**\DateTime**](\DateTime.md) |  | 
 **ordered_signers** | **bool** | Enable an ordered workflow, each signer will be requested to sign in a sequential order | 
-**reminder_settings** | [**\Swagger\Client\Model\SignatureRequestInListReminderSettings**](SignatureRequestInListReminderSettings.md) |  | 
+**reminder_settings** | [**\Yousign\Client\Model\SignatureRequestInListReminderSettings**](SignatureRequestInListReminderSettings.md) |  | 
 **timezone** | **string** |  | 
 **email_custom_note** | **string** |  | 
 **expiration_date** | [**\DateTime**](\DateTime.md) |  | 
-**signers** | [**\Swagger\Client\Model\EmbeddedSignerWithSignatureLink[]**](EmbeddedSignerWithSignatureLink.md) |  | 
-**approvers** | [**\Swagger\Client\Model\ApproverToNotify[]**](ApproverToNotify.md) |  | [optional] 
-**documents** | [**\Swagger\Client\Model\SignatureRequestActivatedDocumentsInner[]**](SignatureRequestActivatedDocumentsInner.md) |  | 
+**signers** | [**\Yousign\Client\Model\EmbeddedSignerWithSignatureLink[]**](EmbeddedSignerWithSignatureLink.md) |  | 
+**approvers** | [**\Yousign\Client\Model\ApproverToNotify[]**](ApproverToNotify.md) |  | [optional] 
+**documents** | [**\Yousign\Client\Model\SignatureRequestActivatedDocumentsInner[]**](SignatureRequestActivatedDocumentsInner.md) |  | 
 **external_id** | **string** |  | 
 **branding_id** | **string** |  | 
 **custom_experience_id** | **string** |  | 
-**audit_trail_locale** | [**\Swagger\Client\Model\AuditTrailLocale**](AuditTrailLocale.md) |  | 
+**audit_trail_locale** | [**\Yousign\Client\Model\AuditTrailLocale**](AuditTrailLocale.md) |  | 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-

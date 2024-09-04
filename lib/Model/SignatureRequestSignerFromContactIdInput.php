@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * SignatureRequestSignerFromContactIdInput Class Doc Comment
  *
  * @category Class
  * @description Create signer from a contact
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,11 +58,11 @@ class SignatureRequestSignerFromContactIdInput implements ModelInterface, ArrayA
       */
     protected static $swaggerTypes = [
         'contact_id' => 'string',
-        'fields' => '\Swagger\Client\Model\FieldsInput[]',
+        'fields' => '\Yousign\Client\Model\FieldsInput[]',
         'signature_level' => 'string',
         'signature_authentication_mode' => 'string',
-        'redirect_urls' => '\Swagger\Client\Model\SignatureRequestSignerFromInfoInputRedirectUrls',
-        'custom_text' => '\Swagger\Client\Model\FromScratch1CustomText'
+        'redirect_urls' => '\Yousign\Client\Model\SignatureRequestSignerFromInfoInputRedirectUrls',
+        'custom_text' => '\Yousign\Client\Model\FromScratch1CustomText'
     ];
 
     /**
@@ -319,7 +319,7 @@ class SignatureRequestSignerFromContactIdInput implements ModelInterface, ArrayA
     /**
      * Gets fields
      *
-     * @return \Swagger\Client\Model\FieldsInput[]
+     * @return \Yousign\Client\Model\FieldsInput[]
      */
     public function getFields()
     {
@@ -329,7 +329,7 @@ class SignatureRequestSignerFromContactIdInput implements ModelInterface, ArrayA
     /**
      * Sets fields
      *
-     * @param \Swagger\Client\Model\FieldsInput[] $fields fields
+     * @param \Yousign\Client\Model\FieldsInput[] $fields fields
      *
      * @return $this
      */
@@ -409,7 +409,7 @@ class SignatureRequestSignerFromContactIdInput implements ModelInterface, ArrayA
     /**
      * Gets redirect_urls
      *
-     * @return \Swagger\Client\Model\SignatureRequestSignerFromInfoInputRedirectUrls
+     * @return \Yousign\Client\Model\SignatureRequestSignerFromInfoInputRedirectUrls
      */
     public function getRedirectUrls()
     {
@@ -419,7 +419,7 @@ class SignatureRequestSignerFromContactIdInput implements ModelInterface, ArrayA
     /**
      * Sets redirect_urls
      *
-     * @param \Swagger\Client\Model\SignatureRequestSignerFromInfoInputRedirectUrls $redirect_urls redirect_urls
+     * @param \Yousign\Client\Model\SignatureRequestSignerFromInfoInputRedirectUrls $redirect_urls redirect_urls
      *
      * @return $this
      */
@@ -433,7 +433,7 @@ class SignatureRequestSignerFromContactIdInput implements ModelInterface, ArrayA
     /**
      * Gets custom_text
      *
-     * @return \Swagger\Client\Model\FromScratch1CustomText
+     * @return \Yousign\Client\Model\FromScratch1CustomText
      */
     public function getCustomText()
     {
@@ -443,7 +443,7 @@ class SignatureRequestSignerFromContactIdInput implements ModelInterface, ArrayA
     /**
      * Sets custom_text
      *
-     * @param \Swagger\Client\Model\FromScratch1CustomText $custom_text custom_text
+     * @param \Yousign\Client\Model\FromScratch1CustomText $custom_text custom_text
      *
      * @return $this
      */

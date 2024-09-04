@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200Response Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,8 +56,8 @@ class GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200Response
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'meta' => '\Swagger\Client\Model\Pagination',
-        'data' => '\Swagger\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner[]'
+        'meta' => '\Yousign\Client\Model\Pagination',
+        'data' => '\Yousign\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner[]'
     ];
 
     /**
@@ -210,7 +210,7 @@ class GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200Response
     /**
      * Gets meta
      *
-     * @return \Swagger\Client\Model\Pagination
+     * @return \Yousign\Client\Model\Pagination
      */
     public function getMeta()
     {
@@ -220,7 +220,7 @@ class GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200Response
     /**
      * Sets meta
      *
-     * @param \Swagger\Client\Model\Pagination $meta meta
+     * @param \Yousign\Client\Model\Pagination $meta meta
      *
      * @return $this
      */
@@ -234,7 +234,7 @@ class GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200Response
     /**
      * Gets data
      *
-     * @return \Swagger\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner[]
+     * @return \Yousign\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner[]
      */
     public function getData()
     {
@@ -244,7 +244,7 @@ class GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200Response
     /**
      * Sets data
      *
-     * @param \Swagger\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner[] $data data
+     * @param \Yousign\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner[] $data data
      *
      * @return $this
      */

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Yousign\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Yousign\Client\ApiException;
+use Yousign\Client\Configuration;
+use Yousign\Client\HeaderSelector;
+use Yousign\Client\ObjectSerializer;
 
 /**
  * ContactApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,7 +93,7 @@ class ContactApi
      *
      * @param  string $contact_id Contact Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -109,7 +109,7 @@ class ContactApi
      *
      * @param  string $contact_id Contact Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -153,7 +153,7 @@ class ContactApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -347,9 +347,9 @@ class ContactApi
      * @param  string $after After cursor (pagination) (optional)
      * @param  int $limit The limit of items count to retrieve. (optional, default to 100)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\GetContacts200Response
+     * @return \Yousign\Client\Model\GetContacts200Response
      */
     public function getContacts($after = null, $limit = '100')
     {
@@ -365,13 +365,13 @@ class ContactApi
      * @param  string $after After cursor (pagination) (optional)
      * @param  int $limit The limit of items count to retrieve. (optional, default to 100)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\GetContacts200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\GetContacts200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getContactsWithHttpInfo($after = null, $limit = '100')
     {
-        $returnType = '\Swagger\Client\Model\GetContacts200Response';
+        $returnType = '\Yousign\Client\Model\GetContacts200Response';
         $request = $this->getContactsRequest($after, $limit);
 
         try {
@@ -423,7 +423,7 @@ class ContactApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\GetContacts200Response',
+                        '\Yousign\Client\Model\GetContacts200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -431,7 +431,7 @@ class ContactApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -439,7 +439,7 @@ class ContactApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -491,7 +491,7 @@ class ContactApi
      */
     public function getContactsAsyncWithHttpInfo($after = null, $limit = '100')
     {
-        $returnType = '\Swagger\Client\Model\GetContacts200Response';
+        $returnType = '\Yousign\Client\Model\GetContacts200Response';
         $request = $this->getContactsRequest($after, $limit);
 
         return $this->client
@@ -635,9 +635,9 @@ class ContactApi
      *
      * @param  string $contact_id Contact Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Contact
+     * @return \Yousign\Client\Model\Contact
      */
     public function getContactsContactId($contact_id)
     {
@@ -652,13 +652,13 @@ class ContactApi
      *
      * @param  string $contact_id Contact Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Contact, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\Contact, HTTP status code, HTTP response headers (array of strings)
      */
     public function getContactsContactIdWithHttpInfo($contact_id)
     {
-        $returnType = '\Swagger\Client\Model\Contact';
+        $returnType = '\Yousign\Client\Model\Contact';
         $request = $this->getContactsContactIdRequest($contact_id);
 
         try {
@@ -710,7 +710,7 @@ class ContactApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Contact',
+                        '\Yousign\Client\Model\Contact',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -760,7 +760,7 @@ class ContactApi
      */
     public function getContactsContactIdAsyncWithHttpInfo($contact_id)
     {
-        $returnType = '\Swagger\Client\Model\Contact';
+        $returnType = '\Yousign\Client\Model\Contact';
         $request = $this->getContactsContactIdRequest($contact_id);
 
         return $this->client
@@ -908,11 +908,11 @@ class ContactApi
      * Update a Contact
      *
      * @param  string $contact_id Contact Id (required)
-     * @param  \Swagger\Client\Model\UpdateContact $body body (optional)
+     * @param  \Yousign\Client\Model\UpdateContact $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Contact
+     * @return \Yousign\Client\Model\Contact
      */
     public function patchContactsContactId($contact_id, $body = null)
     {
@@ -926,15 +926,15 @@ class ContactApi
      * Update a Contact
      *
      * @param  string $contact_id Contact Id (required)
-     * @param  \Swagger\Client\Model\UpdateContact $body (optional)
+     * @param  \Yousign\Client\Model\UpdateContact $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Contact, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\Contact, HTTP status code, HTTP response headers (array of strings)
      */
     public function patchContactsContactIdWithHttpInfo($contact_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\Contact';
+        $returnType = '\Yousign\Client\Model\Contact';
         $request = $this->patchContactsContactIdRequest($contact_id, $body);
 
         try {
@@ -986,7 +986,7 @@ class ContactApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Contact',
+                        '\Yousign\Client\Model\Contact',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -994,7 +994,7 @@ class ContactApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1002,7 +1002,7 @@ class ContactApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1026,7 +1026,7 @@ class ContactApi
                 case 415:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1042,7 +1042,7 @@ class ContactApi
      * Update a Contact
      *
      * @param  string $contact_id Contact Id (required)
-     * @param  \Swagger\Client\Model\UpdateContact $body (optional)
+     * @param  \Yousign\Client\Model\UpdateContact $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1063,14 +1063,14 @@ class ContactApi
      * Update a Contact
      *
      * @param  string $contact_id Contact Id (required)
-     * @param  \Swagger\Client\Model\UpdateContact $body (optional)
+     * @param  \Yousign\Client\Model\UpdateContact $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function patchContactsContactIdAsyncWithHttpInfo($contact_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\Contact';
+        $returnType = '\Yousign\Client\Model\Contact';
         $request = $this->patchContactsContactIdRequest($contact_id, $body);
 
         return $this->client
@@ -1114,7 +1114,7 @@ class ContactApi
      * Create request for operation 'patchContactsContactId'
      *
      * @param  string $contact_id Contact Id (required)
-     * @param  \Swagger\Client\Model\UpdateContact $body (optional)
+     * @param  \Yousign\Client\Model\UpdateContact $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1221,11 +1221,11 @@ class ContactApi
      *
      * Create a Contact
      *
-     * @param  \Swagger\Client\Model\CreateContact $body body (optional)
+     * @param  \Yousign\Client\Model\CreateContact $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Contact
+     * @return \Yousign\Client\Model\Contact
      */
     public function postContact($body = null)
     {
@@ -1238,15 +1238,15 @@ class ContactApi
      *
      * Create a Contact
      *
-     * @param  \Swagger\Client\Model\CreateContact $body (optional)
+     * @param  \Yousign\Client\Model\CreateContact $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Contact, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\Contact, HTTP status code, HTTP response headers (array of strings)
      */
     public function postContactWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\Contact';
+        $returnType = '\Yousign\Client\Model\Contact';
         $request = $this->postContactRequest($body);
 
         try {
@@ -1298,7 +1298,7 @@ class ContactApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Contact',
+                        '\Yousign\Client\Model\Contact',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1306,7 +1306,7 @@ class ContactApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1314,7 +1314,7 @@ class ContactApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1345,7 +1345,7 @@ class ContactApi
      *
      * Create a Contact
      *
-     * @param  \Swagger\Client\Model\CreateContact $body (optional)
+     * @param  \Yousign\Client\Model\CreateContact $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1365,14 +1365,14 @@ class ContactApi
      *
      * Create a Contact
      *
-     * @param  \Swagger\Client\Model\CreateContact $body (optional)
+     * @param  \Yousign\Client\Model\CreateContact $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function postContactAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\Contact';
+        $returnType = '\Yousign\Client\Model\Contact';
         $request = $this->postContactRequest($body);
 
         return $this->client
@@ -1415,7 +1415,7 @@ class ContactApi
     /**
      * Create request for operation 'postContact'
      *
-     * @param  \Swagger\Client\Model\CreateContact $body (optional)
+     * @param  \Yousign\Client\Model\CreateContact $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

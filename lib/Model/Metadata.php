@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * Metadata Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class Metadata implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'data' => 'map[string,\Swagger\Client\Model\MetadataDataValue]'
+        'data' => 'map[string,\Yousign\Client\Model\MetadataDataValue]'
     ];
 
     /**
@@ -204,7 +204,7 @@ class Metadata implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return map[string,\Swagger\Client\Model\MetadataDataValue]
+     * @return map[string,\Yousign\Client\Model\MetadataDataValue]
      */
     public function getData()
     {
@@ -214,7 +214,7 @@ class Metadata implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param map[string,\Swagger\Client\Model\MetadataDataValue] $data data
+     * @param map[string,\Yousign\Client\Model\MetadataDataValue] $data data
      *
      * @return $this
      */

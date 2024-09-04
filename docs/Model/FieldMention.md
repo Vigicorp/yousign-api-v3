@@ -13,7 +13,6 @@ Name | Type | Description | Notes
 **x** | **int** |  | 
 **y** | **int** |  | 
 **mention** | **string** |  | 
-**font** | [**\Swagger\Client\Model\Font**](Font.md) |  | 
+**font** | [**\Yousign\Client\Model\Font**](Font.md) |  | 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-

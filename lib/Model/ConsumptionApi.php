@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * ConsumptionApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,7 +61,7 @@ class ConsumptionApi implements ModelInterface, ArrayAccess
         'advanced_electronic_signature_with_qualified_certificate' => 'int',
         'electronic_seal' => 'int',
         'advanced_electronic_seal' => 'int',
-        'qualified_electronic_signature_identification_mode' => '\Swagger\Client\Model\ConsumptionAppQualifiedElectronicSignatureIdentificationMode'
+        'qualified_electronic_signature_identification_mode' => '\Yousign\Client\Model\ConsumptionAppQualifiedElectronicSignatureIdentificationMode'
     ];
 
     /**
@@ -366,7 +366,7 @@ class ConsumptionApi implements ModelInterface, ArrayAccess
     /**
      * Gets qualified_electronic_signature_identification_mode
      *
-     * @return \Swagger\Client\Model\ConsumptionAppQualifiedElectronicSignatureIdentificationMode
+     * @return \Yousign\Client\Model\ConsumptionAppQualifiedElectronicSignatureIdentificationMode
      */
     public function getQualifiedElectronicSignatureIdentificationMode()
     {
@@ -376,7 +376,7 @@ class ConsumptionApi implements ModelInterface, ArrayAccess
     /**
      * Sets qualified_electronic_signature_identification_mode
      *
-     * @param \Swagger\Client\Model\ConsumptionAppQualifiedElectronicSignatureIdentificationMode $qualified_electronic_signature_identification_mode qualified_electronic_signature_identification_mode
+     * @param \Yousign\Client\Model\ConsumptionAppQualifiedElectronicSignatureIdentificationMode $qualified_electronic_signature_identification_mode qualified_electronic_signature_identification_mode
      *
      * @return $this
      */

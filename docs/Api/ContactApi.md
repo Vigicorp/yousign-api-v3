@@ -1,4 +1,4 @@
-# Swagger\Client\ContactApi
+# Yousign\Client\ContactApi
 
 All URIs are relative to *https://api-sandbox.yousign.app/v3*
 
@@ -22,11 +22,11 @@ Deletes a given Contact.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\ContactApi(
+$apiInstance = new Yousign\Client\Api\ContactApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -64,7 +64,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getContacts**
-> \Swagger\Client\Model\GetContacts200Response getContacts($after, $limit)
+> \Yousign\Client\Model\GetContacts200Response getContacts($after, $limit)
 
 List Contacts
 
@@ -75,11 +75,11 @@ Returns the list of all the Contacts within your organization.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\ContactApi(
+$apiInstance = new Yousign\Client\Api\ContactApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -106,7 +106,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\GetContacts200Response**](../Model/GetContacts200Response.md)
+[**\Yousign\Client\Model\GetContacts200Response**](../Model/GetContacts200Response.md)
 
 ### Authorization
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getContactsContactId**
-> \Swagger\Client\Model\Contact getContactsContactId($contact_id)
+> \Yousign\Client\Model\Contact getContactsContactId($contact_id)
 
 Get a Contact
 
@@ -131,11 +131,11 @@ Retrieves a given Contact.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\ContactApi(
+$apiInstance = new Yousign\Client\Api\ContactApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Contact**](../Model/Contact.md)
+[**\Yousign\Client\Model\Contact**](../Model/Contact.md)
 
 ### Authorization
 
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **patchContactsContactId**
-> \Swagger\Client\Model\Contact patchContactsContactId($contact_id, $body)
+> \Yousign\Client\Model\Contact patchContactsContactId($contact_id, $body)
 
 Update a Contact
 
@@ -185,18 +185,18 @@ Updates a given Contact. Any parameters not provided are left unchanged.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\ContactApi(
+$apiInstance = new Yousign\Client\Api\ContactApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $contact_id = "contact_id_example"; // string | Contact Id
-$body = new \Swagger\Client\Model\UpdateContact(); // \Swagger\Client\Model\UpdateContact | 
+$body = new \Yousign\Client\Model\UpdateContact(); // \Yousign\Client\Model\UpdateContact | 
 
 try {
     $result = $apiInstance->patchContactsContactId($contact_id, $body);
@@ -212,11 +212,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **contact_id** | [**string**](../Model/.md)| Contact Id |
- **body** | [**\Swagger\Client\Model\UpdateContact**](../Model/UpdateContact.md)|  | [optional]
+ **body** | [**\Yousign\Client\Model\UpdateContact**](../Model/UpdateContact.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\Contact**](../Model/Contact.md)
+[**\Yousign\Client\Model\Contact**](../Model/Contact.md)
 
 ### Authorization
 
@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postContact**
-> \Swagger\Client\Model\Contact postContact($body)
+> \Yousign\Client\Model\Contact postContact($body)
 
 Create a Contact
 
@@ -241,17 +241,17 @@ Creates a new Contact.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\ContactApi(
+$apiInstance = new Yousign\Client\Api\ContactApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\CreateContact(); // \Swagger\Client\Model\CreateContact | 
+$body = new \Yousign\Client\Model\CreateContact(); // \Yousign\Client\Model\CreateContact | 
 
 try {
     $result = $apiInstance->postContact($body);
@@ -266,11 +266,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\CreateContact**](../Model/CreateContact.md)|  | [optional]
+ **body** | [**\Yousign\Client\Model\CreateContact**](../Model/CreateContact.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\Contact**](../Model/Contact.md)
+[**\Yousign\Client\Model\Contact**](../Model/Contact.md)
 
 ### Authorization
 
@@ -282,4 +282,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-

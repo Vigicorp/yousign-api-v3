@@ -1,4 +1,4 @@
-# Swagger\Client\WebhookApi
+# Yousign\Client\WebhookApi
 
 All URIs are relative to *https://api-sandbox.yousign.app/v3*
 
@@ -22,11 +22,11 @@ Deletes a given Webhook subscription.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\WebhookApi(
+$apiInstance = new Yousign\Client\Api\WebhookApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -64,7 +64,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWebhooks**
-> \Swagger\Client\Model\WebhookSubscription[] getWebhooks()
+> \Yousign\Client\Model\WebhookSubscription[] getWebhooks()
 
 List Webhook subscriptions
 
@@ -75,11 +75,11 @@ Returns the list of all Webhook subscriptions in your Organization.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\WebhookApi(
+$apiInstance = new Yousign\Client\Api\WebhookApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -100,7 +100,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\WebhookSubscription[]**](../Model/WebhookSubscription.md)
+[**\Yousign\Client\Model\WebhookSubscription[]**](../Model/WebhookSubscription.md)
 
 ### Authorization
 
@@ -114,7 +114,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWebhooksWebhookId**
-> \Swagger\Client\Model\WebhookSubscription getWebhooksWebhookId($webhook_id)
+> \Yousign\Client\Model\WebhookSubscription getWebhooksWebhookId($webhook_id)
 
 Get a Webhook subscription
 
@@ -125,11 +125,11 @@ Retrieves a given Webhook subscription.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\WebhookApi(
+$apiInstance = new Yousign\Client\Api\WebhookApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\WebhookSubscription**](../Model/WebhookSubscription.md)
+[**\Yousign\Client\Model\WebhookSubscription**](../Model/WebhookSubscription.md)
 
 ### Authorization
 
@@ -168,7 +168,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **patchWebhooksWebhookId**
-> \Swagger\Client\Model\WebhookSubscription patchWebhooksWebhookId($webhook_id, $body)
+> \Yousign\Client\Model\WebhookSubscription patchWebhooksWebhookId($webhook_id, $body)
 
 Update a Webhook subscription
 
@@ -179,18 +179,18 @@ Updates a given Webhook subscription. Any parameters not provided are left uncha
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\WebhookApi(
+$apiInstance = new Yousign\Client\Api\WebhookApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $webhook_id = "webhook_id_example"; // string | Webhook Id
-$body = new \Swagger\Client\Model\UpdateWebhookSubscription(); // \Swagger\Client\Model\UpdateWebhookSubscription | 
+$body = new \Yousign\Client\Model\UpdateWebhookSubscription(); // \Yousign\Client\Model\UpdateWebhookSubscription | 
 
 try {
     $result = $apiInstance->patchWebhooksWebhookId($webhook_id, $body);
@@ -206,11 +206,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webhook_id** | [**string**](../Model/.md)| Webhook Id |
- **body** | [**\Swagger\Client\Model\UpdateWebhookSubscription**](../Model/UpdateWebhookSubscription.md)|  | [optional]
+ **body** | [**\Yousign\Client\Model\UpdateWebhookSubscription**](../Model/UpdateWebhookSubscription.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\WebhookSubscription**](../Model/WebhookSubscription.md)
+[**\Yousign\Client\Model\WebhookSubscription**](../Model/WebhookSubscription.md)
 
 ### Authorization
 
@@ -224,7 +224,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postWebhooksSubscriptions**
-> \Swagger\Client\Model\WebhookSubscription postWebhooksSubscriptions($body)
+> \Yousign\Client\Model\WebhookSubscription postWebhooksSubscriptions($body)
 
 Create a Webhook subscription
 
@@ -235,17 +235,17 @@ Creates a new Webhook subscription in your organization.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\WebhookApi(
+$apiInstance = new Yousign\Client\Api\WebhookApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\CreateWebhookSubscription(); // \Swagger\Client\Model\CreateWebhookSubscription | 
+$body = new \Yousign\Client\Model\CreateWebhookSubscription(); // \Yousign\Client\Model\CreateWebhookSubscription | 
 
 try {
     $result = $apiInstance->postWebhooksSubscriptions($body);
@@ -260,11 +260,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\CreateWebhookSubscription**](../Model/CreateWebhookSubscription.md)|  | [optional]
+ **body** | [**\Yousign\Client\Model\CreateWebhookSubscription**](../Model/CreateWebhookSubscription.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\WebhookSubscription**](../Model/WebhookSubscription.md)
+[**\Yousign\Client\Model\WebhookSubscription**](../Model/WebhookSubscription.md)
 
 ### Authorization
 
@@ -276,4 +276,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-

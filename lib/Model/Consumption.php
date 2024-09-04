@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * Consumption Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,9 +56,9 @@ class Consumption implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'app' => '\Swagger\Client\Model\ConsumptionApp',
-        'api' => '\Swagger\Client\Model\ConsumptionApi',
-        'connector' => '\Swagger\Client\Model\ConsumptionApp'
+        'app' => '\Yousign\Client\Model\ConsumptionApp',
+        'api' => '\Yousign\Client\Model\ConsumptionApi',
+        'connector' => '\Yousign\Client\Model\ConsumptionApp'
     ];
 
     /**
@@ -225,7 +225,7 @@ class Consumption implements ModelInterface, ArrayAccess
     /**
      * Gets app
      *
-     * @return \Swagger\Client\Model\ConsumptionApp
+     * @return \Yousign\Client\Model\ConsumptionApp
      */
     public function getApp()
     {
@@ -235,7 +235,7 @@ class Consumption implements ModelInterface, ArrayAccess
     /**
      * Sets app
      *
-     * @param \Swagger\Client\Model\ConsumptionApp $app app
+     * @param \Yousign\Client\Model\ConsumptionApp $app app
      *
      * @return $this
      */
@@ -249,7 +249,7 @@ class Consumption implements ModelInterface, ArrayAccess
     /**
      * Gets api
      *
-     * @return \Swagger\Client\Model\ConsumptionApi
+     * @return \Yousign\Client\Model\ConsumptionApi
      */
     public function getApi()
     {
@@ -259,7 +259,7 @@ class Consumption implements ModelInterface, ArrayAccess
     /**
      * Sets api
      *
-     * @param \Swagger\Client\Model\ConsumptionApi $api api
+     * @param \Yousign\Client\Model\ConsumptionApi $api api
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class Consumption implements ModelInterface, ArrayAccess
     /**
      * Gets connector
      *
-     * @return \Swagger\Client\Model\ConsumptionApp
+     * @return \Yousign\Client\Model\ConsumptionApp
      */
     public function getConnector()
     {
@@ -283,7 +283,7 @@ class Consumption implements ModelInterface, ArrayAccess
     /**
      * Sets connector
      *
-     * @param \Swagger\Client\Model\ConsumptionApp $connector connector
+     * @param \Yousign\Client\Model\ConsumptionApp $connector connector
      *
      * @return $this
      */

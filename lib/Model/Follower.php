@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * Follower Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class Follower implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'email' => 'string',
-        'locale' => '\Swagger\Client\Model\Locale',
+        'locale' => '\Yousign\Client\Model\Locale',
         'follower_link' => 'string'
     ];
 
@@ -249,7 +249,7 @@ class Follower implements ModelInterface, ArrayAccess
     /**
      * Gets locale
      *
-     * @return \Swagger\Client\Model\Locale
+     * @return \Yousign\Client\Model\Locale
      */
     public function getLocale()
     {
@@ -259,7 +259,7 @@ class Follower implements ModelInterface, ArrayAccess
     /**
      * Sets locale
      *
-     * @param \Swagger\Client\Model\Locale $locale locale
+     * @param \Yousign\Client\Model\Locale $locale locale
      *
      * @return $this
      */

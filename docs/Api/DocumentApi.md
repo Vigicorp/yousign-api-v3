@@ -1,4 +1,4 @@
-# Swagger\Client\DocumentApi
+# Yousign\Client\DocumentApi
 
 All URIs are relative to *https://api-sandbox.yousign.app/v3*
 
@@ -26,11 +26,11 @@ Deletes a given Document from a Signature Request.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\DocumentApi(
+$apiInstance = new Yousign\Client\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -70,7 +70,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSignatureRequestsSignatureRequestIdDocuments**
-> \Swagger\Client\Model\Document[] getSignatureRequestsSignatureRequestIdDocuments($signature_request_id, $nature)
+> \Yousign\Client\Model\Document[] getSignatureRequestsSignatureRequestIdDocuments($signature_request_id, $nature)
 
 List Signature Request's Documents
 
@@ -81,11 +81,11 @@ Returns a list of Documents for a given Signature Request.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\DocumentApi(
+$apiInstance = new Yousign\Client\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Document[]**](../Model/Document.md)
+[**\Yousign\Client\Model\Document[]**](../Model/Document.md)
 
 ### Authorization
 
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSignatureRequestsSignatureRequestIdDocumentsDocumentId**
-> \Swagger\Client\Model\Document getSignatureRequestsSignatureRequestIdDocumentsDocumentId($signature_request_id, $document_id)
+> \Yousign\Client\Model\Document getSignatureRequestsSignatureRequestIdDocumentsDocumentId($signature_request_id, $document_id)
 
 Get a Document
 
@@ -137,11 +137,11 @@ Retrieves a given Document.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\DocumentApi(
+$apiInstance = new Yousign\Client\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -168,7 +168,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Document**](../Model/Document.md)
+[**\Yousign\Client\Model\Document**](../Model/Document.md)
 
 ### Authorization
 
@@ -193,11 +193,11 @@ Downloads the PDF version of a given Document.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\DocumentApi(
+$apiInstance = new Yousign\Client\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -249,11 +249,11 @@ Downloads the PDF version of all Documents attached to a given Signature Request
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\DocumentApi(
+$apiInstance = new Yousign\Client\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -296,7 +296,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **patchSignatureRequestsSignatureRequestIdDocumentsDocumentId**
-> \Swagger\Client\Model\Document patchSignatureRequestsSignatureRequestIdDocumentsDocumentId($signature_request_id, $document_id, $body)
+> \Yousign\Client\Model\Document patchSignatureRequestsSignatureRequestIdDocumentsDocumentId($signature_request_id, $document_id, $body)
 
 Update a Document
 
@@ -307,11 +307,11 @@ Updates a given Document. Any parameters not provided are left unchanged.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\DocumentApi(
+$apiInstance = new Yousign\Client\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -319,7 +319,7 @@ $apiInstance = new Swagger\Client\Api\DocumentApi(
 );
 $signature_request_id = "signature_request_id_example"; // string | Signature Request Id
 $document_id = "document_id_example"; // string | Document Id
-$body = new \Swagger\Client\Model\UpdateDocument(); // \Swagger\Client\Model\UpdateDocument | 
+$body = new \Yousign\Client\Model\UpdateDocument(); // \Yousign\Client\Model\UpdateDocument | 
 
 try {
     $result = $apiInstance->patchSignatureRequestsSignatureRequestIdDocumentsDocumentId($signature_request_id, $document_id, $body);
@@ -336,11 +336,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **signature_request_id** | [**string**](../Model/.md)| Signature Request Id |
  **document_id** | [**string**](../Model/.md)| Document Id |
- **body** | [**\Swagger\Client\Model\UpdateDocument**](../Model/UpdateDocument.md)|  | [optional]
+ **body** | [**\Yousign\Client\Model\UpdateDocument**](../Model/UpdateDocument.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\Document**](../Model/Document.md)
+[**\Yousign\Client\Model\Document**](../Model/Document.md)
 
 ### Authorization
 
@@ -354,7 +354,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postDocuments**
-> \Swagger\Client\Model\Document postDocuments($file, $nature, $insert_after_id, $password, $initials, $parse_anchors)
+> \Yousign\Client\Model\Document postDocuments($file, $nature, $insert_after_id, $password, $initials, $parse_anchors)
 
 [DEPRECATED] Upload a Document
 
@@ -365,11 +365,11 @@ Deprecated endpoint, do not use.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\DocumentApi(
+$apiInstance = new Yousign\Client\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -379,7 +379,7 @@ $file = "file_example"; // string |
 $nature = "nature_example"; // string | 
 $insert_after_id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | 
 $password = "password_example"; // string | 
-$initials = new \Swagger\Client\Model\InitialsArea(); // \Swagger\Client\Model\InitialsArea | 
+$initials = new \Yousign\Client\Model\InitialsArea(); // \Yousign\Client\Model\InitialsArea | 
 $parse_anchors = true; // bool | 
 
 try {
@@ -399,12 +399,12 @@ Name | Type | Description  | Notes
  **nature** | **string**|  | [optional]
  **insert_after_id** | [**string**](../Model/.md)|  | [optional]
  **password** | **string**|  | [optional]
- **initials** | [**\Swagger\Client\Model\InitialsArea**](../Model/.md)|  | [optional]
+ **initials** | [**\Yousign\Client\Model\InitialsArea**](../Model/.md)|  | [optional]
  **parse_anchors** | **bool**|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\Document**](../Model/Document.md)
+[**\Yousign\Client\Model\Document**](../Model/Document.md)
 
 ### Authorization
 
@@ -418,7 +418,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postSignatureRequestsSignatureRequestIdDocuments**
-> \Swagger\Client\Model\Document postSignatureRequestsSignatureRequestIdDocuments($signature_request_id, $file, $nature, $insert_after_id, $password, $initials, $parse_anchors)
+> \Yousign\Client\Model\Document postSignatureRequestsSignatureRequestIdDocuments($signature_request_id, $file, $nature, $insert_after_id, $password, $initials, $parse_anchors)
 
 Add Document to a Signature Request
 
@@ -429,11 +429,11 @@ Adds a Document to a given Signature Request.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\DocumentApi(
+$apiInstance = new Yousign\Client\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -444,7 +444,7 @@ $file = "file_example"; // string |
 $nature = "nature_example"; // string | 
 $insert_after_id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | 
 $password = "password_example"; // string | 
-$initials = new \Swagger\Client\Model\InitialsArea(); // \Swagger\Client\Model\InitialsArea | 
+$initials = new \Yousign\Client\Model\InitialsArea(); // \Yousign\Client\Model\InitialsArea | 
 $parse_anchors = true; // bool | 
 
 try {
@@ -465,12 +465,12 @@ Name | Type | Description  | Notes
  **nature** | **string**|  | [optional]
  **insert_after_id** | [**string**](../Model/.md)|  | [optional]
  **password** | **string**|  | [optional]
- **initials** | [**\Swagger\Client\Model\InitialsArea**](../Model/.md)|  | [optional]
+ **initials** | [**\Yousign\Client\Model\InitialsArea**](../Model/.md)|  | [optional]
  **parse_anchors** | **bool**|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\Document**](../Model/Document.md)
+[**\Yousign\Client\Model\Document**](../Model/Document.md)
 
 ### Authorization
 
@@ -484,7 +484,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postSignatureRequestsSignatureRequestIdDocumentsDocumentIdReplace**
-> \Swagger\Client\Model\Document postSignatureRequestsSignatureRequestIdDocumentsDocumentIdReplace($signature_request_id, $document_id, $file)
+> \Yousign\Client\Model\Document postSignatureRequestsSignatureRequestIdDocumentsDocumentIdReplace($signature_request_id, $document_id, $file)
 
 Replace a Document in a Signature Request
 
@@ -495,11 +495,11 @@ Replace the file of a given Document.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\DocumentApi(
+$apiInstance = new Yousign\Client\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -528,7 +528,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Document**](../Model/Document.md)
+[**\Yousign\Client\Model\Document**](../Model/Document.md)
 
 ### Authorization
 
@@ -540,4 +540,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-

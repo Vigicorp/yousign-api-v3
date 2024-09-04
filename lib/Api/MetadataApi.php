@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Yousign\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Yousign\Client\ApiException;
+use Yousign\Client\Configuration;
+use Yousign\Client\HeaderSelector;
+use Yousign\Client\ObjectSerializer;
 
 /**
  * MetadataApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,7 +93,7 @@ class MetadataApi
      *
      * @param  string $signature_request_id Signature Request Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -109,7 +109,7 @@ class MetadataApi
      *
      * @param  string $signature_request_id Signature Request Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -153,7 +153,7 @@ class MetadataApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -346,9 +346,9 @@ class MetadataApi
      *
      * @param  string $signature_request_id Signature Request Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Metadata
+     * @return \Yousign\Client\Model\Metadata
      */
     public function getSignatureRequestsSignatureRequestIdMetadata($signature_request_id)
     {
@@ -363,13 +363,13 @@ class MetadataApi
      *
      * @param  string $signature_request_id Signature Request Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Metadata, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\Metadata, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSignatureRequestsSignatureRequestIdMetadataWithHttpInfo($signature_request_id)
     {
-        $returnType = '\Swagger\Client\Model\Metadata';
+        $returnType = '\Yousign\Client\Model\Metadata';
         $request = $this->getSignatureRequestsSignatureRequestIdMetadataRequest($signature_request_id);
 
         try {
@@ -421,7 +421,7 @@ class MetadataApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Metadata',
+                        '\Yousign\Client\Model\Metadata',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -429,7 +429,7 @@ class MetadataApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -487,7 +487,7 @@ class MetadataApi
      */
     public function getSignatureRequestsSignatureRequestIdMetadataAsyncWithHttpInfo($signature_request_id)
     {
-        $returnType = '\Swagger\Client\Model\Metadata';
+        $returnType = '\Yousign\Client\Model\Metadata';
         $request = $this->getSignatureRequestsSignatureRequestIdMetadataRequest($signature_request_id);
 
         return $this->client
@@ -635,11 +635,11 @@ class MetadataApi
      * Attach Metadata to a Signature Request
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \Swagger\Client\Model\CreateSignatureRequestMetadata $body body (optional)
+     * @param  \Yousign\Client\Model\CreateSignatureRequestMetadata $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Metadata
+     * @return \Yousign\Client\Model\Metadata
      */
     public function postSignatureRequestsSignatureRequestIdMetadata($signature_request_id, $body = null)
     {
@@ -653,15 +653,15 @@ class MetadataApi
      * Attach Metadata to a Signature Request
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \Swagger\Client\Model\CreateSignatureRequestMetadata $body (optional)
+     * @param  \Yousign\Client\Model\CreateSignatureRequestMetadata $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Metadata, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\Metadata, HTTP status code, HTTP response headers (array of strings)
      */
     public function postSignatureRequestsSignatureRequestIdMetadataWithHttpInfo($signature_request_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\Metadata';
+        $returnType = '\Yousign\Client\Model\Metadata';
         $request = $this->postSignatureRequestsSignatureRequestIdMetadataRequest($signature_request_id, $body);
 
         try {
@@ -713,7 +713,7 @@ class MetadataApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Metadata',
+                        '\Yousign\Client\Model\Metadata',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -721,7 +721,7 @@ class MetadataApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -729,7 +729,7 @@ class MetadataApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -753,7 +753,7 @@ class MetadataApi
                 case 415:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -769,7 +769,7 @@ class MetadataApi
      * Attach Metadata to a Signature Request
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \Swagger\Client\Model\CreateSignatureRequestMetadata $body (optional)
+     * @param  \Yousign\Client\Model\CreateSignatureRequestMetadata $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -790,14 +790,14 @@ class MetadataApi
      * Attach Metadata to a Signature Request
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \Swagger\Client\Model\CreateSignatureRequestMetadata $body (optional)
+     * @param  \Yousign\Client\Model\CreateSignatureRequestMetadata $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function postSignatureRequestsSignatureRequestIdMetadataAsyncWithHttpInfo($signature_request_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\Metadata';
+        $returnType = '\Yousign\Client\Model\Metadata';
         $request = $this->postSignatureRequestsSignatureRequestIdMetadataRequest($signature_request_id, $body);
 
         return $this->client
@@ -841,7 +841,7 @@ class MetadataApi
      * Create request for operation 'postSignatureRequestsSignatureRequestIdMetadata'
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \Swagger\Client\Model\CreateSignatureRequestMetadata $body (optional)
+     * @param  \Yousign\Client\Model\CreateSignatureRequestMetadata $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -949,11 +949,11 @@ class MetadataApi
      * Update Metadata of a Signature Request
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \Swagger\Client\Model\UpdateSignatureRequestMetadata $body body (optional)
+     * @param  \Yousign\Client\Model\UpdateSignatureRequestMetadata $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Metadata
+     * @return \Yousign\Client\Model\Metadata
      */
     public function putSignatureRequestsSignatureRequestIdMetadata($signature_request_id, $body = null)
     {
@@ -967,15 +967,15 @@ class MetadataApi
      * Update Metadata of a Signature Request
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \Swagger\Client\Model\UpdateSignatureRequestMetadata $body (optional)
+     * @param  \Yousign\Client\Model\UpdateSignatureRequestMetadata $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Metadata, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\Metadata, HTTP status code, HTTP response headers (array of strings)
      */
     public function putSignatureRequestsSignatureRequestIdMetadataWithHttpInfo($signature_request_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\Metadata';
+        $returnType = '\Yousign\Client\Model\Metadata';
         $request = $this->putSignatureRequestsSignatureRequestIdMetadataRequest($signature_request_id, $body);
 
         try {
@@ -1027,7 +1027,7 @@ class MetadataApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Metadata',
+                        '\Yousign\Client\Model\Metadata',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1035,7 +1035,7 @@ class MetadataApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1043,7 +1043,7 @@ class MetadataApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1075,7 +1075,7 @@ class MetadataApi
      * Update Metadata of a Signature Request
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \Swagger\Client\Model\UpdateSignatureRequestMetadata $body (optional)
+     * @param  \Yousign\Client\Model\UpdateSignatureRequestMetadata $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1096,14 +1096,14 @@ class MetadataApi
      * Update Metadata of a Signature Request
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \Swagger\Client\Model\UpdateSignatureRequestMetadata $body (optional)
+     * @param  \Yousign\Client\Model\UpdateSignatureRequestMetadata $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function putSignatureRequestsSignatureRequestIdMetadataAsyncWithHttpInfo($signature_request_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\Metadata';
+        $returnType = '\Yousign\Client\Model\Metadata';
         $request = $this->putSignatureRequestsSignatureRequestIdMetadataRequest($signature_request_id, $body);
 
         return $this->client
@@ -1147,7 +1147,7 @@ class MetadataApi
      * Create request for operation 'putSignatureRequestsSignatureRequestIdMetadata'
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \Swagger\Client\Model\UpdateSignatureRequestMetadata $body (optional)
+     * @param  \Yousign\Client\Model\UpdateSignatureRequestMetadata $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

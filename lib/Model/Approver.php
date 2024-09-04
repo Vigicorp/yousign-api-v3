@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * Approver Class Doc Comment
  *
  * @category Class
  * @description Approver
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class Approver implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'string',
         'status' => 'string',
-        'info' => '\Swagger\Client\Model\ApproverInfo',
+        'info' => '\Yousign\Client\Model\ApproverInfo',
         'approval_link' => 'string',
         'approval_link_expiration_date' => '\DateTime'
     ];
@@ -321,7 +321,7 @@ class Approver implements ModelInterface, ArrayAccess
     /**
      * Gets info
      *
-     * @return \Swagger\Client\Model\ApproverInfo
+     * @return \Yousign\Client\Model\ApproverInfo
      */
     public function getInfo()
     {
@@ -331,7 +331,7 @@ class Approver implements ModelInterface, ArrayAccess
     /**
      * Sets info
      *
-     * @param \Swagger\Client\Model\ApproverInfo $info info
+     * @param \Yousign\Client\Model\ApproverInfo $info info
      *
      * @return $this
      */

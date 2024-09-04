@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client\Model
+ * @package  Yousign\Client\Model
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,12 +26,12 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 /**
  * Interface abstracting model access.
  *
- * @package Swagger\Client\Model
+ * @package Yousign\Client\Model
  * @author  Swagger Codegen team
  */
 interface ModelInterface

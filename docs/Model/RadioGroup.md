@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **page** | **int** |  | 
 **optional** | **bool** |  | [optional] [default to false]
 **name** | **string** | Radio group&#x27;s name | [optional] 
-**radios** | [**\Swagger\Client\Model\RadioGroupRadiosInner[]**](RadioGroupRadiosInner.md) |  | 
+**radios** | [**\Yousign\Client\Model\RadioGroupRadiosInner[]**](RadioGroupRadiosInner.md) |  | 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-

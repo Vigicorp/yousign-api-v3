@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * UpdateSigner Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,13 +56,13 @@ class UpdateSigner implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'info' => '\Swagger\Client\Model\UpdateSignerInfo',
+        'info' => '\Yousign\Client\Model\UpdateSignerInfo',
         'insert_after_id' => 'string',
         'signature_level' => 'string',
         'signature_authentication_mode' => 'string',
-        'redirect_urls' => '\Swagger\Client\Model\FromScratch1RedirectUrls',
-        'custom_text' => '\Swagger\Client\Model\FromScratch1CustomText',
-        'delivery_mode' => '\Swagger\Client\Model\SignerDeliveryMode',
+        'redirect_urls' => '\Yousign\Client\Model\FromScratch1RedirectUrls',
+        'custom_text' => '\Yousign\Client\Model\FromScratch1CustomText',
+        'delivery_mode' => '\Yousign\Client\Model\SignerDeliveryMode',
         'identification_attestation_id' => 'string'
     ];
 
@@ -298,7 +298,7 @@ class UpdateSigner implements ModelInterface, ArrayAccess
     /**
      * Gets info
      *
-     * @return \Swagger\Client\Model\UpdateSignerInfo
+     * @return \Yousign\Client\Model\UpdateSignerInfo
      */
     public function getInfo()
     {
@@ -308,7 +308,7 @@ class UpdateSigner implements ModelInterface, ArrayAccess
     /**
      * Sets info
      *
-     * @param \Swagger\Client\Model\UpdateSignerInfo $info info
+     * @param \Yousign\Client\Model\UpdateSignerInfo $info info
      *
      * @return $this
      */
@@ -412,7 +412,7 @@ class UpdateSigner implements ModelInterface, ArrayAccess
     /**
      * Gets redirect_urls
      *
-     * @return \Swagger\Client\Model\FromScratch1RedirectUrls
+     * @return \Yousign\Client\Model\FromScratch1RedirectUrls
      */
     public function getRedirectUrls()
     {
@@ -422,7 +422,7 @@ class UpdateSigner implements ModelInterface, ArrayAccess
     /**
      * Sets redirect_urls
      *
-     * @param \Swagger\Client\Model\FromScratch1RedirectUrls $redirect_urls redirect_urls
+     * @param \Yousign\Client\Model\FromScratch1RedirectUrls $redirect_urls redirect_urls
      *
      * @return $this
      */
@@ -436,7 +436,7 @@ class UpdateSigner implements ModelInterface, ArrayAccess
     /**
      * Gets custom_text
      *
-     * @return \Swagger\Client\Model\FromScratch1CustomText
+     * @return \Yousign\Client\Model\FromScratch1CustomText
      */
     public function getCustomText()
     {
@@ -446,7 +446,7 @@ class UpdateSigner implements ModelInterface, ArrayAccess
     /**
      * Sets custom_text
      *
-     * @param \Swagger\Client\Model\FromScratch1CustomText $custom_text custom_text
+     * @param \Yousign\Client\Model\FromScratch1CustomText $custom_text custom_text
      *
      * @return $this
      */
@@ -460,7 +460,7 @@ class UpdateSigner implements ModelInterface, ArrayAccess
     /**
      * Gets delivery_mode
      *
-     * @return \Swagger\Client\Model\SignerDeliveryMode
+     * @return \Yousign\Client\Model\SignerDeliveryMode
      */
     public function getDeliveryMode()
     {
@@ -470,7 +470,7 @@ class UpdateSigner implements ModelInterface, ArrayAccess
     /**
      * Sets delivery_mode
      *
-     * @param \Swagger\Client\Model\SignerDeliveryMode $delivery_mode delivery_mode
+     * @param \Yousign\Client\Model\SignerDeliveryMode $delivery_mode delivery_mode
      *
      * @return $this
      */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * FromScratch Class Doc Comment
  *
  * @category Class
  * @description Create a new Approver from scratch.
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class FromScratch implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'info' => '\Swagger\Client\Model\FromScratchInfo'
+        'info' => '\Yousign\Client\Model\FromScratchInfo'
     ];
 
     /**
@@ -208,7 +208,7 @@ class FromScratch implements ModelInterface, ArrayAccess
     /**
      * Gets info
      *
-     * @return \Swagger\Client\Model\FromScratchInfo
+     * @return \Yousign\Client\Model\FromScratchInfo
      */
     public function getInfo()
     {
@@ -218,7 +218,7 @@ class FromScratch implements ModelInterface, ArrayAccess
     /**
      * Sets info
      *
-     * @param \Swagger\Client\Model\FromScratchInfo $info info
+     * @param \Yousign\Client\Model\FromScratchInfo $info info
      *
      * @return $this
      */

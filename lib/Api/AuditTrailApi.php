@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Yousign\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Yousign\Client\ApiException;
+use Yousign\Client\Configuration;
+use Yousign\Client\HeaderSelector;
+use Yousign\Client\ObjectSerializer;
 
 /**
  * AuditTrailApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,7 +94,7 @@ class AuditTrailApi
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  bool $merge Download all Audit Trails merged as a single PDF file (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -112,7 +112,7 @@ class AuditTrailApi
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  bool $merge Download all Audit Trails merged as a single PDF file (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -178,7 +178,7 @@ class AuditTrailApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -186,7 +186,7 @@ class AuditTrailApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -393,9 +393,9 @@ class AuditTrailApi
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $signer_id Signer Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SignerAuditTrail
+     * @return \Yousign\Client\Model\SignerAuditTrail
      */
     public function getSignatureRequestsSignatureRequestIdSignersSignerIdAuditTrails($signature_request_id, $signer_id)
     {
@@ -411,13 +411,13 @@ class AuditTrailApi
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $signer_id Signer Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SignerAuditTrail, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\SignerAuditTrail, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSignatureRequestsSignatureRequestIdSignersSignerIdAuditTrailsWithHttpInfo($signature_request_id, $signer_id)
     {
-        $returnType = '\Swagger\Client\Model\SignerAuditTrail';
+        $returnType = '\Yousign\Client\Model\SignerAuditTrail';
         $request = $this->getSignatureRequestsSignatureRequestIdSignersSignerIdAuditTrailsRequest($signature_request_id, $signer_id);
 
         try {
@@ -469,7 +469,7 @@ class AuditTrailApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SignerAuditTrail',
+                        '\Yousign\Client\Model\SignerAuditTrail',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -477,7 +477,7 @@ class AuditTrailApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -485,7 +485,7 @@ class AuditTrailApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -545,7 +545,7 @@ class AuditTrailApi
      */
     public function getSignatureRequestsSignatureRequestIdSignersSignerIdAuditTrailsAsyncWithHttpInfo($signature_request_id, $signer_id)
     {
-        $returnType = '\Swagger\Client\Model\SignerAuditTrail';
+        $returnType = '\Yousign\Client\Model\SignerAuditTrail';
         $request = $this->getSignatureRequestsSignatureRequestIdSignersSignerIdAuditTrailsRequest($signature_request_id, $signer_id);
 
         return $this->client
@@ -710,7 +710,7 @@ class AuditTrailApi
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $signer_id Signer Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -728,7 +728,7 @@ class AuditTrailApi
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $signer_id Signer Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -794,7 +794,7 @@ class AuditTrailApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -802,7 +802,7 @@ class AuditTrailApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

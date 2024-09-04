@@ -1,4 +1,4 @@
-# Swagger\Client\ApproverApi
+# Yousign\Client\ApproverApi
 
 All URIs are relative to *https://api-sandbox.yousign.app/v3*
 
@@ -22,11 +22,11 @@ Deletes a given Approver from a Signature Request.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\ApproverApi(
+$apiInstance = new Yousign\Client\Api\ApproverApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -66,7 +66,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSignatureRequestsSignatureRequestIdApproversApproverId**
-> \Swagger\Client\Model\Approver getSignatureRequestsSignatureRequestIdApproversApproverId($signature_request_id, $approver_id)
+> \Yousign\Client\Model\Approver getSignatureRequestsSignatureRequestIdApproversApproverId($signature_request_id, $approver_id)
 
 Get an Approver
 
@@ -77,11 +77,11 @@ Retrieves a given Approver.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\ApproverApi(
+$apiInstance = new Yousign\Client\Api\ApproverApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Approver**](../Model/Approver.md)
+[**\Yousign\Client\Model\Approver**](../Model/Approver.md)
 
 ### Authorization
 
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **patchSignatureRequestsSignatureRequestIdApproversApproverId**
-> \Swagger\Client\Model\Approver patchSignatureRequestsSignatureRequestIdApproversApproverId($signature_request_id, $approver_id, $body)
+> \Yousign\Client\Model\Approver patchSignatureRequestsSignatureRequestIdApproversApproverId($signature_request_id, $approver_id, $body)
 
 Update an Approver
 
@@ -133,11 +133,11 @@ Updates a given Approver. Any parameters not provided are left unchanged.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\ApproverApi(
+$apiInstance = new Yousign\Client\Api\ApproverApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -145,7 +145,7 @@ $apiInstance = new Swagger\Client\Api\ApproverApi(
 );
 $signature_request_id = "signature_request_id_example"; // string | Signature Request Id
 $approver_id = "approver_id_example"; // string | Approver Id
-$body = new \Swagger\Client\Model\PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequest(); // \Swagger\Client\Model\PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequest | 
+$body = new \Yousign\Client\Model\PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequest(); // \Yousign\Client\Model\PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequest | 
 
 try {
     $result = $apiInstance->patchSignatureRequestsSignatureRequestIdApproversApproverId($signature_request_id, $approver_id, $body);
@@ -162,11 +162,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **signature_request_id** | [**string**](../Model/.md)| Signature Request Id |
  **approver_id** | [**string**](../Model/.md)| Approver Id |
- **body** | [**\Swagger\Client\Model\PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequest**](../Model/PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequest.md)|  | [optional]
+ **body** | [**\Yousign\Client\Model\PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequest**](../Model/PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequest.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\Approver**](../Model/Approver.md)
+[**\Yousign\Client\Model\Approver**](../Model/Approver.md)
 
 ### Authorization
 
@@ -180,7 +180,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postSignatureRequestsSignatureRequestIdApprovers**
-> \Swagger\Client\Model\Approver postSignatureRequestsSignatureRequestIdApprovers($signature_request_id, $body)
+> \Yousign\Client\Model\Approver postSignatureRequestsSignatureRequestIdApprovers($signature_request_id, $body)
 
 Create a new Approver
 
@@ -191,18 +191,18 @@ Adds an Approver to a given Signature Request.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\ApproverApi(
+$apiInstance = new Yousign\Client\Api\ApproverApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $signature_request_id = "signature_request_id_example"; // string | Signature Request Id
-$body = new \Swagger\Client\Model\PostSignatureRequestsSignatureRequestIdApproversRequest(); // \Swagger\Client\Model\PostSignatureRequestsSignatureRequestIdApproversRequest | An Approver object to be added to the Signature Request.
+$body = new \Yousign\Client\Model\PostSignatureRequestsSignatureRequestIdApproversRequest(); // \Yousign\Client\Model\PostSignatureRequestsSignatureRequestIdApproversRequest | An Approver object to be added to the Signature Request.
 
 try {
     $result = $apiInstance->postSignatureRequestsSignatureRequestIdApprovers($signature_request_id, $body);
@@ -218,11 +218,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **signature_request_id** | [**string**](../Model/.md)| Signature Request Id |
- **body** | [**\Swagger\Client\Model\PostSignatureRequestsSignatureRequestIdApproversRequest**](../Model/PostSignatureRequestsSignatureRequestIdApproversRequest.md)| An Approver object to be added to the Signature Request. | [optional]
+ **body** | [**\Yousign\Client\Model\PostSignatureRequestsSignatureRequestIdApproversRequest**](../Model/PostSignatureRequestsSignatureRequestIdApproversRequest.md)| An Approver object to be added to the Signature Request. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\Approver**](../Model/Approver.md)
+[**\Yousign\Client\Model\Approver**](../Model/Approver.md)
 
 ### Authorization
 
@@ -247,11 +247,11 @@ Sends a reminder to a given Approver to review their Signature Request. Only pos
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\ApproverApi(
+$apiInstance = new Yousign\Client\Api\ApproverApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -289,4 +289,3 @@ void (empty response body)
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-

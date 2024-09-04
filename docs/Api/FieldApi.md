@@ -1,4 +1,4 @@
-# Swagger\Client\FieldApi
+# Yousign\Client\FieldApi
 
 All URIs are relative to *https://api-sandbox.yousign.app/v3*
 
@@ -21,11 +21,11 @@ Deletes a given Field from a Document.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\FieldApi(
+$apiInstance = new Yousign\Client\Api\FieldApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -67,7 +67,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields**
-> \Swagger\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200Response getSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields($signature_request_id, $document_id, $types, $after, $limit)
+> \Yousign\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200Response getSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields($signature_request_id, $document_id, $types, $after, $limit)
 
 Lists the Fields of a Signature Request Document.
 
@@ -78,11 +78,11 @@ Returns a list of Fields for a given Document. You can limit the number of items
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\FieldApi(
+$apiInstance = new Yousign\Client\Api\FieldApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -90,7 +90,7 @@ $apiInstance = new Swagger\Client\Api\FieldApi(
 );
 $signature_request_id = "signature_request_id_example"; // string | Signature Request Id
 $document_id = "document_id_example"; // string | Document ID
-$types = array(new \Swagger\Client\Model\null[]()); // null[] | Filter by Field type.
+$types = array(new \Yousign\Client\Model\null[]()); // null[] | Filter by Field type.
 $after = "after_example"; // string | After cursor (pagination)
 $limit = 100; // int | The limit of items count to retrieve.
 
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200Response**](../Model/GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200Response.md)
+[**\Yousign\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200Response**](../Model/GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200Response.md)
 
 ### Authorization
 
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields**
-> \Swagger\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner postSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields($signature_request_id, $document_id, $body)
+> \Yousign\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner postSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields($signature_request_id, $document_id, $body)
 
 Create a new Field on a Document
 
@@ -140,11 +140,11 @@ Adds a Field to a given Document.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\FieldApi(
+$apiInstance = new Yousign\Client\Api\FieldApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -152,7 +152,7 @@ $apiInstance = new Swagger\Client\Api\FieldApi(
 );
 $signature_request_id = "signature_request_id_example"; // string | Signature Request Id
 $document_id = "document_id_example"; // string | Document ID
-$body = new \Swagger\Client\Model\CreateField(); // \Swagger\Client\Model\CreateField | 
+$body = new \Yousign\Client\Model\CreateField(); // \Yousign\Client\Model\CreateField | 
 
 try {
     $result = $apiInstance->postSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields($signature_request_id, $document_id, $body);
@@ -169,11 +169,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **signature_request_id** | [**string**](../Model/.md)| Signature Request Id |
  **document_id** | [**string**](../Model/.md)| Document ID |
- **body** | [**\Swagger\Client\Model\CreateField**](../Model/CreateField.md)|  | [optional]
+ **body** | [**\Yousign\Client\Model\CreateField**](../Model/CreateField.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner**](../Model/GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner.md)
+[**\Yousign\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner**](../Model/GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner.md)
 
 ### Authorization
 
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateSignatureRequestsSignatureRequestIdDocumentsDocumentIdFieldsFieldId**
-> \Swagger\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner updateSignatureRequestsSignatureRequestIdDocumentsDocumentIdFieldsFieldId($signature_request_id, $document_id, $field_id, $body)
+> \Yousign\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner updateSignatureRequestsSignatureRequestIdDocumentsDocumentIdFieldsFieldId($signature_request_id, $document_id, $field_id, $body)
 
 Update a Field
 
@@ -198,11 +198,11 @@ Updates a given Field. Any parameters not provided are left unchanged.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\FieldApi(
+$apiInstance = new Yousign\Client\Api\FieldApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -211,7 +211,7 @@ $apiInstance = new Swagger\Client\Api\FieldApi(
 $signature_request_id = "signature_request_id_example"; // string | Signature Request Id
 $document_id = "document_id_example"; // string | Document Id
 $field_id = "field_id_example"; // string | Field Id
-$body = new \Swagger\Client\Model\UpdateField(); // \Swagger\Client\Model\UpdateField | 
+$body = new \Yousign\Client\Model\UpdateField(); // \Yousign\Client\Model\UpdateField | 
 
 try {
     $result = $apiInstance->updateSignatureRequestsSignatureRequestIdDocumentsDocumentIdFieldsFieldId($signature_request_id, $document_id, $field_id, $body);
@@ -229,11 +229,11 @@ Name | Type | Description  | Notes
  **signature_request_id** | [**string**](../Model/.md)| Signature Request Id |
  **document_id** | [**string**](../Model/.md)| Document Id |
  **field_id** | [**string**](../Model/.md)| Field Id |
- **body** | [**\Swagger\Client\Model\UpdateField**](../Model/UpdateField.md)|  | [optional]
+ **body** | [**\Yousign\Client\Model\UpdateField**](../Model/UpdateField.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner**](../Model/GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner.md)
+[**\Yousign\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner**](../Model/GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner.md)
 
 ### Authorization
 
@@ -245,4 +245,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-

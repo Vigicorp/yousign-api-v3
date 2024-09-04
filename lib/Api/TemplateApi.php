@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Yousign\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Yousign\Client\ApiException;
+use Yousign\Client\Configuration;
+use Yousign\Client\HeaderSelector;
+use Yousign\Client\ObjectSerializer;
 
 /**
  * TemplateApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,9 +94,9 @@ class TemplateApi
      * @param  string $after After cursor (pagination) (optional)
      * @param  int $limit The limit of items count to retrieve. (optional, default to 100)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\GetTemplates200Response
+     * @return \Yousign\Client\Model\GetTemplates200Response
      */
     public function getTemplates($after = null, $limit = '100')
     {
@@ -112,13 +112,13 @@ class TemplateApi
      * @param  string $after After cursor (pagination) (optional)
      * @param  int $limit The limit of items count to retrieve. (optional, default to 100)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\GetTemplates200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\GetTemplates200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTemplatesWithHttpInfo($after = null, $limit = '100')
     {
-        $returnType = '\Swagger\Client\Model\GetTemplates200Response';
+        $returnType = '\Yousign\Client\Model\GetTemplates200Response';
         $request = $this->getTemplatesRequest($after, $limit);
 
         try {
@@ -170,7 +170,7 @@ class TemplateApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\GetTemplates200Response',
+                        '\Yousign\Client\Model\GetTemplates200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -178,7 +178,7 @@ class TemplateApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -186,7 +186,7 @@ class TemplateApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -238,7 +238,7 @@ class TemplateApi
      */
     public function getTemplatesAsyncWithHttpInfo($after = null, $limit = '100')
     {
-        $returnType = '\Swagger\Client\Model\GetTemplates200Response';
+        $returnType = '\Yousign\Client\Model\GetTemplates200Response';
         $request = $this->getTemplatesRequest($after, $limit);
 
         return $this->client

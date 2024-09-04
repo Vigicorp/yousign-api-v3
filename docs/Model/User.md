@@ -13,7 +13,6 @@ Name | Type | Description | Notes
 **job_title** | **string** |  | 
 **is_active** | **bool** |  | 
 **role** | **string** |  | 
-**workspaces** | [**\Swagger\Client\Model\UserWorkspacesInner[]**](UserWorkspacesInner.md) |  | [optional] 
+**workspaces** | [**\Yousign\Client\Model\UserWorkspacesInner[]**](UserWorkspacesInner.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-

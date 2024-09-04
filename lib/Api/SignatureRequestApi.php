@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Yousign\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Yousign\Client\ApiException;
+use Yousign\Client\Configuration;
+use Yousign\Client\HeaderSelector;
+use Yousign\Client\ObjectSerializer;
 
 /**
  * SignatureRequestApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,7 +94,7 @@ class SignatureRequestApi
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  bool $permanent_delete If true it will permanently delete the Signature Request. It will no longer be retrievable. (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -111,7 +111,7 @@ class SignatureRequestApi
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  bool $permanent_delete If true it will permanently delete the Signature Request. It will no longer be retrievable. (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -155,7 +155,7 @@ class SignatureRequestApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -163,7 +163,7 @@ class SignatureRequestApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -368,9 +368,9 @@ class SignatureRequestApi
      * @param  string[] $source Filter by source (optional)
      * @param  string $q Search on name (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\GetSignatureRequests200Response
+     * @return \Yousign\Client\Model\GetSignatureRequests200Response
      */
     public function getSignatureRequests($status = null, $after = null, $limit = '100', $external_id = null, $source = null, $q = null)
     {
@@ -390,13 +390,13 @@ class SignatureRequestApi
      * @param  string[] $source Filter by source (optional)
      * @param  string $q Search on name (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\GetSignatureRequests200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\GetSignatureRequests200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSignatureRequestsWithHttpInfo($status = null, $after = null, $limit = '100', $external_id = null, $source = null, $q = null)
     {
-        $returnType = '\Swagger\Client\Model\GetSignatureRequests200Response';
+        $returnType = '\Yousign\Client\Model\GetSignatureRequests200Response';
         $request = $this->getSignatureRequestsRequest($status, $after, $limit, $external_id, $source, $q);
 
         try {
@@ -448,7 +448,7 @@ class SignatureRequestApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\GetSignatureRequests200Response',
+                        '\Yousign\Client\Model\GetSignatureRequests200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -456,7 +456,7 @@ class SignatureRequestApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -464,7 +464,7 @@ class SignatureRequestApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -524,7 +524,7 @@ class SignatureRequestApi
      */
     public function getSignatureRequestsAsyncWithHttpInfo($status = null, $after = null, $limit = '100', $external_id = null, $source = null, $q = null)
     {
-        $returnType = '\Swagger\Client\Model\GetSignatureRequests200Response';
+        $returnType = '\Yousign\Client\Model\GetSignatureRequests200Response';
         $request = $this->getSignatureRequestsRequest($status, $after, $limit, $external_id, $source, $q);
 
         return $this->client
@@ -691,9 +691,9 @@ class SignatureRequestApi
      *
      * @param  string $signature_request_id Signature Request Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SignatureRequest
+     * @return \Yousign\Client\Model\SignatureRequest
      */
     public function getSignatureRequestsSignatureRequestId($signature_request_id)
     {
@@ -708,13 +708,13 @@ class SignatureRequestApi
      *
      * @param  string $signature_request_id Signature Request Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SignatureRequest, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\SignatureRequest, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSignatureRequestsSignatureRequestIdWithHttpInfo($signature_request_id)
     {
-        $returnType = '\Swagger\Client\Model\SignatureRequest';
+        $returnType = '\Yousign\Client\Model\SignatureRequest';
         $request = $this->getSignatureRequestsSignatureRequestIdRequest($signature_request_id);
 
         try {
@@ -766,7 +766,7 @@ class SignatureRequestApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SignatureRequest',
+                        '\Yousign\Client\Model\SignatureRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -774,7 +774,7 @@ class SignatureRequestApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -782,7 +782,7 @@ class SignatureRequestApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -840,7 +840,7 @@ class SignatureRequestApi
      */
     public function getSignatureRequestsSignatureRequestIdAsyncWithHttpInfo($signature_request_id)
     {
-        $returnType = '\Swagger\Client\Model\SignatureRequest';
+        $returnType = '\Yousign\Client\Model\SignatureRequest';
         $request = $this->getSignatureRequestsSignatureRequestIdRequest($signature_request_id);
 
         return $this->client
@@ -988,11 +988,11 @@ class SignatureRequestApi
      * Update a Signature Request
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \Swagger\Client\Model\UpdateSignatureRequest $body body (optional)
+     * @param  \Yousign\Client\Model\UpdateSignatureRequest $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SignatureRequest
+     * @return \Yousign\Client\Model\SignatureRequest
      */
     public function patchSignatureRequestsSignatureRequestId($signature_request_id, $body = null)
     {
@@ -1006,15 +1006,15 @@ class SignatureRequestApi
      * Update a Signature Request
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \Swagger\Client\Model\UpdateSignatureRequest $body (optional)
+     * @param  \Yousign\Client\Model\UpdateSignatureRequest $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SignatureRequest, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\SignatureRequest, HTTP status code, HTTP response headers (array of strings)
      */
     public function patchSignatureRequestsSignatureRequestIdWithHttpInfo($signature_request_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\SignatureRequest';
+        $returnType = '\Yousign\Client\Model\SignatureRequest';
         $request = $this->patchSignatureRequestsSignatureRequestIdRequest($signature_request_id, $body);
 
         try {
@@ -1066,7 +1066,7 @@ class SignatureRequestApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SignatureRequest',
+                        '\Yousign\Client\Model\SignatureRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1074,7 +1074,7 @@ class SignatureRequestApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1082,7 +1082,7 @@ class SignatureRequestApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1106,7 +1106,7 @@ class SignatureRequestApi
                 case 415:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1122,7 +1122,7 @@ class SignatureRequestApi
      * Update a Signature Request
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \Swagger\Client\Model\UpdateSignatureRequest $body (optional)
+     * @param  \Yousign\Client\Model\UpdateSignatureRequest $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1143,14 +1143,14 @@ class SignatureRequestApi
      * Update a Signature Request
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \Swagger\Client\Model\UpdateSignatureRequest $body (optional)
+     * @param  \Yousign\Client\Model\UpdateSignatureRequest $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function patchSignatureRequestsSignatureRequestIdAsyncWithHttpInfo($signature_request_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\SignatureRequest';
+        $returnType = '\Yousign\Client\Model\SignatureRequest';
         $request = $this->patchSignatureRequestsSignatureRequestIdRequest($signature_request_id, $body);
 
         return $this->client
@@ -1194,7 +1194,7 @@ class SignatureRequestApi
      * Create request for operation 'patchSignatureRequestsSignatureRequestId'
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \Swagger\Client\Model\UpdateSignatureRequest $body (optional)
+     * @param  \Yousign\Client\Model\UpdateSignatureRequest $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1301,11 +1301,11 @@ class SignatureRequestApi
      *
      * Initiate a new Signature Request
      *
-     * @param  \Swagger\Client\Model\CreateSignatureRequest $body body (optional)
+     * @param  \Yousign\Client\Model\CreateSignatureRequest $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SignatureRequest
+     * @return \Yousign\Client\Model\SignatureRequest
      */
     public function postSignatureRequests($body = null)
     {
@@ -1318,15 +1318,15 @@ class SignatureRequestApi
      *
      * Initiate a new Signature Request
      *
-     * @param  \Swagger\Client\Model\CreateSignatureRequest $body (optional)
+     * @param  \Yousign\Client\Model\CreateSignatureRequest $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SignatureRequest, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\SignatureRequest, HTTP status code, HTTP response headers (array of strings)
      */
     public function postSignatureRequestsWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\SignatureRequest';
+        $returnType = '\Yousign\Client\Model\SignatureRequest';
         $request = $this->postSignatureRequestsRequest($body);
 
         try {
@@ -1378,7 +1378,7 @@ class SignatureRequestApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SignatureRequest',
+                        '\Yousign\Client\Model\SignatureRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1386,7 +1386,7 @@ class SignatureRequestApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1394,7 +1394,7 @@ class SignatureRequestApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1418,7 +1418,7 @@ class SignatureRequestApi
                 case 415:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1433,7 +1433,7 @@ class SignatureRequestApi
      *
      * Initiate a new Signature Request
      *
-     * @param  \Swagger\Client\Model\CreateSignatureRequest $body (optional)
+     * @param  \Yousign\Client\Model\CreateSignatureRequest $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1453,14 +1453,14 @@ class SignatureRequestApi
      *
      * Initiate a new Signature Request
      *
-     * @param  \Swagger\Client\Model\CreateSignatureRequest $body (optional)
+     * @param  \Yousign\Client\Model\CreateSignatureRequest $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function postSignatureRequestsAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\SignatureRequest';
+        $returnType = '\Yousign\Client\Model\SignatureRequest';
         $request = $this->postSignatureRequestsRequest($body);
 
         return $this->client
@@ -1503,7 +1503,7 @@ class SignatureRequestApi
     /**
      * Create request for operation 'postSignatureRequests'
      *
-     * @param  \Swagger\Client\Model\CreateSignatureRequest $body (optional)
+     * @param  \Yousign\Client\Model\CreateSignatureRequest $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1598,9 +1598,9 @@ class SignatureRequestApi
      *
      * @param  string $signature_request_id Signature Request Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SignatureRequestActivated
+     * @return \Yousign\Client\Model\SignatureRequestActivated
      */
     public function postSignatureRequestsSignatureRequestIdActivate($signature_request_id)
     {
@@ -1615,13 +1615,13 @@ class SignatureRequestApi
      *
      * @param  string $signature_request_id Signature Request Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SignatureRequestActivated, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\SignatureRequestActivated, HTTP status code, HTTP response headers (array of strings)
      */
     public function postSignatureRequestsSignatureRequestIdActivateWithHttpInfo($signature_request_id)
     {
-        $returnType = '\Swagger\Client\Model\SignatureRequestActivated';
+        $returnType = '\Yousign\Client\Model\SignatureRequestActivated';
         $request = $this->postSignatureRequestsSignatureRequestIdActivateRequest($signature_request_id);
 
         try {
@@ -1673,7 +1673,7 @@ class SignatureRequestApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SignatureRequestActivated',
+                        '\Yousign\Client\Model\SignatureRequestActivated',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class SignatureRequestApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1689,7 +1689,7 @@ class SignatureRequestApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1747,7 +1747,7 @@ class SignatureRequestApi
      */
     public function postSignatureRequestsSignatureRequestIdActivateAsyncWithHttpInfo($signature_request_id)
     {
-        $returnType = '\Swagger\Client\Model\SignatureRequestActivated';
+        $returnType = '\Yousign\Client\Model\SignatureRequestActivated';
         $request = $this->postSignatureRequestsSignatureRequestIdActivateRequest($signature_request_id);
 
         return $this->client
@@ -1895,11 +1895,11 @@ class SignatureRequestApi
      * Cancel a Signature Request
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \Swagger\Client\Model\PostSignatureRequestsSignatureRequestIdCancelRequest $body body (optional)
+     * @param  \Yousign\Client\Model\PostSignatureRequestsSignatureRequestIdCancelRequest $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SignatureRequest
+     * @return \Yousign\Client\Model\SignatureRequest
      */
     public function postSignatureRequestsSignatureRequestIdCancel($signature_request_id, $body = null)
     {
@@ -1913,15 +1913,15 @@ class SignatureRequestApi
      * Cancel a Signature Request
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \Swagger\Client\Model\PostSignatureRequestsSignatureRequestIdCancelRequest $body (optional)
+     * @param  \Yousign\Client\Model\PostSignatureRequestsSignatureRequestIdCancelRequest $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SignatureRequest, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\SignatureRequest, HTTP status code, HTTP response headers (array of strings)
      */
     public function postSignatureRequestsSignatureRequestIdCancelWithHttpInfo($signature_request_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\SignatureRequest';
+        $returnType = '\Yousign\Client\Model\SignatureRequest';
         $request = $this->postSignatureRequestsSignatureRequestIdCancelRequest($signature_request_id, $body);
 
         try {
@@ -1973,7 +1973,7 @@ class SignatureRequestApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SignatureRequest',
+                        '\Yousign\Client\Model\SignatureRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1981,7 +1981,7 @@ class SignatureRequestApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1989,7 +1989,7 @@ class SignatureRequestApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2013,7 +2013,7 @@ class SignatureRequestApi
                 case 415:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2029,7 +2029,7 @@ class SignatureRequestApi
      * Cancel a Signature Request
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \Swagger\Client\Model\PostSignatureRequestsSignatureRequestIdCancelRequest $body (optional)
+     * @param  \Yousign\Client\Model\PostSignatureRequestsSignatureRequestIdCancelRequest $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2050,14 +2050,14 @@ class SignatureRequestApi
      * Cancel a Signature Request
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \Swagger\Client\Model\PostSignatureRequestsSignatureRequestIdCancelRequest $body (optional)
+     * @param  \Yousign\Client\Model\PostSignatureRequestsSignatureRequestIdCancelRequest $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function postSignatureRequestsSignatureRequestIdCancelAsyncWithHttpInfo($signature_request_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\SignatureRequest';
+        $returnType = '\Yousign\Client\Model\SignatureRequest';
         $request = $this->postSignatureRequestsSignatureRequestIdCancelRequest($signature_request_id, $body);
 
         return $this->client
@@ -2101,7 +2101,7 @@ class SignatureRequestApi
      * Create request for operation 'postSignatureRequestsSignatureRequestIdCancel'
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \Swagger\Client\Model\PostSignatureRequestsSignatureRequestIdCancelRequest $body (optional)
+     * @param  \Yousign\Client\Model\PostSignatureRequestsSignatureRequestIdCancelRequest $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2209,11 +2209,11 @@ class SignatureRequestApi
      * Reactivate an expired Signature Request
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \Swagger\Client\Model\PostSignatureRequestsSignatureRequestIdReactivateRequest $body body (optional)
+     * @param  \Yousign\Client\Model\PostSignatureRequestsSignatureRequestIdReactivateRequest $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SignatureRequest
+     * @return \Yousign\Client\Model\SignatureRequest
      */
     public function postSignatureRequestsSignatureRequestIdReactivate($signature_request_id, $body = null)
     {
@@ -2227,15 +2227,15 @@ class SignatureRequestApi
      * Reactivate an expired Signature Request
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \Swagger\Client\Model\PostSignatureRequestsSignatureRequestIdReactivateRequest $body (optional)
+     * @param  \Yousign\Client\Model\PostSignatureRequestsSignatureRequestIdReactivateRequest $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SignatureRequest, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\SignatureRequest, HTTP status code, HTTP response headers (array of strings)
      */
     public function postSignatureRequestsSignatureRequestIdReactivateWithHttpInfo($signature_request_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\SignatureRequest';
+        $returnType = '\Yousign\Client\Model\SignatureRequest';
         $request = $this->postSignatureRequestsSignatureRequestIdReactivateRequest($signature_request_id, $body);
 
         try {
@@ -2287,7 +2287,7 @@ class SignatureRequestApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SignatureRequest',
+                        '\Yousign\Client\Model\SignatureRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2295,7 +2295,7 @@ class SignatureRequestApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2303,7 +2303,7 @@ class SignatureRequestApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2327,7 +2327,7 @@ class SignatureRequestApi
                 case 415:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2343,7 +2343,7 @@ class SignatureRequestApi
      * Reactivate an expired Signature Request
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \Swagger\Client\Model\PostSignatureRequestsSignatureRequestIdReactivateRequest $body (optional)
+     * @param  \Yousign\Client\Model\PostSignatureRequestsSignatureRequestIdReactivateRequest $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2364,14 +2364,14 @@ class SignatureRequestApi
      * Reactivate an expired Signature Request
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \Swagger\Client\Model\PostSignatureRequestsSignatureRequestIdReactivateRequest $body (optional)
+     * @param  \Yousign\Client\Model\PostSignatureRequestsSignatureRequestIdReactivateRequest $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function postSignatureRequestsSignatureRequestIdReactivateAsyncWithHttpInfo($signature_request_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\SignatureRequest';
+        $returnType = '\Yousign\Client\Model\SignatureRequest';
         $request = $this->postSignatureRequestsSignatureRequestIdReactivateRequest($signature_request_id, $body);
 
         return $this->client
@@ -2415,7 +2415,7 @@ class SignatureRequestApi
      * Create request for operation 'postSignatureRequestsSignatureRequestIdReactivate'
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \Swagger\Client\Model\PostSignatureRequestsSignatureRequestIdReactivateRequest $body (optional)
+     * @param  \Yousign\Client\Model\PostSignatureRequestsSignatureRequestIdReactivateRequest $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

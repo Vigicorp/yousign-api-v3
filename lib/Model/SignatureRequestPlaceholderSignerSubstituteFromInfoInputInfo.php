@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * SignatureRequestPlaceholderSignerSubstituteFromInfoInputInfo Class Doc Comment
  *
  * @category Class
  * @description Create new signer
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,7 +61,7 @@ class SignatureRequestPlaceholderSignerSubstituteFromInfoInputInfo implements Mo
         'last_name' => 'string',
         'email' => 'string',
         'phone_number' => 'string',
-        'locale' => '\Swagger\Client\Model\Locale'
+        'locale' => '\Yousign\Client\Model\Locale'
     ];
 
     /**
@@ -337,7 +337,7 @@ class SignatureRequestPlaceholderSignerSubstituteFromInfoInputInfo implements Mo
     /**
      * Gets locale
      *
-     * @return \Swagger\Client\Model\Locale
+     * @return \Yousign\Client\Model\Locale
      */
     public function getLocale()
     {
@@ -347,7 +347,7 @@ class SignatureRequestPlaceholderSignerSubstituteFromInfoInputInfo implements Mo
     /**
      * Sets locale
      *
-     * @param \Swagger\Client\Model\Locale $locale locale
+     * @param \Yousign\Client\Model\Locale $locale locale
      *
      * @return $this
      */

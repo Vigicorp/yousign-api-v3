@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * Font Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,10 +56,10 @@ class Font implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'family' => '\Swagger\Client\Model\FontFamily',
+        'family' => '\Yousign\Client\Model\FontFamily',
         'color' => 'string',
         'size' => 'int',
-        'variants' => '\Swagger\Client\Model\FontVariants'
+        'variants' => '\Yousign\Client\Model\FontVariants'
     ];
 
     /**
@@ -234,7 +234,7 @@ class Font implements ModelInterface, ArrayAccess
     /**
      * Gets family
      *
-     * @return \Swagger\Client\Model\FontFamily
+     * @return \Yousign\Client\Model\FontFamily
      */
     public function getFamily()
     {
@@ -244,7 +244,7 @@ class Font implements ModelInterface, ArrayAccess
     /**
      * Sets family
      *
-     * @param \Swagger\Client\Model\FontFamily $family family
+     * @param \Yousign\Client\Model\FontFamily $family family
      *
      * @return $this
      */
@@ -306,7 +306,7 @@ class Font implements ModelInterface, ArrayAccess
     /**
      * Gets variants
      *
-     * @return \Swagger\Client\Model\FontVariants
+     * @return \Yousign\Client\Model\FontVariants
      */
     public function getVariants()
     {
@@ -316,7 +316,7 @@ class Font implements ModelInterface, ArrayAccess
     /**
      * Sets variants
      *
-     * @param \Swagger\Client\Model\FontVariants $variants variants
+     * @param \Yousign\Client\Model\FontVariants $variants variants
      *
      * @return $this
      */

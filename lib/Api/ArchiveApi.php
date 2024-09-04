@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Yousign\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Yousign\Client\ApiException;
+use Yousign\Client\Configuration;
+use Yousign\Client\HeaderSelector;
+use Yousign\Client\ObjectSerializer;
 
 /**
  * ArchiveApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,7 +93,7 @@ class ArchiveApi
      *
      * @param  string $archived_file_id ArchivedFileId (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -110,7 +110,7 @@ class ArchiveApi
      *
      * @param  string $archived_file_id ArchivedFileId (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -176,7 +176,7 @@ class ArchiveApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -184,7 +184,7 @@ class ArchiveApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -395,9 +395,9 @@ class ArchiveApi
      * @param  string[] $tags tags (optional)
      * @param  string $expired_at expired_at (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ArchivedFile
+     * @return \Yousign\Client\Model\ArchivedFile
      */
     public function postArchives($file = null, $workspace_id = null, $archive_y = null, $tags = null, $expired_at = null)
     {
@@ -416,13 +416,13 @@ class ArchiveApi
      * @param  string[] $tags (optional)
      * @param  string $expired_at (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ArchivedFile, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\ArchivedFile, HTTP status code, HTTP response headers (array of strings)
      */
     public function postArchivesWithHttpInfo($file = null, $workspace_id = null, $archive_y = null, $tags = null, $expired_at = null)
     {
-        $returnType = '\Swagger\Client\Model\ArchivedFile';
+        $returnType = '\Yousign\Client\Model\ArchivedFile';
         $request = $this->postArchivesRequest($file, $workspace_id, $archive_y, $tags, $expired_at);
 
         try {
@@ -474,7 +474,7 @@ class ArchiveApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ArchivedFile',
+                        '\Yousign\Client\Model\ArchivedFile',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -482,7 +482,7 @@ class ArchiveApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -490,7 +490,7 @@ class ArchiveApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -556,7 +556,7 @@ class ArchiveApi
      */
     public function postArchivesAsyncWithHttpInfo($file = null, $workspace_id = null, $archive_y = null, $tags = null, $expired_at = null)
     {
-        $returnType = '\Swagger\Client\Model\ArchivedFile';
+        $returnType = '\Yousign\Client\Model\ArchivedFile';
         $request = $this->postArchivesRequest($file, $workspace_id, $archive_y, $tags, $expired_at);
 
         return $this->client

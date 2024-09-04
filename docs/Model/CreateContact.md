@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **first_name** | **string** |  | 
 **last_name** | **string** |  | 
 **email** | **string** |  | 
-**locale** | [**\Swagger\Client\Model\Locale**](Locale.md) |  | 
+**locale** | [**\Yousign\Client\Model\Locale**](Locale.md) |  | 
 **phone_number** | **string** | E.164 format | [optional] 
 **company_name** | **string** | This property cannot start or end with whitespace, does not allow HTML tags, URL or email. | [optional] 
 **job_title** | **string** | This property cannot start or end with whitespace, does not allow HTML tags, URL or email. | [optional] 
@@ -18,4 +18,3 @@ Name | Type | Description | Notes
 **workspace_id** | **string** |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-

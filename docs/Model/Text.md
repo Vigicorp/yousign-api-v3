@@ -14,7 +14,6 @@ Name | Type | Description | Notes
 **question** | **string** |  | 
 **instruction** | **string** |  | [optional] 
 **optional** | **bool** |  | [optional] [default to false]
-**font** | [**\Swagger\Client\Model\CreateFieldFont**](CreateFieldFont.md) |  | [optional] 
+**font** | [**\Yousign\Client\Model\CreateFieldFont**](CreateFieldFont.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-

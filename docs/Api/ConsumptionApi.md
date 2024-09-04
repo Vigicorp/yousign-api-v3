@@ -1,4 +1,4 @@
-# Swagger\Client\ConsumptionApi
+# Yousign\Client\ConsumptionApi
 
 All URIs are relative to *https://api-sandbox.yousign.app/v3*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getConsumptionsExport**](ConsumptionApi.md#getconsumptionsexport) | **GET** /consumptions/export | Export Consumption data
 
 # **getConsumptions**
-> \Swagger\Client\Model\Consumption getConsumptions($from, $to, $authentication_key)
+> \Yousign\Client\Model\Consumption getConsumptions($from, $to, $authentication_key)
 
 Get Consumptions
 
@@ -19,18 +19,18 @@ Get signatures Consumption by source
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\ConsumptionApi(
+$apiInstance = new Yousign\Client\Api\ConsumptionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$from = new \Swagger\Client\Model\DateYMD(); // \Swagger\Client\Model\DateYMD | The \"from\" date must not be more than 1 year in the past
-$to = new \Swagger\Client\Model\DateYMD(); // \Swagger\Client\Model\DateYMD | The \"to\" date must be more recent than the \"from\" date
+$from = new \Yousign\Client\Model\DateYMD(); // \Yousign\Client\Model\DateYMD | The \"from\" date must not be more than 1 year in the past
+$to = new \Yousign\Client\Model\DateYMD(); // \Yousign\Client\Model\DateYMD | The \"to\" date must be more recent than the \"from\" date
 $authentication_key = "authentication_key_example"; // string | 
 
 try {
@@ -46,13 +46,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **from** | [**\Swagger\Client\Model\DateYMD**](../Model/.md)| The \&quot;from\&quot; date must not be more than 1 year in the past |
- **to** | [**\Swagger\Client\Model\DateYMD**](../Model/.md)| The \&quot;to\&quot; date must be more recent than the \&quot;from\&quot; date |
+ **from** | [**\Yousign\Client\Model\DateYMD**](../Model/.md)| The \&quot;from\&quot; date must not be more than 1 year in the past |
+ **to** | [**\Yousign\Client\Model\DateYMD**](../Model/.md)| The \&quot;to\&quot; date must be more recent than the \&quot;from\&quot; date |
  **authentication_key** | [**string**](../Model/.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\Consumption**](../Model/Consumption.md)
+[**\Yousign\Client\Model\Consumption**](../Model/Consumption.md)
 
 ### Authorization
 
@@ -77,18 +77,18 @@ Get a binary .csv file containing all the Consumption data of the underlying sig
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\ConsumptionApi(
+$apiInstance = new Yousign\Client\Api\ConsumptionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$from = new \Swagger\Client\Model\DateYMD(); // \Swagger\Client\Model\DateYMD | The \"from\" date must not be more than 1 year in the past
-$to = new \Swagger\Client\Model\DateYMD(); // \Swagger\Client\Model\DateYMD | The \"to\" date must be more recent than the \"from\" date
+$from = new \Yousign\Client\Model\DateYMD(); // \Yousign\Client\Model\DateYMD | The \"from\" date must not be more than 1 year in the past
+$to = new \Yousign\Client\Model\DateYMD(); // \Yousign\Client\Model\DateYMD | The \"to\" date must be more recent than the \"from\" date
 $authentication_key = "authentication_key_example"; // string | 
 
 try {
@@ -104,8 +104,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **from** | [**\Swagger\Client\Model\DateYMD**](../Model/.md)| The \&quot;from\&quot; date must not be more than 1 year in the past |
- **to** | [**\Swagger\Client\Model\DateYMD**](../Model/.md)| The \&quot;to\&quot; date must be more recent than the \&quot;from\&quot; date |
+ **from** | [**\Yousign\Client\Model\DateYMD**](../Model/.md)| The \&quot;from\&quot; date must not be more than 1 year in the past |
+ **to** | [**\Yousign\Client\Model\DateYMD**](../Model/.md)| The \&quot;to\&quot; date must be more recent than the \&quot;from\&quot; date |
  **authentication_key** | [**string**](../Model/.md)|  | [optional]
 
 ### Return type
@@ -122,4 +122,3 @@ Name | Type | Description  | Notes
  - **Accept**: text/csv, application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-

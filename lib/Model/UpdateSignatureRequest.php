@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * UpdateSignatureRequest Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class UpdateSignatureRequest implements ModelInterface, ArrayAccess
         'name' => 'string',
         'delivery_mode' => 'string',
         'ordered_signers' => 'bool',
-        'reminder_settings' => '\Swagger\Client\Model\UpdateSignatureRequestReminderSettings',
+        'reminder_settings' => '\Yousign\Client\Model\UpdateSignatureRequestReminderSettings',
         'timezone' => 'string',
         'email_custom_note' => 'string',
         'expiration_date' => '\DateTime',
@@ -69,7 +69,7 @@ class UpdateSignatureRequest implements ModelInterface, ArrayAccess
         'signers_allowed_to_decline' => 'bool',
         'workspace_id' => 'string',
         'audit_trail_locale' => 'AllOfUpdateSignatureRequestAuditTrailLocale',
-        'email_notification' => '\Swagger\Client\Model\SignatureRequestEmailNotification'
+        'email_notification' => '\Yousign\Client\Model\SignatureRequestEmailNotification'
     ];
 
     /**
@@ -385,7 +385,7 @@ class UpdateSignatureRequest implements ModelInterface, ArrayAccess
     /**
      * Gets reminder_settings
      *
-     * @return \Swagger\Client\Model\UpdateSignatureRequestReminderSettings
+     * @return \Yousign\Client\Model\UpdateSignatureRequestReminderSettings
      */
     public function getReminderSettings()
     {
@@ -395,7 +395,7 @@ class UpdateSignatureRequest implements ModelInterface, ArrayAccess
     /**
      * Sets reminder_settings
      *
-     * @param \Swagger\Client\Model\UpdateSignatureRequestReminderSettings $reminder_settings reminder_settings
+     * @param \Yousign\Client\Model\UpdateSignatureRequestReminderSettings $reminder_settings reminder_settings
      *
      * @return $this
      */
@@ -625,7 +625,7 @@ class UpdateSignatureRequest implements ModelInterface, ArrayAccess
     /**
      * Gets email_notification
      *
-     * @return \Swagger\Client\Model\SignatureRequestEmailNotification
+     * @return \Yousign\Client\Model\SignatureRequestEmailNotification
      */
     public function getEmailNotification()
     {
@@ -635,7 +635,7 @@ class UpdateSignatureRequest implements ModelInterface, ArrayAccess
     /**
      * Sets email_notification
      *
-     * @param \Swagger\Client\Model\SignatureRequestEmailNotification $email_notification email_notification
+     * @param \Yousign\Client\Model\SignatureRequestEmailNotification $email_notification email_notification
      *
      * @return $this
      */

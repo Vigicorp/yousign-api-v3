@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * WebhookSubscription Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,9 +60,9 @@ class WebhookSubscription implements ModelInterface, ArrayAccess
         'endpoint' => 'string',
         'description' => 'string',
         'sandbox' => 'bool',
-        'subscribed_events' => '\Swagger\Client\Model\WebhookSubscriptionSubscribedEvents',
+        'subscribed_events' => '\Yousign\Client\Model\WebhookSubscriptionSubscribedEvents',
         'secret_key' => 'string',
-        'scopes' => '\Swagger\Client\Model\WebhookSubscriptionScopes',
+        'scopes' => '\Yousign\Client\Model\WebhookSubscriptionScopes',
         'auto_retry' => 'bool',
         'enabled' => 'bool',
         'created_at' => '\DateTime',
@@ -393,7 +393,7 @@ class WebhookSubscription implements ModelInterface, ArrayAccess
     /**
      * Gets subscribed_events
      *
-     * @return \Swagger\Client\Model\WebhookSubscriptionSubscribedEvents
+     * @return \Yousign\Client\Model\WebhookSubscriptionSubscribedEvents
      */
     public function getSubscribedEvents()
     {
@@ -403,7 +403,7 @@ class WebhookSubscription implements ModelInterface, ArrayAccess
     /**
      * Sets subscribed_events
      *
-     * @param \Swagger\Client\Model\WebhookSubscriptionSubscribedEvents $subscribed_events subscribed_events
+     * @param \Yousign\Client\Model\WebhookSubscriptionSubscribedEvents $subscribed_events subscribed_events
      *
      * @return $this
      */
@@ -441,7 +441,7 @@ class WebhookSubscription implements ModelInterface, ArrayAccess
     /**
      * Gets scopes
      *
-     * @return \Swagger\Client\Model\WebhookSubscriptionScopes
+     * @return \Yousign\Client\Model\WebhookSubscriptionScopes
      */
     public function getScopes()
     {
@@ -451,7 +451,7 @@ class WebhookSubscription implements ModelInterface, ArrayAccess
     /**
      * Sets scopes
      *
-     * @param \Swagger\Client\Model\WebhookSubscriptionScopes $scopes scopes
+     * @param \Yousign\Client\Model\WebhookSubscriptionScopes $scopes scopes
      *
      * @return $this
      */

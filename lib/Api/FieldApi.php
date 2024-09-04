@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Yousign\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Yousign\Client\ApiException;
+use Yousign\Client\Configuration;
+use Yousign\Client\HeaderSelector;
+use Yousign\Client\ObjectSerializer;
 
 /**
  * FieldApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -95,7 +95,7 @@ class FieldApi
      * @param  string $document_id Document Id (required)
      * @param  string $field_id Field Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -113,7 +113,7 @@ class FieldApi
      * @param  string $document_id Document Id (required)
      * @param  string $field_id Field Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -157,7 +157,7 @@ class FieldApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -165,7 +165,7 @@ class FieldApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -396,9 +396,9 @@ class FieldApi
      * @param  string $after After cursor (pagination) (optional)
      * @param  int $limit The limit of items count to retrieve. (optional, default to 100)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200Response
+     * @return \Yousign\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200Response
      */
     public function getSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields($signature_request_id, $document_id, $types = null, $after = null, $limit = '100')
     {
@@ -417,13 +417,13 @@ class FieldApi
      * @param  string $after After cursor (pagination) (optional)
      * @param  int $limit The limit of items count to retrieve. (optional, default to 100)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSignatureRequestsSignatureRequestIdDocumentsDocumentIdFieldsWithHttpInfo($signature_request_id, $document_id, $types = null, $after = null, $limit = '100')
     {
-        $returnType = '\Swagger\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200Response';
+        $returnType = '\Yousign\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200Response';
         $request = $this->getSignatureRequestsSignatureRequestIdDocumentsDocumentIdFieldsRequest($signature_request_id, $document_id, $types, $after, $limit);
 
         try {
@@ -475,7 +475,7 @@ class FieldApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200Response',
+                        '\Yousign\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -483,7 +483,7 @@ class FieldApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -549,7 +549,7 @@ class FieldApi
      */
     public function getSignatureRequestsSignatureRequestIdDocumentsDocumentIdFieldsAsyncWithHttpInfo($signature_request_id, $document_id, $types = null, $after = null, $limit = '100')
     {
-        $returnType = '\Swagger\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200Response';
+        $returnType = '\Yousign\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200Response';
         $request = $this->getSignatureRequestsSignatureRequestIdDocumentsDocumentIdFieldsRequest($signature_request_id, $document_id, $types, $after, $limit);
 
         return $this->client
@@ -731,11 +731,11 @@ class FieldApi
      *
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $document_id Document ID (required)
-     * @param  \Swagger\Client\Model\CreateField $body body (optional)
+     * @param  \Yousign\Client\Model\CreateField $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner
+     * @return \Yousign\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner
      */
     public function postSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields($signature_request_id, $document_id, $body = null)
     {
@@ -750,15 +750,15 @@ class FieldApi
      *
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $document_id Document ID (required)
-     * @param  \Swagger\Client\Model\CreateField $body (optional)
+     * @param  \Yousign\Client\Model\CreateField $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner, HTTP status code, HTTP response headers (array of strings)
      */
     public function postSignatureRequestsSignatureRequestIdDocumentsDocumentIdFieldsWithHttpInfo($signature_request_id, $document_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner';
+        $returnType = '\Yousign\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner';
         $request = $this->postSignatureRequestsSignatureRequestIdDocumentsDocumentIdFieldsRequest($signature_request_id, $document_id, $body);
 
         try {
@@ -810,7 +810,7 @@ class FieldApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner',
+                        '\Yousign\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -818,7 +818,7 @@ class FieldApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -826,7 +826,7 @@ class FieldApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -850,7 +850,7 @@ class FieldApi
                 case 415:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -867,7 +867,7 @@ class FieldApi
      *
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $document_id Document ID (required)
-     * @param  \Swagger\Client\Model\CreateField $body (optional)
+     * @param  \Yousign\Client\Model\CreateField $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -889,14 +889,14 @@ class FieldApi
      *
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $document_id Document ID (required)
-     * @param  \Swagger\Client\Model\CreateField $body (optional)
+     * @param  \Yousign\Client\Model\CreateField $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function postSignatureRequestsSignatureRequestIdDocumentsDocumentIdFieldsAsyncWithHttpInfo($signature_request_id, $document_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner';
+        $returnType = '\Yousign\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner';
         $request = $this->postSignatureRequestsSignatureRequestIdDocumentsDocumentIdFieldsRequest($signature_request_id, $document_id, $body);
 
         return $this->client
@@ -941,7 +941,7 @@ class FieldApi
      *
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $document_id Document ID (required)
-     * @param  \Swagger\Client\Model\CreateField $body (optional)
+     * @param  \Yousign\Client\Model\CreateField $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1065,11 +1065,11 @@ class FieldApi
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $document_id Document Id (required)
      * @param  string $field_id Field Id (required)
-     * @param  \Swagger\Client\Model\UpdateField $body body (optional)
+     * @param  \Yousign\Client\Model\UpdateField $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner
+     * @return \Yousign\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner
      */
     public function updateSignatureRequestsSignatureRequestIdDocumentsDocumentIdFieldsFieldId($signature_request_id, $document_id, $field_id, $body = null)
     {
@@ -1085,15 +1085,15 @@ class FieldApi
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $document_id Document Id (required)
      * @param  string $field_id Field Id (required)
-     * @param  \Swagger\Client\Model\UpdateField $body (optional)
+     * @param  \Yousign\Client\Model\UpdateField $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateSignatureRequestsSignatureRequestIdDocumentsDocumentIdFieldsFieldIdWithHttpInfo($signature_request_id, $document_id, $field_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner';
+        $returnType = '\Yousign\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner';
         $request = $this->updateSignatureRequestsSignatureRequestIdDocumentsDocumentIdFieldsFieldIdRequest($signature_request_id, $document_id, $field_id, $body);
 
         try {
@@ -1145,7 +1145,7 @@ class FieldApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner',
+                        '\Yousign\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1153,7 +1153,7 @@ class FieldApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1161,7 +1161,7 @@ class FieldApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1195,7 +1195,7 @@ class FieldApi
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $document_id Document Id (required)
      * @param  string $field_id Field Id (required)
-     * @param  \Swagger\Client\Model\UpdateField $body (optional)
+     * @param  \Yousign\Client\Model\UpdateField $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1218,14 +1218,14 @@ class FieldApi
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $document_id Document Id (required)
      * @param  string $field_id Field Id (required)
-     * @param  \Swagger\Client\Model\UpdateField $body (optional)
+     * @param  \Yousign\Client\Model\UpdateField $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function updateSignatureRequestsSignatureRequestIdDocumentsDocumentIdFieldsFieldIdAsyncWithHttpInfo($signature_request_id, $document_id, $field_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner';
+        $returnType = '\Yousign\Client\Model\GetSignatureRequestsSignatureRequestIdDocumentsDocumentIdFields200ResponseDataInner';
         $request = $this->updateSignatureRequestsSignatureRequestIdDocumentsDocumentIdFieldsFieldIdRequest($signature_request_id, $document_id, $field_id, $body);
 
         return $this->client
@@ -1271,7 +1271,7 @@ class FieldApi
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $document_id Document Id (required)
      * @param  string $field_id Field Id (required)
-     * @param  \Swagger\Client\Model\UpdateField $body (optional)
+     * @param  \Yousign\Client\Model\UpdateField $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

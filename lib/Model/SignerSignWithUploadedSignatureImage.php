@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * SignerSignWithUploadedSignatureImage Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class SignerSignWithUploadedSignatureImage implements ModelInterface, ArrayAcces
       */
     protected static $swaggerTypes = [
         'otp' => 'string',
-        'ip_address' => '\Swagger\Client\Model\SignerSIPAddress',
+        'ip_address' => '\Yousign\Client\Model\SignerSIPAddress',
         'consent_given_at' => '\DateTime',
         'signature_image' => 'string'
     ];
@@ -255,7 +255,7 @@ class SignerSignWithUploadedSignatureImage implements ModelInterface, ArrayAcces
     /**
      * Gets ip_address
      *
-     * @return \Swagger\Client\Model\SignerSIPAddress
+     * @return \Yousign\Client\Model\SignerSIPAddress
      */
     public function getIpAddress()
     {
@@ -265,7 +265,7 @@ class SignerSignWithUploadedSignatureImage implements ModelInterface, ArrayAcces
     /**
      * Sets ip_address
      *
-     * @param \Swagger\Client\Model\SignerSIPAddress $ip_address ip_address
+     * @param \Yousign\Client\Model\SignerSIPAddress $ip_address ip_address
      *
      * @return $this
      */

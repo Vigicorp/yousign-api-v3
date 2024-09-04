@@ -1,4 +1,4 @@
-# Swagger\Client\CustomExperienceApi
+# Yousign\Client\CustomExperienceApi
 
 All URIs are relative to *https://api-sandbox.yousign.app/v3*
 
@@ -24,11 +24,11 @@ Deletes a given Custom Experience.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\CustomExperienceApi(
+$apiInstance = new Yousign\Client\Api\CustomExperienceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -77,11 +77,11 @@ Deletes the logo of a Custom Experience.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\CustomExperienceApi(
+$apiInstance = new Yousign\Client\Api\CustomExperienceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -119,7 +119,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCustomExperiences**
-> \Swagger\Client\Model\GetCustomExperiences200Response getCustomExperiences($after, $limit)
+> \Yousign\Client\Model\GetCustomExperiences200Response getCustomExperiences($after, $limit)
 
 List Custom Experiences
 
@@ -130,11 +130,11 @@ Returns the list of all Custom Experiences in your Organization. You can limit t
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\CustomExperienceApi(
+$apiInstance = new Yousign\Client\Api\CustomExperienceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\GetCustomExperiences200Response**](../Model/GetCustomExperiences200Response.md)
+[**\Yousign\Client\Model\GetCustomExperiences200Response**](../Model/GetCustomExperiences200Response.md)
 
 ### Authorization
 
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCustomExperiencesCustomExperienceId**
-> \Swagger\Client\Model\CustomExperience getCustomExperiencesCustomExperienceId($custom_experience_id)
+> \Yousign\Client\Model\CustomExperience getCustomExperiencesCustomExperienceId($custom_experience_id)
 
 Get a Custom Experience
 
@@ -186,11 +186,11 @@ Retrieves a given Custom Experience.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\CustomExperienceApi(
+$apiInstance = new Yousign\Client\Api\CustomExperienceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -215,7 +215,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\CustomExperience**](../Model/CustomExperience.md)
+[**\Yousign\Client\Model\CustomExperience**](../Model/CustomExperience.md)
 
 ### Authorization
 
@@ -229,7 +229,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **patchCustomExperienceLogo**
-> \Swagger\Client\Model\CustomExperience patchCustomExperienceLogo($custom_experience_id, $file)
+> \Yousign\Client\Model\CustomExperience patchCustomExperienceLogo($custom_experience_id, $file)
 
 Update a Custom Experience logo
 
@@ -240,11 +240,11 @@ Updates the logo of a given Custom Experience by uploading the image of your cho
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\CustomExperienceApi(
+$apiInstance = new Yousign\Client\Api\CustomExperienceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -271,7 +271,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\CustomExperience**](../Model/CustomExperience.md)
+[**\Yousign\Client\Model\CustomExperience**](../Model/CustomExperience.md)
 
 ### Authorization
 
@@ -285,7 +285,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **patchCustomExperiencesCustomExperienceId**
-> \Swagger\Client\Model\CustomExperience patchCustomExperiencesCustomExperienceId($custom_experience_id, $body)
+> \Yousign\Client\Model\CustomExperience patchCustomExperiencesCustomExperienceId($custom_experience_id, $body)
 
 Update a Custom Experience
 
@@ -296,18 +296,18 @@ Updates a given Custom Experience. Any parameters not provided are left unchange
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\CustomExperienceApi(
+$apiInstance = new Yousign\Client\Api\CustomExperienceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $custom_experience_id = "custom_experience_id_example"; // string | Custom Experience Id
-$body = new \Swagger\Client\Model\UpdateCustomExperience(); // \Swagger\Client\Model\UpdateCustomExperience | 
+$body = new \Yousign\Client\Model\UpdateCustomExperience(); // \Yousign\Client\Model\UpdateCustomExperience | 
 
 try {
     $result = $apiInstance->patchCustomExperiencesCustomExperienceId($custom_experience_id, $body);
@@ -323,11 +323,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **custom_experience_id** | [**string**](../Model/.md)| Custom Experience Id |
- **body** | [**\Swagger\Client\Model\UpdateCustomExperience**](../Model/UpdateCustomExperience.md)|  | [optional]
+ **body** | [**\Yousign\Client\Model\UpdateCustomExperience**](../Model/UpdateCustomExperience.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\CustomExperience**](../Model/CustomExperience.md)
+[**\Yousign\Client\Model\CustomExperience**](../Model/CustomExperience.md)
 
 ### Authorization
 
@@ -341,7 +341,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCustomExperience**
-> \Swagger\Client\Model\CustomExperience postCustomExperience($body)
+> \Yousign\Client\Model\CustomExperience postCustomExperience($body)
 
 Create a Custom Experience
 
@@ -352,17 +352,17 @@ Creates a new Custom Experience.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\CustomExperienceApi(
+$apiInstance = new Yousign\Client\Api\CustomExperienceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\CreateCustomExperience(); // \Swagger\Client\Model\CreateCustomExperience | 
+$body = new \Yousign\Client\Model\CreateCustomExperience(); // \Yousign\Client\Model\CreateCustomExperience | 
 
 try {
     $result = $apiInstance->postCustomExperience($body);
@@ -377,11 +377,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\CreateCustomExperience**](../Model/CreateCustomExperience.md)|  | [optional]
+ **body** | [**\Yousign\Client\Model\CreateCustomExperience**](../Model/CreateCustomExperience.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\CustomExperience**](../Model/CustomExperience.md)
+[**\Yousign\Client\Model\CustomExperience**](../Model/CustomExperience.md)
 
 ### Authorization
 
@@ -393,4 +393,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-

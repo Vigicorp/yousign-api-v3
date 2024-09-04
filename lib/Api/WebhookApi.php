@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Yousign\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Yousign\Client\ApiException;
+use Yousign\Client\Configuration;
+use Yousign\Client\HeaderSelector;
+use Yousign\Client\ObjectSerializer;
 
 /**
  * WebhookApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,7 +93,7 @@ class WebhookApi
      *
      * @param  string $webhook_id Webhook Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -109,7 +109,7 @@ class WebhookApi
      *
      * @param  string $webhook_id Webhook Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -153,7 +153,7 @@ class WebhookApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -161,7 +161,7 @@ class WebhookApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -353,9 +353,9 @@ class WebhookApi
      * List Webhook subscriptions
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\WebhookSubscription[]
+     * @return \Yousign\Client\Model\WebhookSubscription[]
      */
     public function getWebhooks()
     {
@@ -369,13 +369,13 @@ class WebhookApi
      * List Webhook subscriptions
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\WebhookSubscription[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\WebhookSubscription[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getWebhooksWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\WebhookSubscription[]';
+        $returnType = '\Yousign\Client\Model\WebhookSubscription[]';
         $request = $this->getWebhooksRequest();
 
         try {
@@ -427,7 +427,7 @@ class WebhookApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\WebhookSubscription[]',
+                        '\Yousign\Client\Model\WebhookSubscription[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -435,7 +435,7 @@ class WebhookApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -443,7 +443,7 @@ class WebhookApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -491,7 +491,7 @@ class WebhookApi
      */
     public function getWebhooksAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\WebhookSubscription[]';
+        $returnType = '\Yousign\Client\Model\WebhookSubscription[]';
         $request = $this->getWebhooksRequest();
 
         return $this->client
@@ -625,9 +625,9 @@ class WebhookApi
      *
      * @param  string $webhook_id Webhook Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\WebhookSubscription
+     * @return \Yousign\Client\Model\WebhookSubscription
      */
     public function getWebhooksWebhookId($webhook_id)
     {
@@ -642,13 +642,13 @@ class WebhookApi
      *
      * @param  string $webhook_id Webhook Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\WebhookSubscription, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\WebhookSubscription, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWebhooksWebhookIdWithHttpInfo($webhook_id)
     {
-        $returnType = '\Swagger\Client\Model\WebhookSubscription';
+        $returnType = '\Yousign\Client\Model\WebhookSubscription';
         $request = $this->getWebhooksWebhookIdRequest($webhook_id);
 
         try {
@@ -700,7 +700,7 @@ class WebhookApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\WebhookSubscription',
+                        '\Yousign\Client\Model\WebhookSubscription',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -708,7 +708,7 @@ class WebhookApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -716,7 +716,7 @@ class WebhookApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -774,7 +774,7 @@ class WebhookApi
      */
     public function getWebhooksWebhookIdAsyncWithHttpInfo($webhook_id)
     {
-        $returnType = '\Swagger\Client\Model\WebhookSubscription';
+        $returnType = '\Yousign\Client\Model\WebhookSubscription';
         $request = $this->getWebhooksWebhookIdRequest($webhook_id);
 
         return $this->client
@@ -922,11 +922,11 @@ class WebhookApi
      * Update a Webhook subscription
      *
      * @param  string $webhook_id Webhook Id (required)
-     * @param  \Swagger\Client\Model\UpdateWebhookSubscription $body body (optional)
+     * @param  \Yousign\Client\Model\UpdateWebhookSubscription $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\WebhookSubscription
+     * @return \Yousign\Client\Model\WebhookSubscription
      */
     public function patchWebhooksWebhookId($webhook_id, $body = null)
     {
@@ -940,15 +940,15 @@ class WebhookApi
      * Update a Webhook subscription
      *
      * @param  string $webhook_id Webhook Id (required)
-     * @param  \Swagger\Client\Model\UpdateWebhookSubscription $body (optional)
+     * @param  \Yousign\Client\Model\UpdateWebhookSubscription $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\WebhookSubscription, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\WebhookSubscription, HTTP status code, HTTP response headers (array of strings)
      */
     public function patchWebhooksWebhookIdWithHttpInfo($webhook_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\WebhookSubscription';
+        $returnType = '\Yousign\Client\Model\WebhookSubscription';
         $request = $this->patchWebhooksWebhookIdRequest($webhook_id, $body);
 
         try {
@@ -1000,7 +1000,7 @@ class WebhookApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\WebhookSubscription',
+                        '\Yousign\Client\Model\WebhookSubscription',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1008,7 +1008,7 @@ class WebhookApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1016,7 +1016,7 @@ class WebhookApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1048,7 +1048,7 @@ class WebhookApi
      * Update a Webhook subscription
      *
      * @param  string $webhook_id Webhook Id (required)
-     * @param  \Swagger\Client\Model\UpdateWebhookSubscription $body (optional)
+     * @param  \Yousign\Client\Model\UpdateWebhookSubscription $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1069,14 +1069,14 @@ class WebhookApi
      * Update a Webhook subscription
      *
      * @param  string $webhook_id Webhook Id (required)
-     * @param  \Swagger\Client\Model\UpdateWebhookSubscription $body (optional)
+     * @param  \Yousign\Client\Model\UpdateWebhookSubscription $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function patchWebhooksWebhookIdAsyncWithHttpInfo($webhook_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\WebhookSubscription';
+        $returnType = '\Yousign\Client\Model\WebhookSubscription';
         $request = $this->patchWebhooksWebhookIdRequest($webhook_id, $body);
 
         return $this->client
@@ -1120,7 +1120,7 @@ class WebhookApi
      * Create request for operation 'patchWebhooksWebhookId'
      *
      * @param  string $webhook_id Webhook Id (required)
-     * @param  \Swagger\Client\Model\UpdateWebhookSubscription $body (optional)
+     * @param  \Yousign\Client\Model\UpdateWebhookSubscription $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1227,11 +1227,11 @@ class WebhookApi
      *
      * Create a Webhook subscription
      *
-     * @param  \Swagger\Client\Model\CreateWebhookSubscription $body body (optional)
+     * @param  \Yousign\Client\Model\CreateWebhookSubscription $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\WebhookSubscription
+     * @return \Yousign\Client\Model\WebhookSubscription
      */
     public function postWebhooksSubscriptions($body = null)
     {
@@ -1244,15 +1244,15 @@ class WebhookApi
      *
      * Create a Webhook subscription
      *
-     * @param  \Swagger\Client\Model\CreateWebhookSubscription $body (optional)
+     * @param  \Yousign\Client\Model\CreateWebhookSubscription $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\WebhookSubscription, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\WebhookSubscription, HTTP status code, HTTP response headers (array of strings)
      */
     public function postWebhooksSubscriptionsWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\WebhookSubscription';
+        $returnType = '\Yousign\Client\Model\WebhookSubscription';
         $request = $this->postWebhooksSubscriptionsRequest($body);
 
         try {
@@ -1304,7 +1304,7 @@ class WebhookApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\WebhookSubscription',
+                        '\Yousign\Client\Model\WebhookSubscription',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1312,7 +1312,7 @@ class WebhookApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1320,7 +1320,7 @@ class WebhookApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1344,7 +1344,7 @@ class WebhookApi
                 case 415:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1359,7 +1359,7 @@ class WebhookApi
      *
      * Create a Webhook subscription
      *
-     * @param  \Swagger\Client\Model\CreateWebhookSubscription $body (optional)
+     * @param  \Yousign\Client\Model\CreateWebhookSubscription $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1379,14 +1379,14 @@ class WebhookApi
      *
      * Create a Webhook subscription
      *
-     * @param  \Swagger\Client\Model\CreateWebhookSubscription $body (optional)
+     * @param  \Yousign\Client\Model\CreateWebhookSubscription $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function postWebhooksSubscriptionsAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\WebhookSubscription';
+        $returnType = '\Yousign\Client\Model\WebhookSubscription';
         $request = $this->postWebhooksSubscriptionsRequest($body);
 
         return $this->client
@@ -1429,7 +1429,7 @@ class WebhookApi
     /**
      * Create request for operation 'postWebhooksSubscriptions'
      *
-     * @param  \Swagger\Client\Model\CreateWebhookSubscription $body (optional)
+     * @param  \Yousign\Client\Model\CreateWebhookSubscription $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

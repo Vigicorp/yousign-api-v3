@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * ReadOnlyText1 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -62,7 +62,7 @@ class ReadOnlyText1 implements ModelInterface, ArrayAccess
         'width' => 'int',
         'height' => 'int',
         'text' => 'string',
-        'font' => '\Swagger\Client\Model\UpdateFieldFont'
+        'font' => '\Yousign\Client\Model\UpdateFieldFont'
     ];
 
     /**
@@ -384,7 +384,7 @@ class ReadOnlyText1 implements ModelInterface, ArrayAccess
     /**
      * Gets font
      *
-     * @return \Swagger\Client\Model\UpdateFieldFont
+     * @return \Yousign\Client\Model\UpdateFieldFont
      */
     public function getFont()
     {
@@ -394,7 +394,7 @@ class ReadOnlyText1 implements ModelInterface, ArrayAccess
     /**
      * Sets font
      *
-     * @param \Swagger\Client\Model\UpdateFieldFont $font font
+     * @param \Yousign\Client\Model\UpdateFieldFont $font font
      *
      * @return $this
      */

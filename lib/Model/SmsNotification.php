@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * SmsNotification Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class SmsNotification implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'otp_message' => '\Swagger\Client\Model\OtpMessage'
+        'otp_message' => '\Yousign\Client\Model\OtpMessage'
     ];
 
     /**
@@ -207,7 +207,7 @@ class SmsNotification implements ModelInterface, ArrayAccess
     /**
      * Gets otp_message
      *
-     * @return \Swagger\Client\Model\OtpMessage
+     * @return \Yousign\Client\Model\OtpMessage
      */
     public function getOtpMessage()
     {
@@ -217,7 +217,7 @@ class SmsNotification implements ModelInterface, ArrayAccess
     /**
      * Sets otp_message
      *
-     * @param \Swagger\Client\Model\OtpMessage $otp_message otp_message
+     * @param \Yousign\Client\Model\OtpMessage $otp_message otp_message
      *
      * @return $this
      */

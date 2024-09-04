@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * FromExistingContact1 Class Doc Comment
  *
  * @category Class
  * @description Create a new signer from an existing contact
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,15 +58,15 @@ class FromExistingContact1 implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'contact_id' => 'string',
-        'fields' => '\Swagger\Client\Model\FieldsInput[]',
+        'fields' => '\Yousign\Client\Model\FieldsInput[]',
         'insert_after_id' => 'string',
         'signature_level' => 'string',
         'signature_authentication_mode' => 'string',
-        'redirect_urls' => '\Swagger\Client\Model\FromScratch1RedirectUrls',
-        'custom_text' => '\Swagger\Client\Model\FromScratch1CustomText',
-        'delivery_mode' => '\Swagger\Client\Model\SignerDeliveryMode',
+        'redirect_urls' => '\Yousign\Client\Model\FromScratch1RedirectUrls',
+        'custom_text' => '\Yousign\Client\Model\FromScratch1CustomText',
+        'delivery_mode' => '\Yousign\Client\Model\SignerDeliveryMode',
         'identification_attestation_id' => 'string',
-        'sms_notification' => '\Swagger\Client\Model\SmsNotification'
+        'sms_notification' => '\Yousign\Client\Model\SmsNotification'
     ];
 
     /**
@@ -341,7 +341,7 @@ class FromExistingContact1 implements ModelInterface, ArrayAccess
     /**
      * Gets fields
      *
-     * @return \Swagger\Client\Model\FieldsInput[]
+     * @return \Yousign\Client\Model\FieldsInput[]
      */
     public function getFields()
     {
@@ -351,7 +351,7 @@ class FromExistingContact1 implements ModelInterface, ArrayAccess
     /**
      * Sets fields
      *
-     * @param \Swagger\Client\Model\FieldsInput[] $fields fields
+     * @param \Yousign\Client\Model\FieldsInput[] $fields fields
      *
      * @return $this
      */
@@ -455,7 +455,7 @@ class FromExistingContact1 implements ModelInterface, ArrayAccess
     /**
      * Gets redirect_urls
      *
-     * @return \Swagger\Client\Model\FromScratch1RedirectUrls
+     * @return \Yousign\Client\Model\FromScratch1RedirectUrls
      */
     public function getRedirectUrls()
     {
@@ -465,7 +465,7 @@ class FromExistingContact1 implements ModelInterface, ArrayAccess
     /**
      * Sets redirect_urls
      *
-     * @param \Swagger\Client\Model\FromScratch1RedirectUrls $redirect_urls redirect_urls
+     * @param \Yousign\Client\Model\FromScratch1RedirectUrls $redirect_urls redirect_urls
      *
      * @return $this
      */
@@ -479,7 +479,7 @@ class FromExistingContact1 implements ModelInterface, ArrayAccess
     /**
      * Gets custom_text
      *
-     * @return \Swagger\Client\Model\FromScratch1CustomText
+     * @return \Yousign\Client\Model\FromScratch1CustomText
      */
     public function getCustomText()
     {
@@ -489,7 +489,7 @@ class FromExistingContact1 implements ModelInterface, ArrayAccess
     /**
      * Sets custom_text
      *
-     * @param \Swagger\Client\Model\FromScratch1CustomText $custom_text custom_text
+     * @param \Yousign\Client\Model\FromScratch1CustomText $custom_text custom_text
      *
      * @return $this
      */
@@ -503,7 +503,7 @@ class FromExistingContact1 implements ModelInterface, ArrayAccess
     /**
      * Gets delivery_mode
      *
-     * @return \Swagger\Client\Model\SignerDeliveryMode
+     * @return \Yousign\Client\Model\SignerDeliveryMode
      */
     public function getDeliveryMode()
     {
@@ -513,7 +513,7 @@ class FromExistingContact1 implements ModelInterface, ArrayAccess
     /**
      * Sets delivery_mode
      *
-     * @param \Swagger\Client\Model\SignerDeliveryMode $delivery_mode delivery_mode
+     * @param \Yousign\Client\Model\SignerDeliveryMode $delivery_mode delivery_mode
      *
      * @return $this
      */
@@ -551,7 +551,7 @@ class FromExistingContact1 implements ModelInterface, ArrayAccess
     /**
      * Gets sms_notification
      *
-     * @return \Swagger\Client\Model\SmsNotification
+     * @return \Yousign\Client\Model\SmsNotification
      */
     public function getSmsNotification()
     {
@@ -561,7 +561,7 @@ class FromExistingContact1 implements ModelInterface, ArrayAccess
     /**
      * Sets sms_notification
      *
-     * @param \Swagger\Client\Model\SmsNotification $sms_notification sms_notification
+     * @param \Yousign\Client\Model\SmsNotification $sms_notification sms_notification
      *
      * @return $this
      */

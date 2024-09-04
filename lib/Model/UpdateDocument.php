@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * UpdateDocument Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class UpdateDocument implements ModelInterface, ArrayAccess
         'nature' => 'string',
         'insert_after_id' => 'string',
         'password' => 'string',
-        'initials' => '\Swagger\Client\Model\InitialsArea'
+        'initials' => '\Yousign\Client\Model\InitialsArea'
     ];
 
     /**
@@ -325,7 +325,7 @@ class UpdateDocument implements ModelInterface, ArrayAccess
     /**
      * Gets initials
      *
-     * @return \Swagger\Client\Model\InitialsArea
+     * @return \Yousign\Client\Model\InitialsArea
      */
     public function getInitials()
     {
@@ -335,7 +335,7 @@ class UpdateDocument implements ModelInterface, ArrayAccess
     /**
      * Sets initials
      *
-     * @param \Swagger\Client\Model\InitialsArea $initials initials
+     * @param \Yousign\Client\Model\InitialsArea $initials initials
      *
      * @return $this
      */

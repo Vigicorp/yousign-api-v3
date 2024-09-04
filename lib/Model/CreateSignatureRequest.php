@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * CreateSignatureRequest Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class CreateSignatureRequest implements ModelInterface, ArrayAccess
         'name' => 'string',
         'delivery_mode' => 'string',
         'ordered_signers' => 'bool',
-        'reminder_settings' => '\Swagger\Client\Model\CreateSignatureRequestReminderSettings',
+        'reminder_settings' => '\Yousign\Client\Model\CreateSignatureRequestReminderSettings',
         'timezone' => 'string',
         'email_custom_note' => 'string',
         'expiration_date' => '\DateTime',
@@ -68,13 +68,13 @@ class CreateSignatureRequest implements ModelInterface, ArrayAccess
         'branding_id' => 'string',
         'custom_experience_id' => 'string',
         'documents' => 'string[]',
-        'signers' => '\Swagger\Client\Model\CreateSignatureRequestSignersInner[]',
+        'signers' => '\Yousign\Client\Model\CreateSignatureRequestSignersInner[]',
         'workspace_id' => 'string',
         'audit_trail_locale' => 'AllOfCreateSignatureRequestAuditTrailLocale',
         'signers_allowed_to_decline' => 'bool',
-        'email_notification' => '\Swagger\Client\Model\SignatureRequestEmailNotification',
-        'template_placeholders' => '\Swagger\Client\Model\CreateSignatureRequestTemplatePlaceholders',
-        'archiving' => '\Swagger\Client\Model\Archiving'
+        'email_notification' => '\Yousign\Client\Model\SignatureRequestEmailNotification',
+        'template_placeholders' => '\Yousign\Client\Model\CreateSignatureRequestTemplatePlaceholders',
+        'archiving' => '\Yousign\Client\Model\Archiving'
     ];
 
     /**
@@ -421,7 +421,7 @@ class CreateSignatureRequest implements ModelInterface, ArrayAccess
     /**
      * Gets reminder_settings
      *
-     * @return \Swagger\Client\Model\CreateSignatureRequestReminderSettings
+     * @return \Yousign\Client\Model\CreateSignatureRequestReminderSettings
      */
     public function getReminderSettings()
     {
@@ -431,7 +431,7 @@ class CreateSignatureRequest implements ModelInterface, ArrayAccess
     /**
      * Sets reminder_settings
      *
-     * @param \Swagger\Client\Model\CreateSignatureRequestReminderSettings $reminder_settings reminder_settings
+     * @param \Yousign\Client\Model\CreateSignatureRequestReminderSettings $reminder_settings reminder_settings
      *
      * @return $this
      */
@@ -637,7 +637,7 @@ class CreateSignatureRequest implements ModelInterface, ArrayAccess
     /**
      * Gets signers
      *
-     * @return \Swagger\Client\Model\CreateSignatureRequestSignersInner[]
+     * @return \Yousign\Client\Model\CreateSignatureRequestSignersInner[]
      */
     public function getSigners()
     {
@@ -647,7 +647,7 @@ class CreateSignatureRequest implements ModelInterface, ArrayAccess
     /**
      * Sets signers
      *
-     * @param \Swagger\Client\Model\CreateSignatureRequestSignersInner[] $signers Can only be used if you add documents at the same time.
+     * @param \Yousign\Client\Model\CreateSignatureRequestSignersInner[] $signers Can only be used if you add documents at the same time.
      *
      * @return $this
      */
@@ -733,7 +733,7 @@ class CreateSignatureRequest implements ModelInterface, ArrayAccess
     /**
      * Gets email_notification
      *
-     * @return \Swagger\Client\Model\SignatureRequestEmailNotification
+     * @return \Yousign\Client\Model\SignatureRequestEmailNotification
      */
     public function getEmailNotification()
     {
@@ -743,7 +743,7 @@ class CreateSignatureRequest implements ModelInterface, ArrayAccess
     /**
      * Sets email_notification
      *
-     * @param \Swagger\Client\Model\SignatureRequestEmailNotification $email_notification email_notification
+     * @param \Yousign\Client\Model\SignatureRequestEmailNotification $email_notification email_notification
      *
      * @return $this
      */
@@ -757,7 +757,7 @@ class CreateSignatureRequest implements ModelInterface, ArrayAccess
     /**
      * Gets template_placeholders
      *
-     * @return \Swagger\Client\Model\CreateSignatureRequestTemplatePlaceholders
+     * @return \Yousign\Client\Model\CreateSignatureRequestTemplatePlaceholders
      */
     public function getTemplatePlaceholders()
     {
@@ -767,7 +767,7 @@ class CreateSignatureRequest implements ModelInterface, ArrayAccess
     /**
      * Sets template_placeholders
      *
-     * @param \Swagger\Client\Model\CreateSignatureRequestTemplatePlaceholders $template_placeholders template_placeholders
+     * @param \Yousign\Client\Model\CreateSignatureRequestTemplatePlaceholders $template_placeholders template_placeholders
      *
      * @return $this
      */
@@ -781,7 +781,7 @@ class CreateSignatureRequest implements ModelInterface, ArrayAccess
     /**
      * Gets archiving
      *
-     * @return \Swagger\Client\Model\Archiving
+     * @return \Yousign\Client\Model\Archiving
      */
     public function getArchiving()
     {
@@ -791,7 +791,7 @@ class CreateSignatureRequest implements ModelInterface, ArrayAccess
     /**
      * Sets archiving
      *
-     * @param \Swagger\Client\Model\Archiving $archiving archiving
+     * @param \Yousign\Client\Model\Archiving $archiving archiving
      *
      * @return $this
      */

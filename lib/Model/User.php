@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * User Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -66,7 +66,7 @@ class User implements ModelInterface, ArrayAccess
         'job_title' => 'string',
         'is_active' => 'bool',
         'role' => 'string',
-        'workspaces' => '\Swagger\Client\Model\UserWorkspacesInner[]'
+        'workspaces' => '\Yousign\Client\Model\UserWorkspacesInner[]'
     ];
 
     /**
@@ -567,7 +567,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Gets workspaces
      *
-     * @return \Swagger\Client\Model\UserWorkspacesInner[]
+     * @return \Yousign\Client\Model\UserWorkspacesInner[]
      */
     public function getWorkspaces()
     {
@@ -577,7 +577,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Sets workspaces
      *
-     * @param \Swagger\Client\Model\UserWorkspacesInner[] $workspaces workspaces
+     * @param \Yousign\Client\Model\UserWorkspacesInner[] $workspaces workspaces
      *
      * @return $this
      */

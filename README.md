@@ -57,7 +57,7 @@ Please follow the [installation procedure](#installation--usage) and then run th
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Swagger\Client\Api\ApproverApi(
+$apiInstance = new Yousign\Client\Api\ApproverApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -73,7 +73,7 @@ try {
 }
 
 
-$apiInstance = new Swagger\Client\Api\ApproverApi(
+$apiInstance = new Yousign\Client\Api\ApproverApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -90,7 +90,7 @@ try {
 }
 
 
-$apiInstance = new Swagger\Client\Api\ApproverApi(
+$apiInstance = new Yousign\Client\Api\ApproverApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -98,7 +98,7 @@ $apiInstance = new Swagger\Client\Api\ApproverApi(
 );
 $signature_request_id = "signature_request_id_example"; // string | Signature Request Id
 $approver_id = "approver_id_example"; // string | Approver Id
-$body = new \Swagger\Client\Model\PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequest(); // \Swagger\Client\Model\PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequest | 
+$body = new \Yousign\Client\Model\PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequest(); // \Yousign\Client\Model\PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequest | 
 
 try {
     $result = $apiInstance->patchSignatureRequestsSignatureRequestIdApproversApproverId($signature_request_id, $approver_id, $body);
@@ -108,14 +108,14 @@ try {
 }
 
 
-$apiInstance = new Swagger\Client\Api\ApproverApi(
+$apiInstance = new Yousign\Client\Api\ApproverApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $signature_request_id = "signature_request_id_example"; // string | Signature Request Id
-$body = new \Swagger\Client\Model\PostSignatureRequestsSignatureRequestIdApproversRequest(); // \Swagger\Client\Model\PostSignatureRequestsSignatureRequestIdApproversRequest | An Approver object to be added to the Signature Request.
+$body = new \Yousign\Client\Model\PostSignatureRequestsSignatureRequestIdApproversRequest(); // \Yousign\Client\Model\PostSignatureRequestsSignatureRequestIdApproversRequest | An Approver object to be added to the Signature Request.
 
 try {
     $result = $apiInstance->postSignatureRequestsSignatureRequestIdApprovers($signature_request_id, $body);
@@ -125,7 +125,7 @@ try {
 }
 
 
-$apiInstance = new Swagger\Client\Api\ApproverApi(
+$apiInstance = new Yousign\Client\Api\ApproverApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -441,4 +441,3 @@ Class | Method | HTTP request | Description
 ## Author
 
 contact@yousign.com
-

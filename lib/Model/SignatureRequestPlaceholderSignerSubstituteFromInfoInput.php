@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * SignatureRequestPlaceholderSignerSubstituteFromInfoInput Class Doc Comment
  *
  * @category Class
  * @description Create a placeholder signer substitute from info
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,12 +58,12 @@ class SignatureRequestPlaceholderSignerSubstituteFromInfoInput implements ModelI
       */
     protected static $swaggerTypes = [
         'label' => 'string',
-        'info' => '\Swagger\Client\Model\SignatureRequestPlaceholderSignerSubstituteFromInfoInputInfo',
+        'info' => '\Yousign\Client\Model\SignatureRequestPlaceholderSignerSubstituteFromInfoInputInfo',
         'signature_level' => 'string',
         'signature_authentication_mode' => 'string',
-        'redirect_urls' => '\Swagger\Client\Model\FromScratch1RedirectUrls',
-        'custom_text' => '\Swagger\Client\Model\FromScratch1CustomText',
-        'delivery_mode' => '\Swagger\Client\Model\SignerDeliveryMode'
+        'redirect_urls' => '\Yousign\Client\Model\FromScratch1RedirectUrls',
+        'custom_text' => '\Yousign\Client\Model\FromScratch1CustomText',
+        'delivery_mode' => '\Yousign\Client\Model\SignerDeliveryMode'
     ];
 
     /**
@@ -325,7 +325,7 @@ class SignatureRequestPlaceholderSignerSubstituteFromInfoInput implements ModelI
     /**
      * Gets info
      *
-     * @return \Swagger\Client\Model\SignatureRequestPlaceholderSignerSubstituteFromInfoInputInfo
+     * @return \Yousign\Client\Model\SignatureRequestPlaceholderSignerSubstituteFromInfoInputInfo
      */
     public function getInfo()
     {
@@ -335,7 +335,7 @@ class SignatureRequestPlaceholderSignerSubstituteFromInfoInput implements ModelI
     /**
      * Sets info
      *
-     * @param \Swagger\Client\Model\SignatureRequestPlaceholderSignerSubstituteFromInfoInputInfo $info info
+     * @param \Yousign\Client\Model\SignatureRequestPlaceholderSignerSubstituteFromInfoInputInfo $info info
      *
      * @return $this
      */
@@ -415,7 +415,7 @@ class SignatureRequestPlaceholderSignerSubstituteFromInfoInput implements ModelI
     /**
      * Gets redirect_urls
      *
-     * @return \Swagger\Client\Model\FromScratch1RedirectUrls
+     * @return \Yousign\Client\Model\FromScratch1RedirectUrls
      */
     public function getRedirectUrls()
     {
@@ -425,7 +425,7 @@ class SignatureRequestPlaceholderSignerSubstituteFromInfoInput implements ModelI
     /**
      * Sets redirect_urls
      *
-     * @param \Swagger\Client\Model\FromScratch1RedirectUrls $redirect_urls redirect_urls
+     * @param \Yousign\Client\Model\FromScratch1RedirectUrls $redirect_urls redirect_urls
      *
      * @return $this
      */
@@ -439,7 +439,7 @@ class SignatureRequestPlaceholderSignerSubstituteFromInfoInput implements ModelI
     /**
      * Gets custom_text
      *
-     * @return \Swagger\Client\Model\FromScratch1CustomText
+     * @return \Yousign\Client\Model\FromScratch1CustomText
      */
     public function getCustomText()
     {
@@ -449,7 +449,7 @@ class SignatureRequestPlaceholderSignerSubstituteFromInfoInput implements ModelI
     /**
      * Sets custom_text
      *
-     * @param \Swagger\Client\Model\FromScratch1CustomText $custom_text custom_text
+     * @param \Yousign\Client\Model\FromScratch1CustomText $custom_text custom_text
      *
      * @return $this
      */
@@ -463,7 +463,7 @@ class SignatureRequestPlaceholderSignerSubstituteFromInfoInput implements ModelI
     /**
      * Gets delivery_mode
      *
-     * @return \Swagger\Client\Model\SignerDeliveryMode
+     * @return \Yousign\Client\Model\SignerDeliveryMode
      */
     public function getDeliveryMode()
     {
@@ -473,7 +473,7 @@ class SignatureRequestPlaceholderSignerSubstituteFromInfoInput implements ModelI
     /**
      * Sets delivery_mode
      *
-     * @param \Swagger\Client\Model\SignerDeliveryMode $delivery_mode delivery_mode
+     * @param \Yousign\Client\Model\SignerDeliveryMode $delivery_mode delivery_mode
      *
      * @return $this
      */

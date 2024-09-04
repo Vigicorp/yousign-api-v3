@@ -1,4 +1,4 @@
-# Swagger\Client\ArchiveApi
+# Yousign\Client\ArchiveApi
 
 All URIs are relative to *https://api-sandbox.yousign.app/v3*
 
@@ -19,11 +19,11 @@ Download the archived file using the ArchivedFileId.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\ArchiveApi(
+$apiInstance = new Yousign\Client\Api\ArchiveApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postArchives**
-> \Swagger\Client\Model\ArchivedFile postArchives($file, $workspace_id, $archive_y, $tags, $expired_at)
+> \Yousign\Client\Model\ArchivedFile postArchives($file, $workspace_id, $archive_y, $tags, $expired_at)
 
 Direct upload an archived file
 
@@ -73,11 +73,11 @@ Archive a file in a secure digital safe for 10 years
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\ArchiveApi(
+$apiInstance = new Yousign\Client\Api\ArchiveApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -110,7 +110,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ArchivedFile**](../Model/ArchivedFile.md)
+[**\Yousign\Client\Model\ArchivedFile**](../Model/ArchivedFile.md)
 
 ### Authorization
 
@@ -122,4 +122,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-

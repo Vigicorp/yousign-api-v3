@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * SignatureRequest Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,29 +57,29 @@ class SignatureRequest implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'string',
-        'status' => '\Swagger\Client\Model\SignatureRequestStatus',
+        'status' => '\Yousign\Client\Model\SignatureRequestStatus',
         'name' => 'string',
         'delivery_mode' => 'string',
         'created_at' => '\DateTime',
         'ordered_signers' => 'bool',
-        'reminder_settings' => '\Swagger\Client\Model\SignatureRequestInListReminderSettings',
+        'reminder_settings' => '\Yousign\Client\Model\SignatureRequestInListReminderSettings',
         'timezone' => 'string',
         'email_custom_note' => 'string',
         'expiration_date' => '\DateTime',
         'source' => 'string',
-        'signers' => '\Swagger\Client\Model\SignatureRequestInListSignersInner[]',
-        'approvers' => '\Swagger\Client\Model\SignatureRequestInListApproversInner[]',
-        'documents' => '\Swagger\Client\Model\SignatureRequestInListDocumentsInner[]',
-        'sender' => '\Swagger\Client\Model\SignatureRequestInListSender',
+        'signers' => '\Yousign\Client\Model\SignatureRequestInListSignersInner[]',
+        'approvers' => '\Yousign\Client\Model\SignatureRequestInListApproversInner[]',
+        'documents' => '\Yousign\Client\Model\SignatureRequestInListDocumentsInner[]',
+        'sender' => '\Yousign\Client\Model\SignatureRequestInListSender',
         'external_id' => 'string',
         'branding_id' => 'string',
         'custom_experience_id' => 'string',
         'signers_allowed_to_decline' => 'bool',
         'workspace_id' => 'string',
-        'audit_trail_locale' => '\Swagger\Client\Model\AuditTrailLocale',
-        'email_notification' => '\Swagger\Client\Model\SignatureRequestEmailNotification',
+        'audit_trail_locale' => '\Yousign\Client\Model\AuditTrailLocale',
+        'email_notification' => '\Yousign\Client\Model\SignatureRequestEmailNotification',
         'bulk_send_batch_id' => 'string',
-        'decline_information' => '\Swagger\Client\Model\SignatureRequestDeclineInformation'
+        'decline_information' => '\Yousign\Client\Model\SignatureRequestDeclineInformation'
     ];
 
     /**
@@ -481,7 +481,7 @@ class SignatureRequest implements ModelInterface, ArrayAccess
     /**
      * Gets status
      *
-     * @return \Swagger\Client\Model\SignatureRequestStatus
+     * @return \Yousign\Client\Model\SignatureRequestStatus
      */
     public function getStatus()
     {
@@ -491,7 +491,7 @@ class SignatureRequest implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param \Swagger\Client\Model\SignatureRequestStatus $status status
+     * @param \Yousign\Client\Model\SignatureRequestStatus $status status
      *
      * @return $this
      */
@@ -610,7 +610,7 @@ class SignatureRequest implements ModelInterface, ArrayAccess
     /**
      * Gets reminder_settings
      *
-     * @return \Swagger\Client\Model\SignatureRequestInListReminderSettings
+     * @return \Yousign\Client\Model\SignatureRequestInListReminderSettings
      */
     public function getReminderSettings()
     {
@@ -620,7 +620,7 @@ class SignatureRequest implements ModelInterface, ArrayAccess
     /**
      * Sets reminder_settings
      *
-     * @param \Swagger\Client\Model\SignatureRequestInListReminderSettings $reminder_settings reminder_settings
+     * @param \Yousign\Client\Model\SignatureRequestInListReminderSettings $reminder_settings reminder_settings
      *
      * @return $this
      */
@@ -739,7 +739,7 @@ class SignatureRequest implements ModelInterface, ArrayAccess
     /**
      * Gets signers
      *
-     * @return \Swagger\Client\Model\SignatureRequestInListSignersInner[]
+     * @return \Yousign\Client\Model\SignatureRequestInListSignersInner[]
      */
     public function getSigners()
     {
@@ -749,7 +749,7 @@ class SignatureRequest implements ModelInterface, ArrayAccess
     /**
      * Sets signers
      *
-     * @param \Swagger\Client\Model\SignatureRequestInListSignersInner[] $signers signers
+     * @param \Yousign\Client\Model\SignatureRequestInListSignersInner[] $signers signers
      *
      * @return $this
      */
@@ -763,7 +763,7 @@ class SignatureRequest implements ModelInterface, ArrayAccess
     /**
      * Gets approvers
      *
-     * @return \Swagger\Client\Model\SignatureRequestInListApproversInner[]
+     * @return \Yousign\Client\Model\SignatureRequestInListApproversInner[]
      */
     public function getApprovers()
     {
@@ -773,7 +773,7 @@ class SignatureRequest implements ModelInterface, ArrayAccess
     /**
      * Sets approvers
      *
-     * @param \Swagger\Client\Model\SignatureRequestInListApproversInner[] $approvers approvers
+     * @param \Yousign\Client\Model\SignatureRequestInListApproversInner[] $approvers approvers
      *
      * @return $this
      */
@@ -787,7 +787,7 @@ class SignatureRequest implements ModelInterface, ArrayAccess
     /**
      * Gets documents
      *
-     * @return \Swagger\Client\Model\SignatureRequestInListDocumentsInner[]
+     * @return \Yousign\Client\Model\SignatureRequestInListDocumentsInner[]
      */
     public function getDocuments()
     {
@@ -797,7 +797,7 @@ class SignatureRequest implements ModelInterface, ArrayAccess
     /**
      * Sets documents
      *
-     * @param \Swagger\Client\Model\SignatureRequestInListDocumentsInner[] $documents documents
+     * @param \Yousign\Client\Model\SignatureRequestInListDocumentsInner[] $documents documents
      *
      * @return $this
      */
@@ -811,7 +811,7 @@ class SignatureRequest implements ModelInterface, ArrayAccess
     /**
      * Gets sender
      *
-     * @return \Swagger\Client\Model\SignatureRequestInListSender
+     * @return \Yousign\Client\Model\SignatureRequestInListSender
      */
     public function getSender()
     {
@@ -821,7 +821,7 @@ class SignatureRequest implements ModelInterface, ArrayAccess
     /**
      * Sets sender
      *
-     * @param \Swagger\Client\Model\SignatureRequestInListSender $sender sender
+     * @param \Yousign\Client\Model\SignatureRequestInListSender $sender sender
      *
      * @return $this
      */
@@ -955,7 +955,7 @@ class SignatureRequest implements ModelInterface, ArrayAccess
     /**
      * Gets audit_trail_locale
      *
-     * @return \Swagger\Client\Model\AuditTrailLocale
+     * @return \Yousign\Client\Model\AuditTrailLocale
      */
     public function getAuditTrailLocale()
     {
@@ -965,7 +965,7 @@ class SignatureRequest implements ModelInterface, ArrayAccess
     /**
      * Sets audit_trail_locale
      *
-     * @param \Swagger\Client\Model\AuditTrailLocale $audit_trail_locale audit_trail_locale
+     * @param \Yousign\Client\Model\AuditTrailLocale $audit_trail_locale audit_trail_locale
      *
      * @return $this
      */
@@ -979,7 +979,7 @@ class SignatureRequest implements ModelInterface, ArrayAccess
     /**
      * Gets email_notification
      *
-     * @return \Swagger\Client\Model\SignatureRequestEmailNotification
+     * @return \Yousign\Client\Model\SignatureRequestEmailNotification
      */
     public function getEmailNotification()
     {
@@ -989,7 +989,7 @@ class SignatureRequest implements ModelInterface, ArrayAccess
     /**
      * Sets email_notification
      *
-     * @param \Swagger\Client\Model\SignatureRequestEmailNotification $email_notification email_notification
+     * @param \Yousign\Client\Model\SignatureRequestEmailNotification $email_notification email_notification
      *
      * @return $this
      */
@@ -1027,7 +1027,7 @@ class SignatureRequest implements ModelInterface, ArrayAccess
     /**
      * Gets decline_information
      *
-     * @return \Swagger\Client\Model\SignatureRequestDeclineInformation
+     * @return \Yousign\Client\Model\SignatureRequestDeclineInformation
      */
     public function getDeclineInformation()
     {
@@ -1037,7 +1037,7 @@ class SignatureRequest implements ModelInterface, ArrayAccess
     /**
      * Sets decline_information
      *
-     * @param \Swagger\Client\Model\SignatureRequestDeclineInformation $decline_information decline_information
+     * @param \Yousign\Client\Model\SignatureRequestDeclineInformation $decline_information decline_information
      *
      * @return $this
      */

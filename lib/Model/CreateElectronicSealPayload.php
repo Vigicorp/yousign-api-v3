@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * CreateElectronicSealPayload Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class CreateElectronicSealPayload implements ModelInterface, ArrayAccess
         'document_id' => 'string',
         'image_id' => 'string',
         'external_id' => 'string',
-        'fields' => '\Swagger\Client\Model\CreateElectronicSealPayloadFieldsInner[]',
+        'fields' => '\Yousign\Client\Model\CreateElectronicSealPayloadFieldsInner[]',
         'signature_level' => 'string',
         'certificate_id' => 'string'
     ];
@@ -334,7 +334,7 @@ class CreateElectronicSealPayload implements ModelInterface, ArrayAccess
     /**
      * Gets fields
      *
-     * @return \Swagger\Client\Model\CreateElectronicSealPayloadFieldsInner[]
+     * @return \Yousign\Client\Model\CreateElectronicSealPayloadFieldsInner[]
      */
     public function getFields()
     {
@@ -344,7 +344,7 @@ class CreateElectronicSealPayload implements ModelInterface, ArrayAccess
     /**
      * Sets fields
      *
-     * @param \Swagger\Client\Model\CreateElectronicSealPayloadFieldsInner[] $fields fields
+     * @param \Yousign\Client\Model\CreateElectronicSealPayloadFieldsInner[] $fields fields
      *
      * @return $this
      */

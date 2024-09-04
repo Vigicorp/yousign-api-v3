@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **advanced_electronic_signature_with_qualified_certificate** | **int** |  | 
 **electronic_seal** | **int** |  | [optional] 
 **advanced_electronic_seal** | **int** |  | [optional] 
-**qualified_electronic_signature_identification_mode** | [**\Swagger\Client\Model\ConsumptionAppQualifiedElectronicSignatureIdentificationMode**](ConsumptionAppQualifiedElectronicSignatureIdentificationMode.md) |  | 
+**qualified_electronic_signature_identification_mode** | [**\Yousign\Client\Model\ConsumptionAppQualifiedElectronicSignatureIdentificationMode**](ConsumptionAppQualifiedElectronicSignatureIdentificationMode.md) |  | 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-

@@ -1,4 +1,4 @@
-# Swagger\Client\AuditTrailApi
+# Yousign\Client\AuditTrailApi
 
 All URIs are relative to *https://api-sandbox.yousign.app/v3*
 
@@ -20,11 +20,11 @@ Download the PDF version of all the Audit Trails attached to a given Signature R
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\AuditTrailApi(
+$apiInstance = new Yousign\Client\Api\AuditTrailApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSignatureRequestsSignatureRequestIdSignersSignerIdAuditTrails**
-> \Swagger\Client\Model\SignerAuditTrail getSignatureRequestsSignatureRequestIdSignersSignerIdAuditTrails($signature_request_id, $signer_id)
+> \Yousign\Client\Model\SignerAuditTrail getSignatureRequestsSignatureRequestIdSignersSignerIdAuditTrails($signature_request_id, $signer_id)
 
 Get Signer Audit Trail
 
@@ -76,11 +76,11 @@ Retrieves the JSON version of the Audit Trail attached to a given Signer. Only p
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\AuditTrailApi(
+$apiInstance = new Yousign\Client\Api\AuditTrailApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SignerAuditTrail**](../Model/SignerAuditTrail.md)
+[**\Yousign\Client\Model\SignerAuditTrail**](../Model/SignerAuditTrail.md)
 
 ### Authorization
 
@@ -132,11 +132,11 @@ Download the PDF version of the Audit Trail attached to a given Signer. Only pos
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\AuditTrailApi(
+$apiInstance = new Yousign\Client\Api\AuditTrailApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -175,4 +175,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/pdf, application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-

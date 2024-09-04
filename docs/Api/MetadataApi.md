@@ -1,4 +1,4 @@
-# Swagger\Client\MetadataApi
+# Yousign\Client\MetadataApi
 
 All URIs are relative to *https://api-sandbox.yousign.app/v3*
 
@@ -21,11 +21,11 @@ Deletes the Metadata of a given Signature Request.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\MetadataApi(
+$apiInstance = new Yousign\Client\Api\MetadataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -63,7 +63,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSignatureRequestsSignatureRequestIdMetadata**
-> \Swagger\Client\Model\Metadata getSignatureRequestsSignatureRequestIdMetadata($signature_request_id)
+> \Yousign\Client\Model\Metadata getSignatureRequestsSignatureRequestIdMetadata($signature_request_id)
 
 Get the Signature Request Metadata
 
@@ -74,11 +74,11 @@ Retrieves the Metadata of a given Signature Request.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\MetadataApi(
+$apiInstance = new Yousign\Client\Api\MetadataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -103,7 +103,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Metadata**](../Model/Metadata.md)
+[**\Yousign\Client\Model\Metadata**](../Model/Metadata.md)
 
 ### Authorization
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postSignatureRequestsSignatureRequestIdMetadata**
-> \Swagger\Client\Model\Metadata postSignatureRequestsSignatureRequestIdMetadata($signature_request_id, $body)
+> \Yousign\Client\Model\Metadata postSignatureRequestsSignatureRequestIdMetadata($signature_request_id, $body)
 
 Attach Metadata to a Signature Request
 
@@ -128,18 +128,18 @@ Add Metadata to a given Signature Request.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\MetadataApi(
+$apiInstance = new Yousign\Client\Api\MetadataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $signature_request_id = "signature_request_id_example"; // string | Signature Request Id
-$body = new \Swagger\Client\Model\CreateSignatureRequestMetadata(); // \Swagger\Client\Model\CreateSignatureRequestMetadata | 
+$body = new \Yousign\Client\Model\CreateSignatureRequestMetadata(); // \Yousign\Client\Model\CreateSignatureRequestMetadata | 
 
 try {
     $result = $apiInstance->postSignatureRequestsSignatureRequestIdMetadata($signature_request_id, $body);
@@ -155,11 +155,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **signature_request_id** | [**string**](../Model/.md)| Signature Request Id |
- **body** | [**\Swagger\Client\Model\CreateSignatureRequestMetadata**](../Model/CreateSignatureRequestMetadata.md)|  | [optional]
+ **body** | [**\Yousign\Client\Model\CreateSignatureRequestMetadata**](../Model/CreateSignatureRequestMetadata.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\Metadata**](../Model/Metadata.md)
+[**\Yousign\Client\Model\Metadata**](../Model/Metadata.md)
 
 ### Authorization
 
@@ -173,7 +173,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **putSignatureRequestsSignatureRequestIdMetadata**
-> \Swagger\Client\Model\Metadata putSignatureRequestsSignatureRequestIdMetadata($signature_request_id, $body)
+> \Yousign\Client\Model\Metadata putSignatureRequestsSignatureRequestIdMetadata($signature_request_id, $body)
 
 Update Metadata of a Signature Request
 
@@ -184,18 +184,18 @@ Updates the Metadata of a given Signature Request. Any parameters not provided a
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\MetadataApi(
+$apiInstance = new Yousign\Client\Api\MetadataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $signature_request_id = "signature_request_id_example"; // string | Signature Request Id
-$body = new \Swagger\Client\Model\UpdateSignatureRequestMetadata(); // \Swagger\Client\Model\UpdateSignatureRequestMetadata | 
+$body = new \Yousign\Client\Model\UpdateSignatureRequestMetadata(); // \Yousign\Client\Model\UpdateSignatureRequestMetadata | 
 
 try {
     $result = $apiInstance->putSignatureRequestsSignatureRequestIdMetadata($signature_request_id, $body);
@@ -211,11 +211,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **signature_request_id** | [**string**](../Model/.md)| Signature Request Id |
- **body** | [**\Swagger\Client\Model\UpdateSignatureRequestMetadata**](../Model/UpdateSignatureRequestMetadata.md)|  | [optional]
+ **body** | [**\Yousign\Client\Model\UpdateSignatureRequestMetadata**](../Model/UpdateSignatureRequestMetadata.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\Metadata**](../Model/Metadata.md)
+[**\Yousign\Client\Model\Metadata**](../Model/Metadata.md)
 
 ### Authorization
 
@@ -227,4 +227,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-

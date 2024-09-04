@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Yousign\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Yousign\Client\ApiException;
+use Yousign\Client\Configuration;
+use Yousign\Client\HeaderSelector;
+use Yousign\Client\ObjectSerializer;
 
 /**
  * WorkspaceApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -92,9 +92,9 @@ class WorkspaceApi
      * Delete a Workspace
      *
      * @param  string $workspace_id Workspace Id (required)
-     * @param  \Swagger\Client\Model\DeleteWorkspace $body body (optional)
+     * @param  \Yousign\Client\Model\DeleteWorkspace $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -109,9 +109,9 @@ class WorkspaceApi
      * Delete a Workspace
      *
      * @param  string $workspace_id Workspace Id (required)
-     * @param  \Swagger\Client\Model\DeleteWorkspace $body (optional)
+     * @param  \Yousign\Client\Model\DeleteWorkspace $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -155,7 +155,7 @@ class WorkspaceApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -163,7 +163,7 @@ class WorkspaceApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -187,7 +187,7 @@ class WorkspaceApi
                 case 415:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -203,7 +203,7 @@ class WorkspaceApi
      * Delete a Workspace
      *
      * @param  string $workspace_id Workspace Id (required)
-     * @param  \Swagger\Client\Model\DeleteWorkspace $body (optional)
+     * @param  \Yousign\Client\Model\DeleteWorkspace $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -224,7 +224,7 @@ class WorkspaceApi
      * Delete a Workspace
      *
      * @param  string $workspace_id Workspace Id (required)
-     * @param  \Swagger\Client\Model\DeleteWorkspace $body (optional)
+     * @param  \Yousign\Client\Model\DeleteWorkspace $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -261,7 +261,7 @@ class WorkspaceApi
      * Create request for operation 'deleteWorkspace'
      *
      * @param  string $workspace_id Workspace Id (required)
-     * @param  \Swagger\Client\Model\DeleteWorkspace $body (optional)
+     * @param  \Yousign\Client\Model\DeleteWorkspace $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -371,9 +371,9 @@ class WorkspaceApi
      * @param  string $after After cursor (pagination) (optional)
      * @param  int $limit The limit of items count to retrieve. (optional, default to 10)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\GetWorkspaces200Response
+     * @return \Yousign\Client\Model\GetWorkspaces200Response
      */
     public function getWorkspaces($after = null, $limit = '10')
     {
@@ -389,13 +389,13 @@ class WorkspaceApi
      * @param  string $after After cursor (pagination) (optional)
      * @param  int $limit The limit of items count to retrieve. (optional, default to 10)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\GetWorkspaces200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\GetWorkspaces200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWorkspacesWithHttpInfo($after = null, $limit = '10')
     {
-        $returnType = '\Swagger\Client\Model\GetWorkspaces200Response';
+        $returnType = '\Yousign\Client\Model\GetWorkspaces200Response';
         $request = $this->getWorkspacesRequest($after, $limit);
 
         try {
@@ -447,7 +447,7 @@ class WorkspaceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\GetWorkspaces200Response',
+                        '\Yousign\Client\Model\GetWorkspaces200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -455,7 +455,7 @@ class WorkspaceApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -463,7 +463,7 @@ class WorkspaceApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -515,7 +515,7 @@ class WorkspaceApi
      */
     public function getWorkspacesAsyncWithHttpInfo($after = null, $limit = '10')
     {
-        $returnType = '\Swagger\Client\Model\GetWorkspaces200Response';
+        $returnType = '\Yousign\Client\Model\GetWorkspaces200Response';
         $request = $this->getWorkspacesRequest($after, $limit);
 
         return $this->client
@@ -658,9 +658,9 @@ class WorkspaceApi
      * Get the default Workspace
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Workspace
+     * @return \Yousign\Client\Model\Workspace
      */
     public function getWorkspacesDefault()
     {
@@ -674,13 +674,13 @@ class WorkspaceApi
      * Get the default Workspace
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Workspace, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\Workspace, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWorkspacesDefaultWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Workspace';
+        $returnType = '\Yousign\Client\Model\Workspace';
         $request = $this->getWorkspacesDefaultRequest();
 
         try {
@@ -732,7 +732,7 @@ class WorkspaceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Workspace',
+                        '\Yousign\Client\Model\Workspace',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -740,7 +740,7 @@ class WorkspaceApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -748,7 +748,7 @@ class WorkspaceApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -804,7 +804,7 @@ class WorkspaceApi
      */
     public function getWorkspacesDefaultAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Workspace';
+        $returnType = '\Yousign\Client\Model\Workspace';
         $request = $this->getWorkspacesDefaultRequest();
 
         return $this->client
@@ -938,9 +938,9 @@ class WorkspaceApi
      *
      * @param  string $workspace_id Workspace Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Workspace
+     * @return \Yousign\Client\Model\Workspace
      */
     public function getWorkspacesWorkspaceId($workspace_id)
     {
@@ -955,13 +955,13 @@ class WorkspaceApi
      *
      * @param  string $workspace_id Workspace Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Workspace, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\Workspace, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWorkspacesWorkspaceIdWithHttpInfo($workspace_id)
     {
-        $returnType = '\Swagger\Client\Model\Workspace';
+        $returnType = '\Yousign\Client\Model\Workspace';
         $request = $this->getWorkspacesWorkspaceIdRequest($workspace_id);
 
         try {
@@ -1013,7 +1013,7 @@ class WorkspaceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Workspace',
+                        '\Yousign\Client\Model\Workspace',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1021,7 +1021,7 @@ class WorkspaceApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1029,7 +1029,7 @@ class WorkspaceApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1087,7 +1087,7 @@ class WorkspaceApi
      */
     public function getWorkspacesWorkspaceIdAsyncWithHttpInfo($workspace_id)
     {
-        $returnType = '\Swagger\Client\Model\Workspace';
+        $returnType = '\Yousign\Client\Model\Workspace';
         $request = $this->getWorkspacesWorkspaceIdRequest($workspace_id);
 
         return $this->client
@@ -1234,9 +1234,9 @@ class WorkspaceApi
      *
      * Mark the given Workspace as default
      *
-     * @param  \Swagger\Client\Model\MarkWorkspaceAsDefault $body body (optional)
+     * @param  \Yousign\Client\Model\MarkWorkspaceAsDefault $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1250,9 +1250,9 @@ class WorkspaceApi
      *
      * Mark the given Workspace as default
      *
-     * @param  \Swagger\Client\Model\MarkWorkspaceAsDefault $body (optional)
+     * @param  \Yousign\Client\Model\MarkWorkspaceAsDefault $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1296,7 +1296,7 @@ class WorkspaceApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1304,7 +1304,7 @@ class WorkspaceApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1320,7 +1320,7 @@ class WorkspaceApi
                 case 415:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1335,7 +1335,7 @@ class WorkspaceApi
      *
      * Mark the given Workspace as default
      *
-     * @param  \Swagger\Client\Model\MarkWorkspaceAsDefault $body (optional)
+     * @param  \Yousign\Client\Model\MarkWorkspaceAsDefault $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1355,7 +1355,7 @@ class WorkspaceApi
      *
      * Mark the given Workspace as default
      *
-     * @param  \Swagger\Client\Model\MarkWorkspaceAsDefault $body (optional)
+     * @param  \Yousign\Client\Model\MarkWorkspaceAsDefault $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1391,7 +1391,7 @@ class WorkspaceApi
     /**
      * Create request for operation 'markWorkspaceAsDefault'
      *
-     * @param  \Swagger\Client\Model\MarkWorkspaceAsDefault $body (optional)
+     * @param  \Yousign\Client\Model\MarkWorkspaceAsDefault $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1485,11 +1485,11 @@ class WorkspaceApi
      * Update a Workspace
      *
      * @param  string $workspace_id Workspace Id (required)
-     * @param  \Swagger\Client\Model\UpdateWorkspace $body body (optional)
+     * @param  \Yousign\Client\Model\UpdateWorkspace $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Workspace
+     * @return \Yousign\Client\Model\Workspace
      */
     public function patchWorkspacesWorkspaceId($workspace_id, $body = null)
     {
@@ -1503,15 +1503,15 @@ class WorkspaceApi
      * Update a Workspace
      *
      * @param  string $workspace_id Workspace Id (required)
-     * @param  \Swagger\Client\Model\UpdateWorkspace $body (optional)
+     * @param  \Yousign\Client\Model\UpdateWorkspace $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Workspace, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\Workspace, HTTP status code, HTTP response headers (array of strings)
      */
     public function patchWorkspacesWorkspaceIdWithHttpInfo($workspace_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\Workspace';
+        $returnType = '\Yousign\Client\Model\Workspace';
         $request = $this->patchWorkspacesWorkspaceIdRequest($workspace_id, $body);
 
         try {
@@ -1563,7 +1563,7 @@ class WorkspaceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Workspace',
+                        '\Yousign\Client\Model\Workspace',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1571,7 +1571,7 @@ class WorkspaceApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1579,7 +1579,7 @@ class WorkspaceApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1603,7 +1603,7 @@ class WorkspaceApi
                 case 415:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1619,7 +1619,7 @@ class WorkspaceApi
      * Update a Workspace
      *
      * @param  string $workspace_id Workspace Id (required)
-     * @param  \Swagger\Client\Model\UpdateWorkspace $body (optional)
+     * @param  \Yousign\Client\Model\UpdateWorkspace $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1640,14 +1640,14 @@ class WorkspaceApi
      * Update a Workspace
      *
      * @param  string $workspace_id Workspace Id (required)
-     * @param  \Swagger\Client\Model\UpdateWorkspace $body (optional)
+     * @param  \Yousign\Client\Model\UpdateWorkspace $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function patchWorkspacesWorkspaceIdAsyncWithHttpInfo($workspace_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\Workspace';
+        $returnType = '\Yousign\Client\Model\Workspace';
         $request = $this->patchWorkspacesWorkspaceIdRequest($workspace_id, $body);
 
         return $this->client
@@ -1691,7 +1691,7 @@ class WorkspaceApi
      * Create request for operation 'patchWorkspacesWorkspaceId'
      *
      * @param  string $workspace_id Workspace Id (required)
-     * @param  \Swagger\Client\Model\UpdateWorkspace $body (optional)
+     * @param  \Yousign\Client\Model\UpdateWorkspace $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1798,11 +1798,11 @@ class WorkspaceApi
      *
      * Create a Workspace
      *
-     * @param  \Swagger\Client\Model\CreateWorkspace $body body (optional)
+     * @param  \Yousign\Client\Model\CreateWorkspace $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Workspace
+     * @return \Yousign\Client\Model\Workspace
      */
     public function postWorkspace($body = null)
     {
@@ -1815,15 +1815,15 @@ class WorkspaceApi
      *
      * Create a Workspace
      *
-     * @param  \Swagger\Client\Model\CreateWorkspace $body (optional)
+     * @param  \Yousign\Client\Model\CreateWorkspace $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Workspace, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\Workspace, HTTP status code, HTTP response headers (array of strings)
      */
     public function postWorkspaceWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\Workspace';
+        $returnType = '\Yousign\Client\Model\Workspace';
         $request = $this->postWorkspaceRequest($body);
 
         try {
@@ -1875,7 +1875,7 @@ class WorkspaceApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Workspace',
+                        '\Yousign\Client\Model\Workspace',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1883,7 +1883,7 @@ class WorkspaceApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1891,7 +1891,7 @@ class WorkspaceApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1915,7 +1915,7 @@ class WorkspaceApi
                 case 415:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1930,7 +1930,7 @@ class WorkspaceApi
      *
      * Create a Workspace
      *
-     * @param  \Swagger\Client\Model\CreateWorkspace $body (optional)
+     * @param  \Yousign\Client\Model\CreateWorkspace $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1950,14 +1950,14 @@ class WorkspaceApi
      *
      * Create a Workspace
      *
-     * @param  \Swagger\Client\Model\CreateWorkspace $body (optional)
+     * @param  \Yousign\Client\Model\CreateWorkspace $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function postWorkspaceAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\Workspace';
+        $returnType = '\Yousign\Client\Model\Workspace';
         $request = $this->postWorkspaceRequest($body);
 
         return $this->client
@@ -2000,7 +2000,7 @@ class WorkspaceApi
     /**
      * Create request for operation 'postWorkspace'
      *
-     * @param  \Swagger\Client\Model\CreateWorkspace $body (optional)
+     * @param  \Yousign\Client\Model\CreateWorkspace $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

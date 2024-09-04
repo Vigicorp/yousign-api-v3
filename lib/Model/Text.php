@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * Text Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -67,7 +67,7 @@ class Text implements ModelInterface, ArrayAccess
         'question' => 'string',
         'instruction' => 'string',
         'optional' => 'bool',
-        'font' => '\Swagger\Client\Model\CreateFieldFont'
+        'font' => '\Yousign\Client\Model\CreateFieldFont'
     ];
 
     /**
@@ -584,7 +584,7 @@ class Text implements ModelInterface, ArrayAccess
     /**
      * Gets font
      *
-     * @return \Swagger\Client\Model\CreateFieldFont
+     * @return \Yousign\Client\Model\CreateFieldFont
      */
     public function getFont()
     {
@@ -594,7 +594,7 @@ class Text implements ModelInterface, ArrayAccess
     /**
      * Sets font
      *
-     * @param \Swagger\Client\Model\CreateFieldFont $font font
+     * @param \Yousign\Client\Model\CreateFieldFont $font font
      *
      * @return $this
      */

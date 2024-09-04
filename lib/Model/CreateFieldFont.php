@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * CreateFieldFont Class Doc Comment
  *
  * @category Class
  * @description If set, **width** and **height** properties become required. Otherwise, if not set or null, the default font will be used.
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,10 +57,10 @@ class CreateFieldFont implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'family' => '\Swagger\Client\Model\FontFamily',
+        'family' => '\Yousign\Client\Model\FontFamily',
         'color' => 'string',
         'size' => 'int',
-        'variants' => '\Swagger\Client\Model\FontVariants'
+        'variants' => '\Yousign\Client\Model\FontVariants'
     ];
 
     /**
@@ -235,7 +235,7 @@ class CreateFieldFont implements ModelInterface, ArrayAccess
     /**
      * Gets family
      *
-     * @return \Swagger\Client\Model\FontFamily
+     * @return \Yousign\Client\Model\FontFamily
      */
     public function getFamily()
     {
@@ -245,7 +245,7 @@ class CreateFieldFont implements ModelInterface, ArrayAccess
     /**
      * Sets family
      *
-     * @param \Swagger\Client\Model\FontFamily $family family
+     * @param \Yousign\Client\Model\FontFamily $family family
      *
      * @return $this
      */
@@ -307,7 +307,7 @@ class CreateFieldFont implements ModelInterface, ArrayAccess
     /**
      * Gets variants
      *
-     * @return \Swagger\Client\Model\FontVariants
+     * @return \Yousign\Client\Model\FontVariants
      */
     public function getVariants()
     {
@@ -317,7 +317,7 @@ class CreateFieldFont implements ModelInterface, ArrayAccess
     /**
      * Sets variants
      *
-     * @param \Swagger\Client\Model\FontVariants $variants variants
+     * @param \Yousign\Client\Model\FontVariants $variants variants
      *
      * @return $this
      */

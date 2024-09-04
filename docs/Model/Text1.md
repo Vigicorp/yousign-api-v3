@@ -13,7 +13,6 @@ Name | Type | Description | Notes
 **question** | **string** |  | [optional] 
 **instruction** | **string** |  | [optional] 
 **optional** | **bool** |  | [optional] [default to false]
-**font** | [**\Swagger\Client\Model\UpdateFieldFont**](UpdateFieldFont.md) |  | [optional] 
+**font** | [**\Yousign\Client\Model\UpdateFieldFont**](UpdateFieldFont.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-

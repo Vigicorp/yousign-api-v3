@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Yousign\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Yousign\Client\ApiException;
+use Yousign\Client\Configuration;
+use Yousign\Client\HeaderSelector;
+use Yousign\Client\ObjectSerializer;
 
 /**
  * ElectronicSealApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,7 +93,7 @@ class ElectronicSealApi
      *
      * @param  string $electronic_seal_image_id electronic_seal_image_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -109,7 +109,7 @@ class ElectronicSealApi
      *
      * @param  string $electronic_seal_image_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -153,7 +153,7 @@ class ElectronicSealApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -346,7 +346,7 @@ class ElectronicSealApi
      *
      * @param  string $electronic_seal_id electronic_seal_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -363,7 +363,7 @@ class ElectronicSealApi
      *
      * @param  string $electronic_seal_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -429,7 +429,7 @@ class ElectronicSealApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -437,7 +437,7 @@ class ElectronicSealApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -644,7 +644,7 @@ class ElectronicSealApi
      *
      * @param  string $electronic_seal_document_id electronic_seal_document_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -661,7 +661,7 @@ class ElectronicSealApi
      *
      * @param  string $electronic_seal_document_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -727,7 +727,7 @@ class ElectronicSealApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -926,7 +926,7 @@ class ElectronicSealApi
      *
      * @param  string $electronic_seal_image_id electronic_seal_image_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -943,7 +943,7 @@ class ElectronicSealApi
      *
      * @param  string $electronic_seal_image_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1009,7 +1009,7 @@ class ElectronicSealApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1208,9 +1208,9 @@ class ElectronicSealApi
      *
      * @param  string $electronic_seal_id electronic_seal_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ElectronicSeal
+     * @return \Yousign\Client\Model\ElectronicSeal
      */
     public function getElectronicSeal($electronic_seal_id)
     {
@@ -1225,13 +1225,13 @@ class ElectronicSealApi
      *
      * @param  string $electronic_seal_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ElectronicSeal, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\ElectronicSeal, HTTP status code, HTTP response headers (array of strings)
      */
     public function getElectronicSealWithHttpInfo($electronic_seal_id)
     {
-        $returnType = '\Swagger\Client\Model\ElectronicSeal';
+        $returnType = '\Yousign\Client\Model\ElectronicSeal';
         $request = $this->getElectronicSealRequest($electronic_seal_id);
 
         try {
@@ -1283,7 +1283,7 @@ class ElectronicSealApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ElectronicSeal',
+                        '\Yousign\Client\Model\ElectronicSeal',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1291,7 +1291,7 @@ class ElectronicSealApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1341,7 +1341,7 @@ class ElectronicSealApi
      */
     public function getElectronicSealAsyncWithHttpInfo($electronic_seal_id)
     {
-        $returnType = '\Swagger\Client\Model\ElectronicSeal';
+        $returnType = '\Yousign\Client\Model\ElectronicSeal';
         $request = $this->getElectronicSealRequest($electronic_seal_id);
 
         return $this->client
@@ -1490,9 +1490,9 @@ class ElectronicSealApi
      *
      * @param  string $electronic_seal_id electronic_seal_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ElectronicSealAuditTrail
+     * @return \Yousign\Client\Model\ElectronicSealAuditTrail
      */
     public function getElectronicSealAuditTrail($electronic_seal_id)
     {
@@ -1507,13 +1507,13 @@ class ElectronicSealApi
      *
      * @param  string $electronic_seal_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ElectronicSealAuditTrail, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\ElectronicSealAuditTrail, HTTP status code, HTTP response headers (array of strings)
      */
     public function getElectronicSealAuditTrailWithHttpInfo($electronic_seal_id)
     {
-        $returnType = '\Swagger\Client\Model\ElectronicSealAuditTrail';
+        $returnType = '\Yousign\Client\Model\ElectronicSealAuditTrail';
         $request = $this->getElectronicSealAuditTrailRequest($electronic_seal_id);
 
         try {
@@ -1565,7 +1565,7 @@ class ElectronicSealApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ElectronicSealAuditTrail',
+                        '\Yousign\Client\Model\ElectronicSealAuditTrail',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1573,7 +1573,7 @@ class ElectronicSealApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1581,7 +1581,7 @@ class ElectronicSealApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1639,7 +1639,7 @@ class ElectronicSealApi
      */
     public function getElectronicSealAuditTrailAsyncWithHttpInfo($electronic_seal_id)
     {
-        $returnType = '\Swagger\Client\Model\ElectronicSealAuditTrail';
+        $returnType = '\Yousign\Client\Model\ElectronicSealAuditTrail';
         $request = $this->getElectronicSealAuditTrailRequest($electronic_seal_id);
 
         return $this->client
@@ -1789,9 +1789,9 @@ class ElectronicSealApi
      * @param  string $after After cursor (pagination) (optional)
      * @param  int $limit The limit of items count to retrieve. (optional, default to 100)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ListElectronicSealImages200Response
+     * @return \Yousign\Client\Model\ListElectronicSealImages200Response
      */
     public function listElectronicSealImages($after = null, $limit = '100')
     {
@@ -1807,13 +1807,13 @@ class ElectronicSealApi
      * @param  string $after After cursor (pagination) (optional)
      * @param  int $limit The limit of items count to retrieve. (optional, default to 100)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ListElectronicSealImages200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\ListElectronicSealImages200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function listElectronicSealImagesWithHttpInfo($after = null, $limit = '100')
     {
-        $returnType = '\Swagger\Client\Model\ListElectronicSealImages200Response';
+        $returnType = '\Yousign\Client\Model\ListElectronicSealImages200Response';
         $request = $this->listElectronicSealImagesRequest($after, $limit);
 
         try {
@@ -1865,7 +1865,7 @@ class ElectronicSealApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ListElectronicSealImages200Response',
+                        '\Yousign\Client\Model\ListElectronicSealImages200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1873,7 +1873,7 @@ class ElectronicSealApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1881,7 +1881,7 @@ class ElectronicSealApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1933,7 +1933,7 @@ class ElectronicSealApi
      */
     public function listElectronicSealImagesAsyncWithHttpInfo($after = null, $limit = '100')
     {
-        $returnType = '\Swagger\Client\Model\ListElectronicSealImages200Response';
+        $returnType = '\Yousign\Client\Model\ListElectronicSealImages200Response';
         $request = $this->listElectronicSealImagesRequest($after, $limit);
 
         return $this->client
@@ -2075,11 +2075,11 @@ class ElectronicSealApi
      *
      * Create an Electronic Seal
      *
-     * @param  \Swagger\Client\Model\CreateElectronicSealPayload $body body (optional)
+     * @param  \Yousign\Client\Model\CreateElectronicSealPayload $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ElectronicSeal
+     * @return \Yousign\Client\Model\ElectronicSeal
      */
     public function postElectronicSeals($body = null)
     {
@@ -2092,15 +2092,15 @@ class ElectronicSealApi
      *
      * Create an Electronic Seal
      *
-     * @param  \Swagger\Client\Model\CreateElectronicSealPayload $body (optional)
+     * @param  \Yousign\Client\Model\CreateElectronicSealPayload $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ElectronicSeal, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\ElectronicSeal, HTTP status code, HTTP response headers (array of strings)
      */
     public function postElectronicSealsWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\ElectronicSeal';
+        $returnType = '\Yousign\Client\Model\ElectronicSeal';
         $request = $this->postElectronicSealsRequest($body);
 
         try {
@@ -2152,7 +2152,7 @@ class ElectronicSealApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ElectronicSeal',
+                        '\Yousign\Client\Model\ElectronicSeal',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2160,7 +2160,7 @@ class ElectronicSealApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2168,7 +2168,7 @@ class ElectronicSealApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2184,7 +2184,7 @@ class ElectronicSealApi
                 case 415:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2199,7 +2199,7 @@ class ElectronicSealApi
      *
      * Create an Electronic Seal
      *
-     * @param  \Swagger\Client\Model\CreateElectronicSealPayload $body (optional)
+     * @param  \Yousign\Client\Model\CreateElectronicSealPayload $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2219,14 +2219,14 @@ class ElectronicSealApi
      *
      * Create an Electronic Seal
      *
-     * @param  \Swagger\Client\Model\CreateElectronicSealPayload $body (optional)
+     * @param  \Yousign\Client\Model\CreateElectronicSealPayload $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function postElectronicSealsAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\ElectronicSeal';
+        $returnType = '\Yousign\Client\Model\ElectronicSeal';
         $request = $this->postElectronicSealsRequest($body);
 
         return $this->client
@@ -2269,7 +2269,7 @@ class ElectronicSealApi
     /**
      * Create request for operation 'postElectronicSeals'
      *
-     * @param  \Swagger\Client\Model\CreateElectronicSealPayload $body (optional)
+     * @param  \Yousign\Client\Model\CreateElectronicSealPayload $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2365,9 +2365,9 @@ class ElectronicSealApi
      * @param  string $file file (optional)
      * @param  string $password password (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ElectronicSealDocument
+     * @return \Yousign\Client\Model\ElectronicSealDocument
      */
     public function uploadElectronicSealDocument($file = null, $password = null)
     {
@@ -2383,13 +2383,13 @@ class ElectronicSealApi
      * @param  string $file (optional)
      * @param  string $password (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ElectronicSealDocument, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\ElectronicSealDocument, HTTP status code, HTTP response headers (array of strings)
      */
     public function uploadElectronicSealDocumentWithHttpInfo($file = null, $password = null)
     {
-        $returnType = '\Swagger\Client\Model\ElectronicSealDocument';
+        $returnType = '\Yousign\Client\Model\ElectronicSealDocument';
         $request = $this->uploadElectronicSealDocumentRequest($file, $password);
 
         try {
@@ -2441,7 +2441,7 @@ class ElectronicSealApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ElectronicSealDocument',
+                        '\Yousign\Client\Model\ElectronicSealDocument',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2449,7 +2449,7 @@ class ElectronicSealApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2457,7 +2457,7 @@ class ElectronicSealApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2509,7 +2509,7 @@ class ElectronicSealApi
      */
     public function uploadElectronicSealDocumentAsyncWithHttpInfo($file = null, $password = null)
     {
-        $returnType = '\Swagger\Client\Model\ElectronicSealDocument';
+        $returnType = '\Yousign\Client\Model\ElectronicSealDocument';
         $request = $this->uploadElectronicSealDocumentRequest($file, $password);
 
         return $this->client
@@ -2655,9 +2655,9 @@ class ElectronicSealApi
      * @param  string $file file (optional)
      * @param  string $name name (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ElectronicSealImage
+     * @return \Yousign\Client\Model\ElectronicSealImage
      */
     public function uploadElectronicSealImage($file = null, $name = null)
     {
@@ -2673,13 +2673,13 @@ class ElectronicSealApi
      * @param  string $file (optional)
      * @param  string $name (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ElectronicSealImage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\ElectronicSealImage, HTTP status code, HTTP response headers (array of strings)
      */
     public function uploadElectronicSealImageWithHttpInfo($file = null, $name = null)
     {
-        $returnType = '\Swagger\Client\Model\ElectronicSealImage';
+        $returnType = '\Yousign\Client\Model\ElectronicSealImage';
         $request = $this->uploadElectronicSealImageRequest($file, $name);
 
         try {
@@ -2731,7 +2731,7 @@ class ElectronicSealApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ElectronicSealImage',
+                        '\Yousign\Client\Model\ElectronicSealImage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2739,7 +2739,7 @@ class ElectronicSealApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2747,7 +2747,7 @@ class ElectronicSealApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2799,7 +2799,7 @@ class ElectronicSealApi
      */
     public function uploadElectronicSealImageAsyncWithHttpInfo($file = null, $name = null)
     {
-        $returnType = '\Swagger\Client\Model\ElectronicSealImage';
+        $returnType = '\Yousign\Client\Model\ElectronicSealImage';
         $request = $this->uploadElectronicSealImageRequest($file, $name);
 
         return $this->client

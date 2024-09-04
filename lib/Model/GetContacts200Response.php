@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * GetContacts200Response Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,8 +56,8 @@ class GetContacts200Response implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'meta' => '\Swagger\Client\Model\Pagination',
-        'data' => '\Swagger\Client\Model\Contact[]'
+        'meta' => '\Yousign\Client\Model\Pagination',
+        'data' => '\Yousign\Client\Model\Contact[]'
     ];
 
     /**
@@ -210,7 +210,7 @@ class GetContacts200Response implements ModelInterface, ArrayAccess
     /**
      * Gets meta
      *
-     * @return \Swagger\Client\Model\Pagination
+     * @return \Yousign\Client\Model\Pagination
      */
     public function getMeta()
     {
@@ -220,7 +220,7 @@ class GetContacts200Response implements ModelInterface, ArrayAccess
     /**
      * Sets meta
      *
-     * @param \Swagger\Client\Model\Pagination $meta meta
+     * @param \Yousign\Client\Model\Pagination $meta meta
      *
      * @return $this
      */
@@ -234,7 +234,7 @@ class GetContacts200Response implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return \Swagger\Client\Model\Contact[]
+     * @return \Yousign\Client\Model\Contact[]
      */
     public function getData()
     {
@@ -244,7 +244,7 @@ class GetContacts200Response implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \Swagger\Client\Model\Contact[] $data data
+     * @param \Yousign\Client\Model\Contact[] $data data
      *
      * @return $this
      */

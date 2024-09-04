@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * CreateFollowersInner Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class CreateFollowersInner implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'email' => 'string',
-        'locale' => '\Swagger\Client\Model\Locale'
+        'locale' => '\Yousign\Client\Model\Locale'
     ];
 
     /**
@@ -240,7 +240,7 @@ class CreateFollowersInner implements ModelInterface, ArrayAccess
     /**
      * Gets locale
      *
-     * @return \Swagger\Client\Model\Locale
+     * @return \Yousign\Client\Model\Locale
      */
     public function getLocale()
     {
@@ -250,7 +250,7 @@ class CreateFollowersInner implements ModelInterface, ArrayAccess
     /**
      * Sets locale
      *
-     * @param \Swagger\Client\Model\Locale $locale locale
+     * @param \Yousign\Client\Model\Locale $locale locale
      *
      * @return $this
      */

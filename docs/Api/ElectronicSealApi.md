@@ -1,4 +1,4 @@
-# Swagger\Client\ElectronicSealApi
+# Yousign\Client\ElectronicSealApi
 
 All URIs are relative to *https://api-sandbox.yousign.app/v3*
 
@@ -25,11 +25,11 @@ Delete an Electronic Seal Image
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\ElectronicSealApi(
+$apiInstance = new Yousign\Client\Api\ElectronicSealApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -78,11 +78,11 @@ Electronic Seal Audit Trail is only available when the Electronic Seal is \"done
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\ElectronicSealApi(
+$apiInstance = new Yousign\Client\Api\ElectronicSealApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -130,11 +130,11 @@ Download an Electronic Seal Document
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\ElectronicSealApi(
+$apiInstance = new Yousign\Client\Api\ElectronicSealApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -182,11 +182,11 @@ Download an Electronic Seal Image
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\ElectronicSealApi(
+$apiInstance = new Yousign\Client\Api\ElectronicSealApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getElectronicSeal**
-> \Swagger\Client\Model\ElectronicSeal getElectronicSeal($electronic_seal_id)
+> \Yousign\Client\Model\ElectronicSeal getElectronicSeal($electronic_seal_id)
 
 Get an Electronic Seal
 
@@ -234,11 +234,11 @@ Get an Electronic Seal
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\ElectronicSealApi(
+$apiInstance = new Yousign\Client\Api\ElectronicSealApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ElectronicSeal**](../Model/ElectronicSeal.md)
+[**\Yousign\Client\Model\ElectronicSeal**](../Model/ElectronicSeal.md)
 
 ### Authorization
 
@@ -277,7 +277,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getElectronicSealAuditTrail**
-> \Swagger\Client\Model\ElectronicSealAuditTrail getElectronicSealAuditTrail($electronic_seal_id)
+> \Yousign\Client\Model\ElectronicSealAuditTrail getElectronicSealAuditTrail($electronic_seal_id)
 
 Get an Electronic Seal Audit Trail
 
@@ -288,11 +288,11 @@ Electronic Seal Audit Trail is only available when the Electronic Seal is \"done
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\ElectronicSealApi(
+$apiInstance = new Yousign\Client\Api\ElectronicSealApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -317,7 +317,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ElectronicSealAuditTrail**](../Model/ElectronicSealAuditTrail.md)
+[**\Yousign\Client\Model\ElectronicSealAuditTrail**](../Model/ElectronicSealAuditTrail.md)
 
 ### Authorization
 
@@ -331,7 +331,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listElectronicSealImages**
-> \Swagger\Client\Model\ListElectronicSealImages200Response listElectronicSealImages($after, $limit)
+> \Yousign\Client\Model\ListElectronicSealImages200Response listElectronicSealImages($after, $limit)
 
 List Electronic Seal Images
 
@@ -340,11 +340,11 @@ List Electronic Seal Images
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\ElectronicSealApi(
+$apiInstance = new Yousign\Client\Api\ElectronicSealApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -371,7 +371,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ListElectronicSealImages200Response**](../Model/ListElectronicSealImages200Response.md)
+[**\Yousign\Client\Model\ListElectronicSealImages200Response**](../Model/ListElectronicSealImages200Response.md)
 
 ### Authorization
 
@@ -385,7 +385,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postElectronicSeals**
-> \Swagger\Client\Model\ElectronicSeal postElectronicSeals($body)
+> \Yousign\Client\Model\ElectronicSeal postElectronicSeals($body)
 
 Create an Electronic Seal
 
@@ -394,17 +394,17 @@ Create an Electronic Seal
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\ElectronicSealApi(
+$apiInstance = new Yousign\Client\Api\ElectronicSealApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\CreateElectronicSealPayload(); // \Swagger\Client\Model\CreateElectronicSealPayload | 
+$body = new \Yousign\Client\Model\CreateElectronicSealPayload(); // \Yousign\Client\Model\CreateElectronicSealPayload | 
 
 try {
     $result = $apiInstance->postElectronicSeals($body);
@@ -419,11 +419,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\CreateElectronicSealPayload**](../Model/CreateElectronicSealPayload.md)|  | [optional]
+ **body** | [**\Yousign\Client\Model\CreateElectronicSealPayload**](../Model/CreateElectronicSealPayload.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\ElectronicSeal**](../Model/ElectronicSeal.md)
+[**\Yousign\Client\Model\ElectronicSeal**](../Model/ElectronicSeal.md)
 
 ### Authorization
 
@@ -437,7 +437,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **uploadElectronicSealDocument**
-> \Swagger\Client\Model\ElectronicSealDocument uploadElectronicSealDocument($file, $password)
+> \Yousign\Client\Model\ElectronicSealDocument uploadElectronicSealDocument($file, $password)
 
 Upload an Electronic Seal Document
 
@@ -448,11 +448,11 @@ Upload an Electronic Seal Document to use for creating an Electronic Seal (can b
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\ElectronicSealApi(
+$apiInstance = new Yousign\Client\Api\ElectronicSealApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -479,7 +479,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ElectronicSealDocument**](../Model/ElectronicSealDocument.md)
+[**\Yousign\Client\Model\ElectronicSealDocument**](../Model/ElectronicSealDocument.md)
 
 ### Authorization
 
@@ -493,7 +493,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **uploadElectronicSealImage**
-> \Swagger\Client\Model\ElectronicSealImage uploadElectronicSealImage($file, $name)
+> \Yousign\Client\Model\ElectronicSealImage uploadElectronicSealImage($file, $name)
 
 Upload an Electronic Seal Image
 
@@ -504,11 +504,11 @@ Upload an Electronic Seal Image to use for creating an Electronic Seal (can be u
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\ElectronicSealApi(
+$apiInstance = new Yousign\Client\Api\ElectronicSealApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -535,7 +535,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ElectronicSealImage**](../Model/ElectronicSealImage.md)
+[**\Yousign\Client\Model\ElectronicSealImage**](../Model/ElectronicSealImage.md)
 
 ### Authorization
 
@@ -547,4 +547,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Yousign\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Yousign\Client\ApiException;
+use Yousign\Client\Configuration;
+use Yousign\Client\HeaderSelector;
+use Yousign\Client\ObjectSerializer;
 
 /**
  * ConsumptionApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -91,13 +91,13 @@ class ConsumptionApi
      *
      * Get Consumptions
      *
-     * @param  \Swagger\Client\Model\DateYMD $from The \&quot;from\&quot; date must not be more than 1 year in the past (required)
-     * @param  \Swagger\Client\Model\DateYMD $to The \&quot;to\&quot; date must be more recent than the \&quot;from\&quot; date (required)
+     * @param  \Yousign\Client\Model\DateYMD $from The \&quot;from\&quot; date must not be more than 1 year in the past (required)
+     * @param  \Yousign\Client\Model\DateYMD $to The \&quot;to\&quot; date must be more recent than the \&quot;from\&quot; date (required)
      * @param  string $authentication_key authentication_key (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Consumption
+     * @return \Yousign\Client\Model\Consumption
      */
     public function getConsumptions($from, $to, $authentication_key = null)
     {
@@ -110,17 +110,17 @@ class ConsumptionApi
      *
      * Get Consumptions
      *
-     * @param  \Swagger\Client\Model\DateYMD $from The \&quot;from\&quot; date must not be more than 1 year in the past (required)
-     * @param  \Swagger\Client\Model\DateYMD $to The \&quot;to\&quot; date must be more recent than the \&quot;from\&quot; date (required)
+     * @param  \Yousign\Client\Model\DateYMD $from The \&quot;from\&quot; date must not be more than 1 year in the past (required)
+     * @param  \Yousign\Client\Model\DateYMD $to The \&quot;to\&quot; date must be more recent than the \&quot;from\&quot; date (required)
      * @param  string $authentication_key (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Consumption, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\Consumption, HTTP status code, HTTP response headers (array of strings)
      */
     public function getConsumptionsWithHttpInfo($from, $to, $authentication_key = null)
     {
-        $returnType = '\Swagger\Client\Model\Consumption';
+        $returnType = '\Yousign\Client\Model\Consumption';
         $request = $this->getConsumptionsRequest($from, $to, $authentication_key);
 
         try {
@@ -172,7 +172,7 @@ class ConsumptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Consumption',
+                        '\Yousign\Client\Model\Consumption',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -180,7 +180,7 @@ class ConsumptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -188,7 +188,7 @@ class ConsumptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -219,8 +219,8 @@ class ConsumptionApi
      *
      * Get Consumptions
      *
-     * @param  \Swagger\Client\Model\DateYMD $from The \&quot;from\&quot; date must not be more than 1 year in the past (required)
-     * @param  \Swagger\Client\Model\DateYMD $to The \&quot;to\&quot; date must be more recent than the \&quot;from\&quot; date (required)
+     * @param  \Yousign\Client\Model\DateYMD $from The \&quot;from\&quot; date must not be more than 1 year in the past (required)
+     * @param  \Yousign\Client\Model\DateYMD $to The \&quot;to\&quot; date must be more recent than the \&quot;from\&quot; date (required)
      * @param  string $authentication_key (optional)
      *
      * @throws \InvalidArgumentException
@@ -241,8 +241,8 @@ class ConsumptionApi
      *
      * Get Consumptions
      *
-     * @param  \Swagger\Client\Model\DateYMD $from The \&quot;from\&quot; date must not be more than 1 year in the past (required)
-     * @param  \Swagger\Client\Model\DateYMD $to The \&quot;to\&quot; date must be more recent than the \&quot;from\&quot; date (required)
+     * @param  \Yousign\Client\Model\DateYMD $from The \&quot;from\&quot; date must not be more than 1 year in the past (required)
+     * @param  \Yousign\Client\Model\DateYMD $to The \&quot;to\&quot; date must be more recent than the \&quot;from\&quot; date (required)
      * @param  string $authentication_key (optional)
      *
      * @throws \InvalidArgumentException
@@ -250,7 +250,7 @@ class ConsumptionApi
      */
     public function getConsumptionsAsyncWithHttpInfo($from, $to, $authentication_key = null)
     {
-        $returnType = '\Swagger\Client\Model\Consumption';
+        $returnType = '\Yousign\Client\Model\Consumption';
         $request = $this->getConsumptionsRequest($from, $to, $authentication_key);
 
         return $this->client
@@ -293,8 +293,8 @@ class ConsumptionApi
     /**
      * Create request for operation 'getConsumptions'
      *
-     * @param  \Swagger\Client\Model\DateYMD $from The \&quot;from\&quot; date must not be more than 1 year in the past (required)
-     * @param  \Swagger\Client\Model\DateYMD $to The \&quot;to\&quot; date must be more recent than the \&quot;from\&quot; date (required)
+     * @param  \Yousign\Client\Model\DateYMD $from The \&quot;from\&quot; date must not be more than 1 year in the past (required)
+     * @param  \Yousign\Client\Model\DateYMD $to The \&quot;to\&quot; date must be more recent than the \&quot;from\&quot; date (required)
      * @param  string $authentication_key (optional)
      *
      * @throws \InvalidArgumentException
@@ -409,11 +409,11 @@ class ConsumptionApi
      *
      * Export Consumption data
      *
-     * @param  \Swagger\Client\Model\DateYMD $from The \&quot;from\&quot; date must not be more than 1 year in the past (required)
-     * @param  \Swagger\Client\Model\DateYMD $to The \&quot;to\&quot; date must be more recent than the \&quot;from\&quot; date (required)
+     * @param  \Yousign\Client\Model\DateYMD $from The \&quot;from\&quot; date must not be more than 1 year in the past (required)
+     * @param  \Yousign\Client\Model\DateYMD $to The \&quot;to\&quot; date must be more recent than the \&quot;from\&quot; date (required)
      * @param  string $authentication_key authentication_key (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -428,11 +428,11 @@ class ConsumptionApi
      *
      * Export Consumption data
      *
-     * @param  \Swagger\Client\Model\DateYMD $from The \&quot;from\&quot; date must not be more than 1 year in the past (required)
-     * @param  \Swagger\Client\Model\DateYMD $to The \&quot;to\&quot; date must be more recent than the \&quot;from\&quot; date (required)
+     * @param  \Yousign\Client\Model\DateYMD $from The \&quot;from\&quot; date must not be more than 1 year in the past (required)
+     * @param  \Yousign\Client\Model\DateYMD $to The \&quot;to\&quot; date must be more recent than the \&quot;from\&quot; date (required)
      * @param  string $authentication_key (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -498,7 +498,7 @@ class ConsumptionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -506,7 +506,7 @@ class ConsumptionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -537,8 +537,8 @@ class ConsumptionApi
      *
      * Export Consumption data
      *
-     * @param  \Swagger\Client\Model\DateYMD $from The \&quot;from\&quot; date must not be more than 1 year in the past (required)
-     * @param  \Swagger\Client\Model\DateYMD $to The \&quot;to\&quot; date must be more recent than the \&quot;from\&quot; date (required)
+     * @param  \Yousign\Client\Model\DateYMD $from The \&quot;from\&quot; date must not be more than 1 year in the past (required)
+     * @param  \Yousign\Client\Model\DateYMD $to The \&quot;to\&quot; date must be more recent than the \&quot;from\&quot; date (required)
      * @param  string $authentication_key (optional)
      *
      * @throws \InvalidArgumentException
@@ -559,8 +559,8 @@ class ConsumptionApi
      *
      * Export Consumption data
      *
-     * @param  \Swagger\Client\Model\DateYMD $from The \&quot;from\&quot; date must not be more than 1 year in the past (required)
-     * @param  \Swagger\Client\Model\DateYMD $to The \&quot;to\&quot; date must be more recent than the \&quot;from\&quot; date (required)
+     * @param  \Yousign\Client\Model\DateYMD $from The \&quot;from\&quot; date must not be more than 1 year in the past (required)
+     * @param  \Yousign\Client\Model\DateYMD $to The \&quot;to\&quot; date must be more recent than the \&quot;from\&quot; date (required)
      * @param  string $authentication_key (optional)
      *
      * @throws \InvalidArgumentException
@@ -611,8 +611,8 @@ class ConsumptionApi
     /**
      * Create request for operation 'getConsumptionsExport'
      *
-     * @param  \Swagger\Client\Model\DateYMD $from The \&quot;from\&quot; date must not be more than 1 year in the past (required)
-     * @param  \Swagger\Client\Model\DateYMD $to The \&quot;to\&quot; date must be more recent than the \&quot;from\&quot; date (required)
+     * @param  \Yousign\Client\Model\DateYMD $from The \&quot;from\&quot; date must not be more than 1 year in the past (required)
+     * @param  \Yousign\Client\Model\DateYMD $to The \&quot;to\&quot; date must be more recent than the \&quot;from\&quot; date (required)
      * @param  string $authentication_key (optional)
      *
      * @throws \InvalidArgumentException

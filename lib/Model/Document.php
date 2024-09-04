@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * Document Class Doc Comment
  *
  * @category Class
  * @description Document to attach to a Signature Request
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -67,7 +67,7 @@ class Document implements ModelInterface, ArrayAccess
         'created_at' => '\DateTime',
         'total_pages' => 'int',
         'is_locked' => 'bool',
-        'initials' => '\Swagger\Client\Model\DocumentInitials',
+        'initials' => '\Yousign\Client\Model\DocumentInitials',
         'total_anchors' => 'int'
     ];
 
@@ -578,7 +578,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Gets initials
      *
-     * @return \Swagger\Client\Model\DocumentInitials
+     * @return \Yousign\Client\Model\DocumentInitials
      */
     public function getInitials()
     {
@@ -588,7 +588,7 @@ class Document implements ModelInterface, ArrayAccess
     /**
      * Sets initials
      *
-     * @param \Swagger\Client\Model\DocumentInitials $initials initials
+     * @param \Yousign\Client\Model\DocumentInitials $initials initials
      *
      * @return $this
      */

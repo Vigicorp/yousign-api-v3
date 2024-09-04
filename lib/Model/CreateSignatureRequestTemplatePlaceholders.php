@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * CreateSignatureRequestTemplatePlaceholders Class Doc Comment
  *
  * @category Class
  * @description When creating a signature request from a template, all substituting data for placeholders defined in the given template.
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,8 +57,8 @@ class CreateSignatureRequestTemplatePlaceholders implements ModelInterface, Arra
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'signers' => '\Swagger\Client\Model\CreateSignatureRequestTemplatePlaceholdersSignersInner[]',
-        'read_only_text_fields' => '\Swagger\Client\Model\SignatureRequestPlaceholderReadOnlyTextFieldSubstituteInput[]'
+        'signers' => '\Yousign\Client\Model\CreateSignatureRequestTemplatePlaceholdersSignersInner[]',
+        'read_only_text_fields' => '\Yousign\Client\Model\SignatureRequestPlaceholderReadOnlyTextFieldSubstituteInput[]'
     ];
 
     /**
@@ -211,7 +211,7 @@ class CreateSignatureRequestTemplatePlaceholders implements ModelInterface, Arra
     /**
      * Gets signers
      *
-     * @return \Swagger\Client\Model\CreateSignatureRequestTemplatePlaceholdersSignersInner[]
+     * @return \Yousign\Client\Model\CreateSignatureRequestTemplatePlaceholdersSignersInner[]
      */
     public function getSigners()
     {
@@ -221,7 +221,7 @@ class CreateSignatureRequestTemplatePlaceholders implements ModelInterface, Arra
     /**
      * Sets signers
      *
-     * @param \Swagger\Client\Model\CreateSignatureRequestTemplatePlaceholdersSignersInner[] $signers Substituting data for placeholder signers.
+     * @param \Yousign\Client\Model\CreateSignatureRequestTemplatePlaceholdersSignersInner[] $signers Substituting data for placeholder signers.
      *
      * @return $this
      */
@@ -235,7 +235,7 @@ class CreateSignatureRequestTemplatePlaceholders implements ModelInterface, Arra
     /**
      * Gets read_only_text_fields
      *
-     * @return \Swagger\Client\Model\SignatureRequestPlaceholderReadOnlyTextFieldSubstituteInput[]
+     * @return \Yousign\Client\Model\SignatureRequestPlaceholderReadOnlyTextFieldSubstituteInput[]
      */
     public function getReadOnlyTextFields()
     {
@@ -245,7 +245,7 @@ class CreateSignatureRequestTemplatePlaceholders implements ModelInterface, Arra
     /**
      * Sets read_only_text_fields
      *
-     * @param \Swagger\Client\Model\SignatureRequestPlaceholderReadOnlyTextFieldSubstituteInput[] $read_only_text_fields Substituting data for placeholder read_only_text fields.
+     * @param \Yousign\Client\Model\SignatureRequestPlaceholderReadOnlyTextFieldSubstituteInput[] $read_only_text_fields Substituting data for placeholder read_only_text fields.
      *
      * @return $this
      */

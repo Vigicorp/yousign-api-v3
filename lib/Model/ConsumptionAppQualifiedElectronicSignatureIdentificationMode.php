@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * ConsumptionAppQualifiedElectronicSignatureIdentificationMode Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class ConsumptionAppQualifiedElectronicSignatureIdentificationMode implements Mo
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'identity_verification' => '\Swagger\Client\Model\ConsumptionAppQualifiedElectronicSignatureIdentificationModeIdentityVerification',
+        'identity_verification' => '\Yousign\Client\Model\ConsumptionAppQualifiedElectronicSignatureIdentificationModeIdentityVerification',
         'saved_identity' => 'int'
     ];
 
@@ -216,7 +216,7 @@ class ConsumptionAppQualifiedElectronicSignatureIdentificationMode implements Mo
     /**
      * Gets identity_verification
      *
-     * @return \Swagger\Client\Model\ConsumptionAppQualifiedElectronicSignatureIdentificationModeIdentityVerification
+     * @return \Yousign\Client\Model\ConsumptionAppQualifiedElectronicSignatureIdentificationModeIdentityVerification
      */
     public function getIdentityVerification()
     {
@@ -226,7 +226,7 @@ class ConsumptionAppQualifiedElectronicSignatureIdentificationMode implements Mo
     /**
      * Sets identity_verification
      *
-     * @param \Swagger\Client\Model\ConsumptionAppQualifiedElectronicSignatureIdentificationModeIdentityVerification $identity_verification identity_verification
+     * @param \Yousign\Client\Model\ConsumptionAppQualifiedElectronicSignatureIdentificationModeIdentityVerification $identity_verification identity_verification
      *
      * @return $this
      */

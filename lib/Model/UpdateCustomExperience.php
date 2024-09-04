@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * UpdateCustomExperience Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -63,12 +63,12 @@ class UpdateCustomExperience implements ModelInterface, ArrayAccess
         'button_color' => 'string',
         'text_color' => 'string',
         'text_button_color' => 'string',
-        'disabled_notifications' => '\Swagger\Client\Model\CustomExperienceDisabledNotificationsType[]',
+        'disabled_notifications' => '\Yousign\Client\Model\CustomExperienceDisabledNotificationsType[]',
         'email_logo_disabled' => 'bool',
         'email_header_text_disabled' => 'bool',
         'email_footer_signature_disabled' => 'bool',
         'email_expiration_text_disabled' => 'bool',
-        'redirect_urls' => '\Swagger\Client\Model\UpdateCustomExperienceRedirectUrls'
+        'redirect_urls' => '\Yousign\Client\Model\UpdateCustomExperienceRedirectUrls'
     ];
 
     /**
@@ -444,7 +444,7 @@ class UpdateCustomExperience implements ModelInterface, ArrayAccess
     /**
      * Gets disabled_notifications
      *
-     * @return \Swagger\Client\Model\CustomExperienceDisabledNotificationsType[]
+     * @return \Yousign\Client\Model\CustomExperienceDisabledNotificationsType[]
      */
     public function getDisabledNotifications()
     {
@@ -454,7 +454,7 @@ class UpdateCustomExperience implements ModelInterface, ArrayAccess
     /**
      * Sets disabled_notifications
      *
-     * @param \Swagger\Client\Model\CustomExperienceDisabledNotificationsType[] $disabled_notifications disabled_notifications
+     * @param \Yousign\Client\Model\CustomExperienceDisabledNotificationsType[] $disabled_notifications disabled_notifications
      *
      * @return $this
      */
@@ -564,7 +564,7 @@ class UpdateCustomExperience implements ModelInterface, ArrayAccess
     /**
      * Gets redirect_urls
      *
-     * @return \Swagger\Client\Model\UpdateCustomExperienceRedirectUrls
+     * @return \Yousign\Client\Model\UpdateCustomExperienceRedirectUrls
      */
     public function getRedirectUrls()
     {
@@ -574,7 +574,7 @@ class UpdateCustomExperience implements ModelInterface, ArrayAccess
     /**
      * Sets redirect_urls
      *
-     * @param \Swagger\Client\Model\UpdateCustomExperienceRedirectUrls $redirect_urls redirect_urls
+     * @param \Yousign\Client\Model\UpdateCustomExperienceRedirectUrls $redirect_urls redirect_urls
      *
      * @return $this
      */

@@ -1,4 +1,4 @@
-# Swagger\Client\SignatureRequestApi
+# Yousign\Client\SignatureRequestApi
 
 All URIs are relative to *https://api-sandbox.yousign.app/v3*
 
@@ -25,11 +25,11 @@ Deletes a given Signature Request, not possible if the Signature Request is in `
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\SignatureRequestApi(
+$apiInstance = new Yousign\Client\Api\SignatureRequestApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -69,7 +69,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSignatureRequests**
-> \Swagger\Client\Model\GetSignatureRequests200Response getSignatureRequests($status, $after, $limit, $external_id, $source, $q)
+> \Yousign\Client\Model\GetSignatureRequests200Response getSignatureRequests($status, $after, $limit, $external_id, $source, $q)
 
 List Signature Requests
 
@@ -80,11 +80,11 @@ Returns the list of all Signatures Requests in your organization. You can limit 
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\SignatureRequestApi(
+$apiInstance = new Yousign\Client\Api\SignatureRequestApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\GetSignatureRequests200Response**](../Model/GetSignatureRequests200Response.md)
+[**\Yousign\Client\Model\GetSignatureRequests200Response**](../Model/GetSignatureRequests200Response.md)
 
 ### Authorization
 
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSignatureRequestsSignatureRequestId**
-> \Swagger\Client\Model\SignatureRequest getSignatureRequestsSignatureRequestId($signature_request_id)
+> \Yousign\Client\Model\SignatureRequest getSignatureRequestsSignatureRequestId($signature_request_id)
 
 Fetch a Signature Request
 
@@ -144,11 +144,11 @@ Retrieves a given Signature Request.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\SignatureRequestApi(
+$apiInstance = new Yousign\Client\Api\SignatureRequestApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -173,7 +173,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SignatureRequest**](../Model/SignatureRequest.md)
+[**\Yousign\Client\Model\SignatureRequest**](../Model/SignatureRequest.md)
 
 ### Authorization
 
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **patchSignatureRequestsSignatureRequestId**
-> \Swagger\Client\Model\SignatureRequest patchSignatureRequestsSignatureRequestId($signature_request_id, $body)
+> \Yousign\Client\Model\SignatureRequest patchSignatureRequestsSignatureRequestId($signature_request_id, $body)
 
 Update a Signature Request
 
@@ -198,18 +198,18 @@ Updates a given Signature Request. Any parameters not provided are left unchange
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\SignatureRequestApi(
+$apiInstance = new Yousign\Client\Api\SignatureRequestApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $signature_request_id = "signature_request_id_example"; // string | Signature Request Id
-$body = new \Swagger\Client\Model\UpdateSignatureRequest(); // \Swagger\Client\Model\UpdateSignatureRequest | 
+$body = new \Yousign\Client\Model\UpdateSignatureRequest(); // \Yousign\Client\Model\UpdateSignatureRequest | 
 
 try {
     $result = $apiInstance->patchSignatureRequestsSignatureRequestId($signature_request_id, $body);
@@ -225,11 +225,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **signature_request_id** | [**string**](../Model/.md)| Signature Request Id |
- **body** | [**\Swagger\Client\Model\UpdateSignatureRequest**](../Model/UpdateSignatureRequest.md)|  | [optional]
+ **body** | [**\Yousign\Client\Model\UpdateSignatureRequest**](../Model/UpdateSignatureRequest.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\SignatureRequest**](../Model/SignatureRequest.md)
+[**\Yousign\Client\Model\SignatureRequest**](../Model/SignatureRequest.md)
 
 ### Authorization
 
@@ -243,7 +243,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postSignatureRequests**
-> \Swagger\Client\Model\SignatureRequest postSignatureRequests($body)
+> \Yousign\Client\Model\SignatureRequest postSignatureRequests($body)
 
 Initiate a new Signature Request
 
@@ -254,17 +254,17 @@ Creates a new Signature Request resource.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\SignatureRequestApi(
+$apiInstance = new Yousign\Client\Api\SignatureRequestApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\CreateSignatureRequest(); // \Swagger\Client\Model\CreateSignatureRequest | 
+$body = new \Yousign\Client\Model\CreateSignatureRequest(); // \Yousign\Client\Model\CreateSignatureRequest | 
 
 try {
     $result = $apiInstance->postSignatureRequests($body);
@@ -279,11 +279,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\CreateSignatureRequest**](../Model/CreateSignatureRequest.md)|  | [optional]
+ **body** | [**\Yousign\Client\Model\CreateSignatureRequest**](../Model/CreateSignatureRequest.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\SignatureRequest**](../Model/SignatureRequest.md)
+[**\Yousign\Client\Model\SignatureRequest**](../Model/SignatureRequest.md)
 
 ### Authorization
 
@@ -297,7 +297,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postSignatureRequestsSignatureRequestIdActivate**
-> \Swagger\Client\Model\SignatureRequestActivated postSignatureRequestsSignatureRequestIdActivate($signature_request_id)
+> \Yousign\Client\Model\SignatureRequestActivated postSignatureRequestsSignatureRequestIdActivate($signature_request_id)
 
 Activate a Signature Request
 
@@ -308,11 +308,11 @@ Activates a Signature request, so it is not in `draft` status anymore. If the `d
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\SignatureRequestApi(
+$apiInstance = new Yousign\Client\Api\SignatureRequestApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -337,7 +337,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SignatureRequestActivated**](../Model/SignatureRequestActivated.md)
+[**\Yousign\Client\Model\SignatureRequestActivated**](../Model/SignatureRequestActivated.md)
 
 ### Authorization
 
@@ -351,7 +351,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postSignatureRequestsSignatureRequestIdCancel**
-> \Swagger\Client\Model\SignatureRequest postSignatureRequestsSignatureRequestIdCancel($signature_request_id, $body)
+> \Yousign\Client\Model\SignatureRequest postSignatureRequestsSignatureRequestIdCancel($signature_request_id, $body)
 
 Cancel a Signature Request
 
@@ -362,18 +362,18 @@ Cancels a Signature Request when it is in `approval` or `ongoing` status. A canc
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\SignatureRequestApi(
+$apiInstance = new Yousign\Client\Api\SignatureRequestApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $signature_request_id = "signature_request_id_example"; // string | Signature Request Id
-$body = new \Swagger\Client\Model\PostSignatureRequestsSignatureRequestIdCancelRequest(); // \Swagger\Client\Model\PostSignatureRequestsSignatureRequestIdCancelRequest | 
+$body = new \Yousign\Client\Model\PostSignatureRequestsSignatureRequestIdCancelRequest(); // \Yousign\Client\Model\PostSignatureRequestsSignatureRequestIdCancelRequest | 
 
 try {
     $result = $apiInstance->postSignatureRequestsSignatureRequestIdCancel($signature_request_id, $body);
@@ -389,11 +389,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **signature_request_id** | [**string**](../Model/.md)| Signature Request Id |
- **body** | [**\Swagger\Client\Model\PostSignatureRequestsSignatureRequestIdCancelRequest**](../Model/PostSignatureRequestsSignatureRequestIdCancelRequest.md)|  | [optional]
+ **body** | [**\Yousign\Client\Model\PostSignatureRequestsSignatureRequestIdCancelRequest**](../Model/PostSignatureRequestsSignatureRequestIdCancelRequest.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\SignatureRequest**](../Model/SignatureRequest.md)
+[**\Yousign\Client\Model\SignatureRequest**](../Model/SignatureRequest.md)
 
 ### Authorization
 
@@ -407,7 +407,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postSignatureRequestsSignatureRequestIdReactivate**
-> \Swagger\Client\Model\SignatureRequest postSignatureRequestsSignatureRequestIdReactivate($signature_request_id, $body)
+> \Yousign\Client\Model\SignatureRequest postSignatureRequestsSignatureRequestIdReactivate($signature_request_id, $body)
 
 Reactivate an expired Signature Request
 
@@ -418,18 +418,18 @@ Reactivates a Signature Request when it is in `expired` status.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Yousign\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\SignatureRequestApi(
+$apiInstance = new Yousign\Client\Api\SignatureRequestApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $signature_request_id = "signature_request_id_example"; // string | Signature Request Id
-$body = new \Swagger\Client\Model\PostSignatureRequestsSignatureRequestIdReactivateRequest(); // \Swagger\Client\Model\PostSignatureRequestsSignatureRequestIdReactivateRequest | 
+$body = new \Yousign\Client\Model\PostSignatureRequestsSignatureRequestIdReactivateRequest(); // \Yousign\Client\Model\PostSignatureRequestsSignatureRequestIdReactivateRequest | 
 
 try {
     $result = $apiInstance->postSignatureRequestsSignatureRequestIdReactivate($signature_request_id, $body);
@@ -445,11 +445,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **signature_request_id** | [**string**](../Model/.md)| Signature Request Id |
- **body** | [**\Swagger\Client\Model\PostSignatureRequestsSignatureRequestIdReactivateRequest**](../Model/PostSignatureRequestsSignatureRequestIdReactivateRequest.md)|  | [optional]
+ **body** | [**\Yousign\Client\Model\PostSignatureRequestsSignatureRequestIdReactivateRequest**](../Model/PostSignatureRequestsSignatureRequestIdReactivateRequest.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\SignatureRequest**](../Model/SignatureRequest.md)
+[**\Yousign\Client\Model\SignatureRequest**](../Model/SignatureRequest.md)
 
 ### Authorization
 
@@ -461,4 +461,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-

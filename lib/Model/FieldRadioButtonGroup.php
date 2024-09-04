@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * FieldRadioButtonGroup Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -63,7 +63,7 @@ class FieldRadioButtonGroup implements ModelInterface, ArrayAccess
         'page' => 'int',
         'optional' => 'bool',
         'name' => 'string',
-        'radios' => '\Swagger\Client\Model\FieldRadioButtonGroupRadiosInner[]'
+        'radios' => '\Yousign\Client\Model\FieldRadioButtonGroupRadiosInner[]'
     ];
 
     /**
@@ -467,7 +467,7 @@ class FieldRadioButtonGroup implements ModelInterface, ArrayAccess
     /**
      * Gets radios
      *
-     * @return \Swagger\Client\Model\FieldRadioButtonGroupRadiosInner[]
+     * @return \Yousign\Client\Model\FieldRadioButtonGroupRadiosInner[]
      */
     public function getRadios()
     {
@@ -477,7 +477,7 @@ class FieldRadioButtonGroup implements ModelInterface, ArrayAccess
     /**
      * Sets radios
      *
-     * @param \Swagger\Client\Model\FieldRadioButtonGroupRadiosInner[] $radios radios
+     * @param \Yousign\Client\Model\FieldRadioButtonGroupRadiosInner[] $radios radios
      *
      * @return $this
      */

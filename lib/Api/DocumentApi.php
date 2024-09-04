@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Yousign\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Yousign\Client\ApiException;
+use Yousign\Client\Configuration;
+use Yousign\Client\HeaderSelector;
+use Yousign\Client\ObjectSerializer;
 
 /**
  * DocumentApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,7 +94,7 @@ class DocumentApi
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $document_id Document Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -111,7 +111,7 @@ class DocumentApi
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $document_id Document Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -155,7 +155,7 @@ class DocumentApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -163,7 +163,7 @@ class DocumentApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -374,9 +374,9 @@ class DocumentApi
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $nature Filter by nature (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Document[]
+     * @return \Yousign\Client\Model\Document[]
      */
     public function getSignatureRequestsSignatureRequestIdDocuments($signature_request_id, $nature = null)
     {
@@ -392,13 +392,13 @@ class DocumentApi
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $nature Filter by nature (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Document[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\Document[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getSignatureRequestsSignatureRequestIdDocumentsWithHttpInfo($signature_request_id, $nature = null)
     {
-        $returnType = '\Swagger\Client\Model\Document[]';
+        $returnType = '\Yousign\Client\Model\Document[]';
         $request = $this->getSignatureRequestsSignatureRequestIdDocumentsRequest($signature_request_id, $nature);
 
         try {
@@ -450,7 +450,7 @@ class DocumentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Document[]',
+                        '\Yousign\Client\Model\Document[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -458,7 +458,7 @@ class DocumentApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -466,7 +466,7 @@ class DocumentApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -526,7 +526,7 @@ class DocumentApi
      */
     public function getSignatureRequestsSignatureRequestIdDocumentsAsyncWithHttpInfo($signature_request_id, $nature = null)
     {
-        $returnType = '\Swagger\Client\Model\Document[]';
+        $returnType = '\Yousign\Client\Model\Document[]';
         $request = $this->getSignatureRequestsSignatureRequestIdDocumentsRequest($signature_request_id, $nature);
 
         return $this->client
@@ -681,9 +681,9 @@ class DocumentApi
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $document_id Document Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Document
+     * @return \Yousign\Client\Model\Document
      */
     public function getSignatureRequestsSignatureRequestIdDocumentsDocumentId($signature_request_id, $document_id)
     {
@@ -699,13 +699,13 @@ class DocumentApi
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $document_id Document Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Document, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\Document, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSignatureRequestsSignatureRequestIdDocumentsDocumentIdWithHttpInfo($signature_request_id, $document_id)
     {
-        $returnType = '\Swagger\Client\Model\Document';
+        $returnType = '\Yousign\Client\Model\Document';
         $request = $this->getSignatureRequestsSignatureRequestIdDocumentsDocumentIdRequest($signature_request_id, $document_id);
 
         try {
@@ -757,7 +757,7 @@ class DocumentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Document',
+                        '\Yousign\Client\Model\Document',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -765,7 +765,7 @@ class DocumentApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -825,7 +825,7 @@ class DocumentApi
      */
     public function getSignatureRequestsSignatureRequestIdDocumentsDocumentIdAsyncWithHttpInfo($signature_request_id, $document_id)
     {
-        $returnType = '\Swagger\Client\Model\Document';
+        $returnType = '\Yousign\Client\Model\Document';
         $request = $this->getSignatureRequestsSignatureRequestIdDocumentsDocumentIdRequest($signature_request_id, $document_id);
 
         return $this->client
@@ -990,7 +990,7 @@ class DocumentApi
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $document_id Document Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -1008,7 +1008,7 @@ class DocumentApi
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $document_id Document Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1074,7 +1074,7 @@ class DocumentApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1082,7 +1082,7 @@ class DocumentApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1308,7 +1308,7 @@ class DocumentApi
      * @param  string $version Specify Documents version to download, &#x60;completed&#x60; is only available when the Signature Request status is &#x60;done&#x60;. (optional)
      * @param  bool $archive Force zip archive download (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -1327,7 +1327,7 @@ class DocumentApi
      * @param  string $version Specify Documents version to download, &#x60;completed&#x60; is only available when the Signature Request status is &#x60;done&#x60;. (optional)
      * @param  bool $archive Force zip archive download (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1393,7 +1393,7 @@ class DocumentApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1401,7 +1401,7 @@ class DocumentApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1614,11 +1614,11 @@ class DocumentApi
      *
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $document_id Document Id (required)
-     * @param  \Swagger\Client\Model\UpdateDocument $body body (optional)
+     * @param  \Yousign\Client\Model\UpdateDocument $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Document
+     * @return \Yousign\Client\Model\Document
      */
     public function patchSignatureRequestsSignatureRequestIdDocumentsDocumentId($signature_request_id, $document_id, $body = null)
     {
@@ -1633,15 +1633,15 @@ class DocumentApi
      *
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $document_id Document Id (required)
-     * @param  \Swagger\Client\Model\UpdateDocument $body (optional)
+     * @param  \Yousign\Client\Model\UpdateDocument $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Document, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\Document, HTTP status code, HTTP response headers (array of strings)
      */
     public function patchSignatureRequestsSignatureRequestIdDocumentsDocumentIdWithHttpInfo($signature_request_id, $document_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\Document';
+        $returnType = '\Yousign\Client\Model\Document';
         $request = $this->patchSignatureRequestsSignatureRequestIdDocumentsDocumentIdRequest($signature_request_id, $document_id, $body);
 
         try {
@@ -1693,7 +1693,7 @@ class DocumentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Document',
+                        '\Yousign\Client\Model\Document',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1701,7 +1701,7 @@ class DocumentApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1709,7 +1709,7 @@ class DocumentApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1733,7 +1733,7 @@ class DocumentApi
                 case 415:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1750,7 +1750,7 @@ class DocumentApi
      *
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $document_id Document Id (required)
-     * @param  \Swagger\Client\Model\UpdateDocument $body (optional)
+     * @param  \Yousign\Client\Model\UpdateDocument $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1772,14 +1772,14 @@ class DocumentApi
      *
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $document_id Document Id (required)
-     * @param  \Swagger\Client\Model\UpdateDocument $body (optional)
+     * @param  \Yousign\Client\Model\UpdateDocument $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function patchSignatureRequestsSignatureRequestIdDocumentsDocumentIdAsyncWithHttpInfo($signature_request_id, $document_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\Document';
+        $returnType = '\Yousign\Client\Model\Document';
         $request = $this->patchSignatureRequestsSignatureRequestIdDocumentsDocumentIdRequest($signature_request_id, $document_id, $body);
 
         return $this->client
@@ -1824,7 +1824,7 @@ class DocumentApi
      *
      * @param  string $signature_request_id Signature Request Id (required)
      * @param  string $document_id Document Id (required)
-     * @param  \Swagger\Client\Model\UpdateDocument $body (optional)
+     * @param  \Yousign\Client\Model\UpdateDocument $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1949,12 +1949,12 @@ class DocumentApi
      * @param  string $nature nature (optional)
      * @param  string $insert_after_id insert_after_id (optional)
      * @param  string $password password (optional)
-     * @param  \Swagger\Client\Model\InitialsArea $initials initials (optional)
+     * @param  \Yousign\Client\Model\InitialsArea $initials initials (optional)
      * @param  bool $parse_anchors parse_anchors (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Document
+     * @return \Yousign\Client\Model\Document
      */
     public function postDocuments($file = null, $nature = null, $insert_after_id = null, $password = null, $initials = null, $parse_anchors = null)
     {
@@ -1971,16 +1971,16 @@ class DocumentApi
      * @param  string $nature (optional)
      * @param  string $insert_after_id (optional)
      * @param  string $password (optional)
-     * @param  \Swagger\Client\Model\InitialsArea $initials (optional)
+     * @param  \Yousign\Client\Model\InitialsArea $initials (optional)
      * @param  bool $parse_anchors (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Document, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\Document, HTTP status code, HTTP response headers (array of strings)
      */
     public function postDocumentsWithHttpInfo($file = null, $nature = null, $insert_after_id = null, $password = null, $initials = null, $parse_anchors = null)
     {
-        $returnType = '\Swagger\Client\Model\Document';
+        $returnType = '\Yousign\Client\Model\Document';
         $request = $this->postDocumentsRequest($file, $nature, $insert_after_id, $password, $initials, $parse_anchors);
 
         try {
@@ -2032,7 +2032,7 @@ class DocumentApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Document',
+                        '\Yousign\Client\Model\Document',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2040,7 +2040,7 @@ class DocumentApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2048,7 +2048,7 @@ class DocumentApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2075,7 +2075,7 @@ class DocumentApi
      * @param  string $nature (optional)
      * @param  string $insert_after_id (optional)
      * @param  string $password (optional)
-     * @param  \Swagger\Client\Model\InitialsArea $initials (optional)
+     * @param  \Yousign\Client\Model\InitialsArea $initials (optional)
      * @param  bool $parse_anchors (optional)
      *
      * @throws \InvalidArgumentException
@@ -2100,7 +2100,7 @@ class DocumentApi
      * @param  string $nature (optional)
      * @param  string $insert_after_id (optional)
      * @param  string $password (optional)
-     * @param  \Swagger\Client\Model\InitialsArea $initials (optional)
+     * @param  \Yousign\Client\Model\InitialsArea $initials (optional)
      * @param  bool $parse_anchors (optional)
      *
      * @throws \InvalidArgumentException
@@ -2108,7 +2108,7 @@ class DocumentApi
      */
     public function postDocumentsAsyncWithHttpInfo($file = null, $nature = null, $insert_after_id = null, $password = null, $initials = null, $parse_anchors = null)
     {
-        $returnType = '\Swagger\Client\Model\Document';
+        $returnType = '\Yousign\Client\Model\Document';
         $request = $this->postDocumentsRequest($file, $nature, $insert_after_id, $password, $initials, $parse_anchors);
 
         return $this->client
@@ -2155,7 +2155,7 @@ class DocumentApi
      * @param  string $nature (optional)
      * @param  string $insert_after_id (optional)
      * @param  string $password (optional)
-     * @param  \Swagger\Client\Model\InitialsArea $initials (optional)
+     * @param  \Yousign\Client\Model\InitialsArea $initials (optional)
      * @param  bool $parse_anchors (optional)
      *
      * @throws \InvalidArgumentException
@@ -2276,12 +2276,12 @@ class DocumentApi
      * @param  string $nature nature (optional)
      * @param  string $insert_after_id insert_after_id (optional)
      * @param  string $password password (optional)
-     * @param  \Swagger\Client\Model\InitialsArea $initials initials (optional)
+     * @param  \Yousign\Client\Model\InitialsArea $initials initials (optional)
      * @param  bool $parse_anchors parse_anchors (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Document
+     * @return \Yousign\Client\Model\Document
      */
     public function postSignatureRequestsSignatureRequestIdDocuments($signature_request_id, $file = null, $nature = null, $insert_after_id = null, $password = null, $initials = null, $parse_anchors = null)
     {
@@ -2299,16 +2299,16 @@ class DocumentApi
      * @param  string $nature (optional)
      * @param  string $insert_after_id (optional)
      * @param  string $password (optional)
-     * @param  \Swagger\Client\Model\InitialsArea $initials (optional)
+     * @param  \Yousign\Client\Model\InitialsArea $initials (optional)
      * @param  bool $parse_anchors (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Document, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\Document, HTTP status code, HTTP response headers (array of strings)
      */
     public function postSignatureRequestsSignatureRequestIdDocumentsWithHttpInfo($signature_request_id, $file = null, $nature = null, $insert_after_id = null, $password = null, $initials = null, $parse_anchors = null)
     {
-        $returnType = '\Swagger\Client\Model\Document';
+        $returnType = '\Yousign\Client\Model\Document';
         $request = $this->postSignatureRequestsSignatureRequestIdDocumentsRequest($signature_request_id, $file, $nature, $insert_after_id, $password, $initials, $parse_anchors);
 
         try {
@@ -2360,7 +2360,7 @@ class DocumentApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Document',
+                        '\Yousign\Client\Model\Document',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2368,7 +2368,7 @@ class DocumentApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2376,7 +2376,7 @@ class DocumentApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2412,7 +2412,7 @@ class DocumentApi
      * @param  string $nature (optional)
      * @param  string $insert_after_id (optional)
      * @param  string $password (optional)
-     * @param  \Swagger\Client\Model\InitialsArea $initials (optional)
+     * @param  \Yousign\Client\Model\InitialsArea $initials (optional)
      * @param  bool $parse_anchors (optional)
      *
      * @throws \InvalidArgumentException
@@ -2438,7 +2438,7 @@ class DocumentApi
      * @param  string $nature (optional)
      * @param  string $insert_after_id (optional)
      * @param  string $password (optional)
-     * @param  \Swagger\Client\Model\InitialsArea $initials (optional)
+     * @param  \Yousign\Client\Model\InitialsArea $initials (optional)
      * @param  bool $parse_anchors (optional)
      *
      * @throws \InvalidArgumentException
@@ -2446,7 +2446,7 @@ class DocumentApi
      */
     public function postSignatureRequestsSignatureRequestIdDocumentsAsyncWithHttpInfo($signature_request_id, $file = null, $nature = null, $insert_after_id = null, $password = null, $initials = null, $parse_anchors = null)
     {
-        $returnType = '\Swagger\Client\Model\Document';
+        $returnType = '\Yousign\Client\Model\Document';
         $request = $this->postSignatureRequestsSignatureRequestIdDocumentsRequest($signature_request_id, $file, $nature, $insert_after_id, $password, $initials, $parse_anchors);
 
         return $this->client
@@ -2494,7 +2494,7 @@ class DocumentApi
      * @param  string $nature (optional)
      * @param  string $insert_after_id (optional)
      * @param  string $password (optional)
-     * @param  \Swagger\Client\Model\InitialsArea $initials (optional)
+     * @param  \Yousign\Client\Model\InitialsArea $initials (optional)
      * @param  bool $parse_anchors (optional)
      *
      * @throws \InvalidArgumentException
@@ -2628,9 +2628,9 @@ class DocumentApi
      * @param  string $document_id Document Id (required)
      * @param  string $file file (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Document
+     * @return \Yousign\Client\Model\Document
      */
     public function postSignatureRequestsSignatureRequestIdDocumentsDocumentIdReplace($signature_request_id, $document_id, $file = null)
     {
@@ -2647,13 +2647,13 @@ class DocumentApi
      * @param  string $document_id Document Id (required)
      * @param  string $file (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Document, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\Document, HTTP status code, HTTP response headers (array of strings)
      */
     public function postSignatureRequestsSignatureRequestIdDocumentsDocumentIdReplaceWithHttpInfo($signature_request_id, $document_id, $file = null)
     {
-        $returnType = '\Swagger\Client\Model\Document';
+        $returnType = '\Yousign\Client\Model\Document';
         $request = $this->postSignatureRequestsSignatureRequestIdDocumentsDocumentIdReplaceRequest($signature_request_id, $document_id, $file);
 
         try {
@@ -2705,7 +2705,7 @@ class DocumentApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Document',
+                        '\Yousign\Client\Model\Document',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2713,7 +2713,7 @@ class DocumentApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2721,7 +2721,7 @@ class DocumentApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2783,7 +2783,7 @@ class DocumentApi
      */
     public function postSignatureRequestsSignatureRequestIdDocumentsDocumentIdReplaceAsyncWithHttpInfo($signature_request_id, $document_id, $file = null)
     {
-        $returnType = '\Swagger\Client\Model\Document';
+        $returnType = '\Yousign\Client\Model\Document';
         $request = $this->postSignatureRequestsSignatureRequestIdDocumentsDocumentIdReplaceRequest($signature_request_id, $document_id, $file);
 
         return $this->client

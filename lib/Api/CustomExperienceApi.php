@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Yousign\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Yousign\Client\ApiException;
+use Yousign\Client\Configuration;
+use Yousign\Client\HeaderSelector;
+use Yousign\Client\ObjectSerializer;
 
 /**
  * CustomExperienceApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,7 +93,7 @@ class CustomExperienceApi
      *
      * @param  string $custom_experience_id Custom Experience Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -109,7 +109,7 @@ class CustomExperienceApi
      *
      * @param  string $custom_experience_id Custom Experience Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -153,7 +153,7 @@ class CustomExperienceApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -161,7 +161,7 @@ class CustomExperienceApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -354,7 +354,7 @@ class CustomExperienceApi
      *
      * @param  string $custom_experience_id Custom Experience Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -370,7 +370,7 @@ class CustomExperienceApi
      *
      * @param  string $custom_experience_id Custom Experience Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -414,7 +414,7 @@ class CustomExperienceApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -422,7 +422,7 @@ class CustomExperienceApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -616,9 +616,9 @@ class CustomExperienceApi
      * @param  string $after After cursor (pagination) (optional)
      * @param  int $limit The limit of items count to retrieve. (optional, default to 100)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\GetCustomExperiences200Response
+     * @return \Yousign\Client\Model\GetCustomExperiences200Response
      */
     public function getCustomExperiences($after = null, $limit = '100')
     {
@@ -634,13 +634,13 @@ class CustomExperienceApi
      * @param  string $after After cursor (pagination) (optional)
      * @param  int $limit The limit of items count to retrieve. (optional, default to 100)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\GetCustomExperiences200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\GetCustomExperiences200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCustomExperiencesWithHttpInfo($after = null, $limit = '100')
     {
-        $returnType = '\Swagger\Client\Model\GetCustomExperiences200Response';
+        $returnType = '\Yousign\Client\Model\GetCustomExperiences200Response';
         $request = $this->getCustomExperiencesRequest($after, $limit);
 
         try {
@@ -692,7 +692,7 @@ class CustomExperienceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\GetCustomExperiences200Response',
+                        '\Yousign\Client\Model\GetCustomExperiences200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -700,7 +700,7 @@ class CustomExperienceApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -708,7 +708,7 @@ class CustomExperienceApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -760,7 +760,7 @@ class CustomExperienceApi
      */
     public function getCustomExperiencesAsyncWithHttpInfo($after = null, $limit = '100')
     {
-        $returnType = '\Swagger\Client\Model\GetCustomExperiences200Response';
+        $returnType = '\Yousign\Client\Model\GetCustomExperiences200Response';
         $request = $this->getCustomExperiencesRequest($after, $limit);
 
         return $this->client
@@ -904,9 +904,9 @@ class CustomExperienceApi
      *
      * @param  string $custom_experience_id Custom Experience Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CustomExperience
+     * @return \Yousign\Client\Model\CustomExperience
      */
     public function getCustomExperiencesCustomExperienceId($custom_experience_id)
     {
@@ -921,13 +921,13 @@ class CustomExperienceApi
      *
      * @param  string $custom_experience_id Custom Experience Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CustomExperience, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\CustomExperience, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCustomExperiencesCustomExperienceIdWithHttpInfo($custom_experience_id)
     {
-        $returnType = '\Swagger\Client\Model\CustomExperience';
+        $returnType = '\Yousign\Client\Model\CustomExperience';
         $request = $this->getCustomExperiencesCustomExperienceIdRequest($custom_experience_id);
 
         try {
@@ -979,7 +979,7 @@ class CustomExperienceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CustomExperience',
+                        '\Yousign\Client\Model\CustomExperience',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -987,7 +987,7 @@ class CustomExperienceApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -995,7 +995,7 @@ class CustomExperienceApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1053,7 +1053,7 @@ class CustomExperienceApi
      */
     public function getCustomExperiencesCustomExperienceIdAsyncWithHttpInfo($custom_experience_id)
     {
-        $returnType = '\Swagger\Client\Model\CustomExperience';
+        $returnType = '\Yousign\Client\Model\CustomExperience';
         $request = $this->getCustomExperiencesCustomExperienceIdRequest($custom_experience_id);
 
         return $this->client
@@ -1203,9 +1203,9 @@ class CustomExperienceApi
      * @param  string $custom_experience_id Custom Experience Id (required)
      * @param  string $file file (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CustomExperience
+     * @return \Yousign\Client\Model\CustomExperience
      */
     public function patchCustomExperienceLogo($custom_experience_id, $file = null)
     {
@@ -1221,13 +1221,13 @@ class CustomExperienceApi
      * @param  string $custom_experience_id Custom Experience Id (required)
      * @param  string $file (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CustomExperience, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\CustomExperience, HTTP status code, HTTP response headers (array of strings)
      */
     public function patchCustomExperienceLogoWithHttpInfo($custom_experience_id, $file = null)
     {
-        $returnType = '\Swagger\Client\Model\CustomExperience';
+        $returnType = '\Yousign\Client\Model\CustomExperience';
         $request = $this->patchCustomExperienceLogoRequest($custom_experience_id, $file);
 
         try {
@@ -1279,7 +1279,7 @@ class CustomExperienceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CustomExperience',
+                        '\Yousign\Client\Model\CustomExperience',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1287,7 +1287,7 @@ class CustomExperienceApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1295,7 +1295,7 @@ class CustomExperienceApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1347,7 +1347,7 @@ class CustomExperienceApi
      */
     public function patchCustomExperienceLogoAsyncWithHttpInfo($custom_experience_id, $file = null)
     {
-        $returnType = '\Swagger\Client\Model\CustomExperience';
+        $returnType = '\Yousign\Client\Model\CustomExperience';
         $request = $this->patchCustomExperienceLogoRequest($custom_experience_id, $file);
 
         return $this->client
@@ -1501,11 +1501,11 @@ class CustomExperienceApi
      * Update a Custom Experience
      *
      * @param  string $custom_experience_id Custom Experience Id (required)
-     * @param  \Swagger\Client\Model\UpdateCustomExperience $body body (optional)
+     * @param  \Yousign\Client\Model\UpdateCustomExperience $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CustomExperience
+     * @return \Yousign\Client\Model\CustomExperience
      */
     public function patchCustomExperiencesCustomExperienceId($custom_experience_id, $body = null)
     {
@@ -1519,15 +1519,15 @@ class CustomExperienceApi
      * Update a Custom Experience
      *
      * @param  string $custom_experience_id Custom Experience Id (required)
-     * @param  \Swagger\Client\Model\UpdateCustomExperience $body (optional)
+     * @param  \Yousign\Client\Model\UpdateCustomExperience $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CustomExperience, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\CustomExperience, HTTP status code, HTTP response headers (array of strings)
      */
     public function patchCustomExperiencesCustomExperienceIdWithHttpInfo($custom_experience_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\CustomExperience';
+        $returnType = '\Yousign\Client\Model\CustomExperience';
         $request = $this->patchCustomExperiencesCustomExperienceIdRequest($custom_experience_id, $body);
 
         try {
@@ -1579,7 +1579,7 @@ class CustomExperienceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CustomExperience',
+                        '\Yousign\Client\Model\CustomExperience',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1587,7 +1587,7 @@ class CustomExperienceApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1595,7 +1595,7 @@ class CustomExperienceApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1627,7 +1627,7 @@ class CustomExperienceApi
      * Update a Custom Experience
      *
      * @param  string $custom_experience_id Custom Experience Id (required)
-     * @param  \Swagger\Client\Model\UpdateCustomExperience $body (optional)
+     * @param  \Yousign\Client\Model\UpdateCustomExperience $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1648,14 +1648,14 @@ class CustomExperienceApi
      * Update a Custom Experience
      *
      * @param  string $custom_experience_id Custom Experience Id (required)
-     * @param  \Swagger\Client\Model\UpdateCustomExperience $body (optional)
+     * @param  \Yousign\Client\Model\UpdateCustomExperience $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function patchCustomExperiencesCustomExperienceIdAsyncWithHttpInfo($custom_experience_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\CustomExperience';
+        $returnType = '\Yousign\Client\Model\CustomExperience';
         $request = $this->patchCustomExperiencesCustomExperienceIdRequest($custom_experience_id, $body);
 
         return $this->client
@@ -1699,7 +1699,7 @@ class CustomExperienceApi
      * Create request for operation 'patchCustomExperiencesCustomExperienceId'
      *
      * @param  string $custom_experience_id Custom Experience Id (required)
-     * @param  \Swagger\Client\Model\UpdateCustomExperience $body (optional)
+     * @param  \Yousign\Client\Model\UpdateCustomExperience $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1806,11 +1806,11 @@ class CustomExperienceApi
      *
      * Create a Custom Experience
      *
-     * @param  \Swagger\Client\Model\CreateCustomExperience $body body (optional)
+     * @param  \Yousign\Client\Model\CreateCustomExperience $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CustomExperience
+     * @return \Yousign\Client\Model\CustomExperience
      */
     public function postCustomExperience($body = null)
     {
@@ -1823,15 +1823,15 @@ class CustomExperienceApi
      *
      * Create a Custom Experience
      *
-     * @param  \Swagger\Client\Model\CreateCustomExperience $body (optional)
+     * @param  \Yousign\Client\Model\CreateCustomExperience $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CustomExperience, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\CustomExperience, HTTP status code, HTTP response headers (array of strings)
      */
     public function postCustomExperienceWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\CustomExperience';
+        $returnType = '\Yousign\Client\Model\CustomExperience';
         $request = $this->postCustomExperienceRequest($body);
 
         try {
@@ -1883,7 +1883,7 @@ class CustomExperienceApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CustomExperience',
+                        '\Yousign\Client\Model\CustomExperience',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1891,7 +1891,7 @@ class CustomExperienceApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1899,7 +1899,7 @@ class CustomExperienceApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1915,7 +1915,7 @@ class CustomExperienceApi
                 case 415:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1930,7 +1930,7 @@ class CustomExperienceApi
      *
      * Create a Custom Experience
      *
-     * @param  \Swagger\Client\Model\CreateCustomExperience $body (optional)
+     * @param  \Yousign\Client\Model\CreateCustomExperience $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1950,14 +1950,14 @@ class CustomExperienceApi
      *
      * Create a Custom Experience
      *
-     * @param  \Swagger\Client\Model\CreateCustomExperience $body (optional)
+     * @param  \Yousign\Client\Model\CreateCustomExperience $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function postCustomExperienceAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\CustomExperience';
+        $returnType = '\Yousign\Client\Model\CustomExperience';
         $request = $this->postCustomExperienceRequest($body);
 
         return $this->client
@@ -2000,7 +2000,7 @@ class CustomExperienceApi
     /**
      * Create request for operation 'postCustomExperience'
      *
-     * @param  \Swagger\Client\Model\CreateCustomExperience $body (optional)
+     * @param  \Yousign\Client\Model\CreateCustomExperience $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

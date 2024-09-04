@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * RadioGroup Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,7 +61,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
         'page' => 'int',
         'optional' => 'bool',
         'name' => 'string',
-        'radios' => '\Swagger\Client\Model\RadioGroupRadiosInner[]'
+        'radios' => '\Yousign\Client\Model\RadioGroupRadiosInner[]'
     ];
 
     /**
@@ -395,7 +395,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Gets radios
      *
-     * @return \Swagger\Client\Model\RadioGroupRadiosInner[]
+     * @return \Yousign\Client\Model\RadioGroupRadiosInner[]
      */
     public function getRadios()
     {
@@ -405,7 +405,7 @@ class RadioGroup implements ModelInterface, ArrayAccess
     /**
      * Sets radios
      *
-     * @param \Swagger\Client\Model\RadioGroupRadiosInner[] $radios radios
+     * @param \Yousign\Client\Model\RadioGroupRadiosInner[] $radios radios
      *
      * @return $this
      */

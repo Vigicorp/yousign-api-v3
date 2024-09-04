@@ -10,7 +10,6 @@ Name | Type | Description | Notes
 **page** | **int** |  | 
 **optional** | **bool** | Does the Signer has to select one of the radio buttons from this group? | 
 **name** | **string** |  | 
-**radios** | [**\Swagger\Client\Model\FieldRadioButtonGroupRadiosInner[]**](FieldRadioButtonGroupRadiosInner.md) |  | 
+**radios** | [**\Yousign\Client\Model\FieldRadioButtonGroupRadiosInner[]**](FieldRadioButtonGroupRadiosInner.md) |  | 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Yousign\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Yousign\Client\ApiException;
+use Yousign\Client\Configuration;
+use Yousign\Client\HeaderSelector;
+use Yousign\Client\ObjectSerializer;
 
 /**
  * FollowerApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,9 +93,9 @@ class FollowerApi
      *
      * @param  string $signature_request_id Signature Request Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\GetSignatureRequestsSignatureRequestIdFollowers200Response
+     * @return \Yousign\Client\Model\GetSignatureRequestsSignatureRequestIdFollowers200Response
      */
     public function getSignatureRequestsSignatureRequestIdFollowers($signature_request_id)
     {
@@ -110,13 +110,13 @@ class FollowerApi
      *
      * @param  string $signature_request_id Signature Request Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\GetSignatureRequestsSignatureRequestIdFollowers200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\GetSignatureRequestsSignatureRequestIdFollowers200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSignatureRequestsSignatureRequestIdFollowersWithHttpInfo($signature_request_id)
     {
-        $returnType = '\Swagger\Client\Model\GetSignatureRequestsSignatureRequestIdFollowers200Response';
+        $returnType = '\Yousign\Client\Model\GetSignatureRequestsSignatureRequestIdFollowers200Response';
         $request = $this->getSignatureRequestsSignatureRequestIdFollowersRequest($signature_request_id);
 
         try {
@@ -168,7 +168,7 @@ class FollowerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\GetSignatureRequestsSignatureRequestIdFollowers200Response',
+                        '\Yousign\Client\Model\GetSignatureRequestsSignatureRequestIdFollowers200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -176,7 +176,7 @@ class FollowerApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -234,7 +234,7 @@ class FollowerApi
      */
     public function getSignatureRequestsSignatureRequestIdFollowersAsyncWithHttpInfo($signature_request_id)
     {
-        $returnType = '\Swagger\Client\Model\GetSignatureRequestsSignatureRequestIdFollowers200Response';
+        $returnType = '\Yousign\Client\Model\GetSignatureRequestsSignatureRequestIdFollowers200Response';
         $request = $this->getSignatureRequestsSignatureRequestIdFollowersRequest($signature_request_id);
 
         return $this->client
@@ -382,11 +382,11 @@ class FollowerApi
      * Create new Followers
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \Swagger\Client\Model\CreateFollowersInner[] $body body (optional)
+     * @param  \Yousign\Client\Model\CreateFollowersInner[] $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Follower[]
+     * @return \Yousign\Client\Model\Follower[]
      */
     public function postSignatureRequestsSignatureRequestIdFollowers($signature_request_id, $body = null)
     {
@@ -400,15 +400,15 @@ class FollowerApi
      * Create new Followers
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \Swagger\Client\Model\CreateFollowersInner[] $body (optional)
+     * @param  \Yousign\Client\Model\CreateFollowersInner[] $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Yousign\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Follower[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Yousign\Client\Model\Follower[], HTTP status code, HTTP response headers (array of strings)
      */
     public function postSignatureRequestsSignatureRequestIdFollowersWithHttpInfo($signature_request_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\Follower[]';
+        $returnType = '\Yousign\Client\Model\Follower[]';
         $request = $this->postSignatureRequestsSignatureRequestIdFollowersRequest($signature_request_id, $body);
 
         try {
@@ -460,7 +460,7 @@ class FollowerApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Follower[]',
+                        '\Yousign\Client\Model\Follower[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -468,7 +468,7 @@ class FollowerApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -476,7 +476,7 @@ class FollowerApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PostArchives401Response',
+                        '\Yousign\Client\Model\PostArchives401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -500,7 +500,7 @@ class FollowerApi
                 case 415:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ViolationResponse',
+                        '\Yousign\Client\Model\ViolationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -516,7 +516,7 @@ class FollowerApi
      * Create new Followers
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \Swagger\Client\Model\CreateFollowersInner[] $body (optional)
+     * @param  \Yousign\Client\Model\CreateFollowersInner[] $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -537,14 +537,14 @@ class FollowerApi
      * Create new Followers
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \Swagger\Client\Model\CreateFollowersInner[] $body (optional)
+     * @param  \Yousign\Client\Model\CreateFollowersInner[] $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function postSignatureRequestsSignatureRequestIdFollowersAsyncWithHttpInfo($signature_request_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\Follower[]';
+        $returnType = '\Yousign\Client\Model\Follower[]';
         $request = $this->postSignatureRequestsSignatureRequestIdFollowersRequest($signature_request_id, $body);
 
         return $this->client
@@ -588,7 +588,7 @@ class FollowerApi
      * Create request for operation 'postSignatureRequestsSignatureRequestIdFollowers'
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \Swagger\Client\Model\CreateFollowersInner[] $body (optional)
+     * @param  \Yousign\Client\Model\CreateFollowersInner[] $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

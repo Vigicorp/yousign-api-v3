@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * Signer Class Doc Comment
  *
  * @category Class
  * @description Signer
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,19 +58,19 @@ class Signer implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'string',
-        'info' => '\Swagger\Client\Model\SignerInfo',
+        'info' => '\Yousign\Client\Model\SignerInfo',
         'status' => 'string',
-        'fields' => '\Swagger\Client\Model\SignerFieldsInner[]',
+        'fields' => '\Yousign\Client\Model\SignerFieldsInner[]',
         'signature_level' => 'string',
         'signature_authentication_mode' => 'string',
         'signature_link' => 'string',
         'signature_link_expiration_date' => '\DateTime',
         'signature_image_preview' => 'string',
-        'redirect_urls' => '\Swagger\Client\Model\SignerRedirectUrls',
-        'custom_text' => '\Swagger\Client\Model\SignerCustomText',
+        'redirect_urls' => '\Yousign\Client\Model\SignerRedirectUrls',
+        'custom_text' => '\Yousign\Client\Model\SignerCustomText',
         'delivery_mode' => 'string',
         'identification_attestation_id' => 'string',
-        'sms_notification' => '\Swagger\Client\Model\SmsNotification'
+        'sms_notification' => '\Yousign\Client\Model\SmsNotification'
     ];
 
     /**
@@ -461,7 +461,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets info
      *
-     * @return \Swagger\Client\Model\SignerInfo
+     * @return \Yousign\Client\Model\SignerInfo
      */
     public function getInfo()
     {
@@ -471,7 +471,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets info
      *
-     * @param \Swagger\Client\Model\SignerInfo $info info
+     * @param \Yousign\Client\Model\SignerInfo $info info
      *
      * @return $this
      */
@@ -518,7 +518,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets fields
      *
-     * @return \Swagger\Client\Model\SignerFieldsInner[]
+     * @return \Yousign\Client\Model\SignerFieldsInner[]
      */
     public function getFields()
     {
@@ -528,7 +528,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets fields
      *
-     * @param \Swagger\Client\Model\SignerFieldsInner[] $fields fields
+     * @param \Yousign\Client\Model\SignerFieldsInner[] $fields fields
      *
      * @return $this
      */
@@ -680,7 +680,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets redirect_urls
      *
-     * @return \Swagger\Client\Model\SignerRedirectUrls
+     * @return \Yousign\Client\Model\SignerRedirectUrls
      */
     public function getRedirectUrls()
     {
@@ -690,7 +690,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets redirect_urls
      *
-     * @param \Swagger\Client\Model\SignerRedirectUrls $redirect_urls redirect_urls
+     * @param \Yousign\Client\Model\SignerRedirectUrls $redirect_urls redirect_urls
      *
      * @return $this
      */
@@ -704,7 +704,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets custom_text
      *
-     * @return \Swagger\Client\Model\SignerCustomText
+     * @return \Yousign\Client\Model\SignerCustomText
      */
     public function getCustomText()
     {
@@ -714,7 +714,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets custom_text
      *
-     * @param \Swagger\Client\Model\SignerCustomText $custom_text custom_text
+     * @param \Yousign\Client\Model\SignerCustomText $custom_text custom_text
      *
      * @return $this
      */
@@ -785,7 +785,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Gets sms_notification
      *
-     * @return \Swagger\Client\Model\SmsNotification
+     * @return \Yousign\Client\Model\SmsNotification
      */
     public function getSmsNotification()
     {
@@ -795,7 +795,7 @@ class Signer implements ModelInterface, ArrayAccess
     /**
      * Sets sms_notification
      *
-     * @param \Swagger\Client\Model\SmsNotification $sms_notification sms_notification
+     * @param \Yousign\Client\Model\SmsNotification $sms_notification sms_notification
      *
      * @return $this
      */

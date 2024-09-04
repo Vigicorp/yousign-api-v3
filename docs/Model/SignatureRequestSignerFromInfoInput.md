@@ -3,12 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**info** | [**\Swagger\Client\Model\SignatureRequestSignerFromInfoInputInfo**](SignatureRequestSignerFromInfoInputInfo.md) |  | 
-**fields** | [**\Swagger\Client\Model\FieldsInput[]**](FieldsInput.md) |  | [optional] 
+**info** | [**\Yousign\Client\Model\SignatureRequestSignerFromInfoInputInfo**](SignatureRequestSignerFromInfoInputInfo.md) |  | 
+**fields** | [**\Yousign\Client\Model\FieldsInput[]**](FieldsInput.md) |  | [optional] 
 **signature_level** | **string** |  | [default to 'electronic_signature']
 **signature_authentication_mode** | **string** |  | [optional] 
-**redirect_urls** | [**\Swagger\Client\Model\SignatureRequestSignerFromInfoInputRedirectUrls**](SignatureRequestSignerFromInfoInputRedirectUrls.md) |  | [optional] 
-**custom_text** | [**\Swagger\Client\Model\FromScratch1CustomText**](FromScratch1CustomText.md) |  | [optional] 
+**redirect_urls** | [**\Yousign\Client\Model\SignatureRequestSignerFromInfoInputRedirectUrls**](SignatureRequestSignerFromInfoInputRedirectUrls.md) |  | [optional] 
+**custom_text** | [**\Yousign\Client\Model\FromScratch1CustomText**](FromScratch1CustomText.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-

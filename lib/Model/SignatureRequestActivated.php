@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * SignatureRequestActivated Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -62,17 +62,17 @@ class SignatureRequestActivated implements ModelInterface, ArrayAccess
         'delivery_mode' => 'string',
         'created_at' => '\DateTime',
         'ordered_signers' => 'bool',
-        'reminder_settings' => '\Swagger\Client\Model\SignatureRequestInListReminderSettings',
+        'reminder_settings' => '\Yousign\Client\Model\SignatureRequestInListReminderSettings',
         'timezone' => 'string',
         'email_custom_note' => 'string',
         'expiration_date' => '\DateTime',
-        'signers' => '\Swagger\Client\Model\EmbeddedSignerWithSignatureLink[]',
-        'approvers' => '\Swagger\Client\Model\ApproverToNotify[]',
-        'documents' => '\Swagger\Client\Model\SignatureRequestActivatedDocumentsInner[]',
+        'signers' => '\Yousign\Client\Model\EmbeddedSignerWithSignatureLink[]',
+        'approvers' => '\Yousign\Client\Model\ApproverToNotify[]',
+        'documents' => '\Yousign\Client\Model\SignatureRequestActivatedDocumentsInner[]',
         'external_id' => 'string',
         'branding_id' => 'string',
         'custom_experience_id' => 'string',
-        'audit_trail_locale' => '\Swagger\Client\Model\AuditTrailLocale'
+        'audit_trail_locale' => '\Yousign\Client\Model\AuditTrailLocale'
     ];
 
     /**
@@ -554,7 +554,7 @@ class SignatureRequestActivated implements ModelInterface, ArrayAccess
     /**
      * Gets reminder_settings
      *
-     * @return \Swagger\Client\Model\SignatureRequestInListReminderSettings
+     * @return \Yousign\Client\Model\SignatureRequestInListReminderSettings
      */
     public function getReminderSettings()
     {
@@ -564,7 +564,7 @@ class SignatureRequestActivated implements ModelInterface, ArrayAccess
     /**
      * Sets reminder_settings
      *
-     * @param \Swagger\Client\Model\SignatureRequestInListReminderSettings $reminder_settings reminder_settings
+     * @param \Yousign\Client\Model\SignatureRequestInListReminderSettings $reminder_settings reminder_settings
      *
      * @return $this
      */
@@ -650,7 +650,7 @@ class SignatureRequestActivated implements ModelInterface, ArrayAccess
     /**
      * Gets signers
      *
-     * @return \Swagger\Client\Model\EmbeddedSignerWithSignatureLink[]
+     * @return \Yousign\Client\Model\EmbeddedSignerWithSignatureLink[]
      */
     public function getSigners()
     {
@@ -660,7 +660,7 @@ class SignatureRequestActivated implements ModelInterface, ArrayAccess
     /**
      * Sets signers
      *
-     * @param \Swagger\Client\Model\EmbeddedSignerWithSignatureLink[] $signers signers
+     * @param \Yousign\Client\Model\EmbeddedSignerWithSignatureLink[] $signers signers
      *
      * @return $this
      */
@@ -674,7 +674,7 @@ class SignatureRequestActivated implements ModelInterface, ArrayAccess
     /**
      * Gets approvers
      *
-     * @return \Swagger\Client\Model\ApproverToNotify[]
+     * @return \Yousign\Client\Model\ApproverToNotify[]
      */
     public function getApprovers()
     {
@@ -684,7 +684,7 @@ class SignatureRequestActivated implements ModelInterface, ArrayAccess
     /**
      * Sets approvers
      *
-     * @param \Swagger\Client\Model\ApproverToNotify[] $approvers approvers
+     * @param \Yousign\Client\Model\ApproverToNotify[] $approvers approvers
      *
      * @return $this
      */
@@ -698,7 +698,7 @@ class SignatureRequestActivated implements ModelInterface, ArrayAccess
     /**
      * Gets documents
      *
-     * @return \Swagger\Client\Model\SignatureRequestActivatedDocumentsInner[]
+     * @return \Yousign\Client\Model\SignatureRequestActivatedDocumentsInner[]
      */
     public function getDocuments()
     {
@@ -708,7 +708,7 @@ class SignatureRequestActivated implements ModelInterface, ArrayAccess
     /**
      * Sets documents
      *
-     * @param \Swagger\Client\Model\SignatureRequestActivatedDocumentsInner[] $documents documents
+     * @param \Yousign\Client\Model\SignatureRequestActivatedDocumentsInner[] $documents documents
      *
      * @return $this
      */
@@ -794,7 +794,7 @@ class SignatureRequestActivated implements ModelInterface, ArrayAccess
     /**
      * Gets audit_trail_locale
      *
-     * @return \Swagger\Client\Model\AuditTrailLocale
+     * @return \Yousign\Client\Model\AuditTrailLocale
      */
     public function getAuditTrailLocale()
     {
@@ -804,7 +804,7 @@ class SignatureRequestActivated implements ModelInterface, ArrayAccess
     /**
      * Sets audit_trail_locale
      *
-     * @param \Swagger\Client\Model\AuditTrailLocale $audit_trail_locale audit_trail_locale
+     * @param \Yousign\Client\Model\AuditTrailLocale $audit_trail_locale audit_trail_locale
      *
      * @return $this
      */

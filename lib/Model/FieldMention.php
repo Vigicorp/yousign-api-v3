@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Yousign\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Yousign\Client\ObjectSerializer;
 
 /**
  * FieldMention Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Yousign\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -66,7 +66,7 @@ class FieldMention implements ModelInterface, ArrayAccess
         'x' => 'int',
         'y' => 'int',
         'mention' => 'string',
-        'font' => '\Swagger\Client\Model\Font'
+        'font' => '\Yousign\Client\Model\Font'
     ];
 
     /**
@@ -566,7 +566,7 @@ class FieldMention implements ModelInterface, ArrayAccess
     /**
      * Gets font
      *
-     * @return \Swagger\Client\Model\Font
+     * @return \Yousign\Client\Model\Font
      */
     public function getFont()
     {
@@ -576,7 +576,7 @@ class FieldMention implements ModelInterface, ArrayAccess
     /**
      * Sets font
      *
-     * @param \Swagger\Client\Model\Font $font font
+     * @param \Yousign\Client\Model\Font $font font
      *
      * @return $this
      */
