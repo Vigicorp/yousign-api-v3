@@ -1,27 +1,33 @@
 # Yousign\Client\AuditTrailApi
 
-All URIs are relative to *https://api-sandbox.yousign.app/v3*
+All URIs are relative to https://api-sandbox.yousign.app/v3, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getSignatureRequestsSignatureRequestIdAuditTrailsDownload**](AuditTrailApi.md#getsignaturerequestssignaturerequestidaudittrailsdownload) | **GET** /signature_requests/{signatureRequestId}/audit_trails/download | Download Signature Request Audit Trails
-[**getSignatureRequestsSignatureRequestIdSignersSignerIdAuditTrails**](AuditTrailApi.md#getsignaturerequestssignaturerequestidsignerssigneridaudittrails) | **GET** /signature_requests/{signatureRequestId}/signers/{signerId}/audit_trails | Get Signer Audit Trail
-[**getSignersSignerIdAuditTrailsDownload**](AuditTrailApi.md#getsignerssigneridaudittrailsdownload) | **GET** /signature_requests/{signatureRequestId}/signers/{signerId}/audit_trails/download | Download Audit Trail PDF
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**getSignatureRequestsSignatureRequestIdAuditTrailsDownload()**](AuditTrailApi.md#getSignatureRequestsSignatureRequestIdAuditTrailsDownload) | **GET** /signature_requests/{signatureRequestId}/audit_trails/download | Download Signature Request Audit Trails |
+| [**getSignatureRequestsSignatureRequestIdSignersSignerIdAuditTrails()**](AuditTrailApi.md#getSignatureRequestsSignatureRequestIdSignersSignerIdAuditTrails) | **GET** /signature_requests/{signatureRequestId}/signers/{signerId}/audit_trails | Get Signer Audit Trail |
+| [**getSignersSignerIdAuditTrailsDownload()**](AuditTrailApi.md#getSignersSignerIdAuditTrailsDownload) | **GET** /signature_requests/{signatureRequestId}/signers/{signerId}/audit_trails/download | Download Audit Trail PDF |
 
-# **getSignatureRequestsSignatureRequestIdAuditTrailsDownload**
-> string getSignatureRequestsSignatureRequestIdAuditTrailsDownload($signature_request_id, $merge)
+
+## `getSignatureRequestsSignatureRequestIdAuditTrailsDownload()`
+
+```php
+getSignatureRequestsSignatureRequestIdAuditTrailsDownload($signature_request_id, $merge): \SplFileObject
+```
 
 Download Signature Request Audit Trails
 
 Download the PDF version of all the Audit Trails attached to a given Signature Request. Each Audit Trail is bound to a different Signer. Only possible when the Signature Request status is `done`.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: bearerAuth
-    $config = Yousign\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = Yousign\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Yousign\Client\Api\AuditTrailApi(
@@ -30,7 +36,7 @@ $apiInstance = new Yousign\Client\Api\AuditTrailApi(
     new GuzzleHttp\Client(),
     $config
 );
-$signature_request_id = "signature_request_id_example"; // string | Signature Request Id
+$signature_request_id = 'signature_request_id_example'; // string | Signature Request Id
 $merge = false; // bool | Download all Audit Trails merged as a single PDF file
 
 try {
@@ -39,19 +45,18 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling AuditTrailApi->getSignatureRequestsSignatureRequestIdAuditTrailsDownload: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **signature_request_id** | [**string**](../Model/.md)| Signature Request Id |
- **merge** | **bool**| Download all Audit Trails merged as a single PDF file | [optional] [default to false]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **signature_request_id** | **string**| Signature Request Id | |
+| **merge** | **bool**| Download all Audit Trails merged as a single PDF file | [optional] [default to false] |
 
 ### Return type
 
-**string**
+**\SplFileObject**
 
 ### Authorization
 
@@ -59,25 +64,32 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/zip, application/pdf, application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/zip, application/pdf`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getSignatureRequestsSignatureRequestIdSignersSignerIdAuditTrails**
-> \Yousign\Client\Model\SignerAuditTrail getSignatureRequestsSignatureRequestIdSignersSignerIdAuditTrails($signature_request_id, $signer_id)
+## `getSignatureRequestsSignatureRequestIdSignersSignerIdAuditTrails()`
+
+```php
+getSignatureRequestsSignatureRequestIdSignersSignerIdAuditTrails($signature_request_id, $signer_id): \Yousign\Client\Model\SignerAuditTrail
+```
 
 Get Signer Audit Trail
 
 Retrieves the JSON version of the Audit Trail attached to a given Signer. Only possible when Signer status is `signed`.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: bearerAuth
-    $config = Yousign\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = Yousign\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Yousign\Client\Api\AuditTrailApi(
@@ -86,8 +98,8 @@ $apiInstance = new Yousign\Client\Api\AuditTrailApi(
     new GuzzleHttp\Client(),
     $config
 );
-$signature_request_id = "signature_request_id_example"; // string | Signature Request Id
-$signer_id = "signer_id_example"; // string | Signer Id
+$signature_request_id = 'signature_request_id_example'; // string | Signature Request Id
+$signer_id = 'signer_id_example'; // string | Signer Id
 
 try {
     $result = $apiInstance->getSignatureRequestsSignatureRequestIdSignersSignerIdAuditTrails($signature_request_id, $signer_id);
@@ -95,15 +107,14 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling AuditTrailApi->getSignatureRequestsSignatureRequestIdSignersSignerIdAuditTrails: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **signature_request_id** | [**string**](../Model/.md)| Signature Request Id |
- **signer_id** | [**string**](../Model/.md)| Signer Id |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **signature_request_id** | **string**| Signature Request Id | |
+| **signer_id** | **string**| Signer Id | |
 
 ### Return type
 
@@ -115,25 +126,32 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getSignersSignerIdAuditTrailsDownload**
-> string getSignersSignerIdAuditTrailsDownload($signature_request_id, $signer_id)
+## `getSignersSignerIdAuditTrailsDownload()`
+
+```php
+getSignersSignerIdAuditTrailsDownload($signature_request_id, $signer_id): \SplFileObject
+```
 
 Download Audit Trail PDF
 
 Download the PDF version of the Audit Trail attached to a given Signer. Only possible when Signer status is `signed`.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: bearerAuth
-    $config = Yousign\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = Yousign\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Yousign\Client\Api\AuditTrailApi(
@@ -142,8 +160,8 @@ $apiInstance = new Yousign\Client\Api\AuditTrailApi(
     new GuzzleHttp\Client(),
     $config
 );
-$signature_request_id = "signature_request_id_example"; // string | Signature Request Id
-$signer_id = "signer_id_example"; // string | Signer Id
+$signature_request_id = 'signature_request_id_example'; // string | Signature Request Id
+$signer_id = 'signer_id_example'; // string | Signer Id
 
 try {
     $result = $apiInstance->getSignersSignerIdAuditTrailsDownload($signature_request_id, $signer_id);
@@ -151,19 +169,18 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling AuditTrailApi->getSignersSignerIdAuditTrailsDownload: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **signature_request_id** | [**string**](../Model/.md)| Signature Request Id |
- **signer_id** | [**string**](../Model/.md)| Signer Id |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **signature_request_id** | **string**| Signature Request Id | |
+| **signer_id** | **string**| Signer Id | |
 
 ### Return type
 
-**string**
+**\SplFileObject**
 
 ### Authorization
 
@@ -171,7 +188,9 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/pdf, application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/pdf`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)

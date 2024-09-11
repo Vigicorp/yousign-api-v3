@@ -1,29 +1,35 @@
 # Yousign\Client\WebhookApi
 
-All URIs are relative to *https://api-sandbox.yousign.app/v3*
+All URIs are relative to https://api-sandbox.yousign.app/v3, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**deleteWebhooksWebhookId**](WebhookApi.md#deletewebhookswebhookid) | **DELETE** /webhooks/{webhookId} | Delete a Webhook subscription
-[**getWebhooks**](WebhookApi.md#getwebhooks) | **GET** /webhooks | List Webhook subscriptions
-[**getWebhooksWebhookId**](WebhookApi.md#getwebhookswebhookid) | **GET** /webhooks/{webhookId} | Get a Webhook subscription
-[**patchWebhooksWebhookId**](WebhookApi.md#patchwebhookswebhookid) | **PATCH** /webhooks/{webhookId} | Update a Webhook subscription
-[**postWebhooksSubscriptions**](WebhookApi.md#postwebhookssubscriptions) | **POST** /webhooks | Create a Webhook subscription
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**deleteWebhooksWebhookId()**](WebhookApi.md#deleteWebhooksWebhookId) | **DELETE** /webhooks/{webhookId} | Delete a Webhook subscription |
+| [**getWebhooks()**](WebhookApi.md#getWebhooks) | **GET** /webhooks | List Webhook subscriptions |
+| [**getWebhooksWebhookId()**](WebhookApi.md#getWebhooksWebhookId) | **GET** /webhooks/{webhookId} | Get a Webhook subscription |
+| [**patchWebhooksWebhookId()**](WebhookApi.md#patchWebhooksWebhookId) | **PATCH** /webhooks/{webhookId} | Update a Webhook subscription |
+| [**postWebhooksSubscriptions()**](WebhookApi.md#postWebhooksSubscriptions) | **POST** /webhooks | Create a Webhook subscription |
 
-# **deleteWebhooksWebhookId**
-> deleteWebhooksWebhookId($webhook_id)
+
+## `deleteWebhooksWebhookId()`
+
+```php
+deleteWebhooksWebhookId($webhook_id)
+```
 
 Delete a Webhook subscription
 
 Deletes a given Webhook subscription.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: bearerAuth
-    $config = Yousign\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = Yousign\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Yousign\Client\Api\WebhookApi(
@@ -32,21 +38,20 @@ $apiInstance = new Yousign\Client\Api\WebhookApi(
     new GuzzleHttp\Client(),
     $config
 );
-$webhook_id = "webhook_id_example"; // string | Webhook Id
+$webhook_id = 'webhook_id_example'; // string | Webhook Id
 
 try {
     $apiInstance->deleteWebhooksWebhookId($webhook_id);
 } catch (Exception $e) {
     echo 'Exception when calling WebhookApi->deleteWebhooksWebhookId: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **webhook_id** | [**string**](../Model/.md)| Webhook Id |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **webhook_id** | **string**| Webhook Id | |
 
 ### Return type
 
@@ -58,25 +63,32 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getWebhooks**
-> \Yousign\Client\Model\WebhookSubscription[] getWebhooks()
+## `getWebhooks()`
+
+```php
+getWebhooks(): \Yousign\Client\Model\WebhookSubscription[]
+```
 
 List Webhook subscriptions
 
 Returns the list of all Webhook subscriptions in your Organization.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: bearerAuth
-    $config = Yousign\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = Yousign\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Yousign\Client\Api\WebhookApi(
@@ -92,10 +104,10 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling WebhookApi->getWebhooks: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -108,25 +120,32 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getWebhooksWebhookId**
-> \Yousign\Client\Model\WebhookSubscription getWebhooksWebhookId($webhook_id)
+## `getWebhooksWebhookId()`
+
+```php
+getWebhooksWebhookId($webhook_id): \Yousign\Client\Model\WebhookSubscription
+```
 
 Get a Webhook subscription
 
 Retrieves a given Webhook subscription.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: bearerAuth
-    $config = Yousign\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = Yousign\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Yousign\Client\Api\WebhookApi(
@@ -135,7 +154,7 @@ $apiInstance = new Yousign\Client\Api\WebhookApi(
     new GuzzleHttp\Client(),
     $config
 );
-$webhook_id = "webhook_id_example"; // string | Webhook Id
+$webhook_id = 'webhook_id_example'; // string | Webhook Id
 
 try {
     $result = $apiInstance->getWebhooksWebhookId($webhook_id);
@@ -143,14 +162,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling WebhookApi->getWebhooksWebhookId: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **webhook_id** | [**string**](../Model/.md)| Webhook Id |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **webhook_id** | **string**| Webhook Id | |
 
 ### Return type
 
@@ -162,25 +180,32 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **patchWebhooksWebhookId**
-> \Yousign\Client\Model\WebhookSubscription patchWebhooksWebhookId($webhook_id, $body)
+## `patchWebhooksWebhookId()`
+
+```php
+patchWebhooksWebhookId($webhook_id, $update_webhook_subscription): \Yousign\Client\Model\WebhookSubscription
+```
 
 Update a Webhook subscription
 
 Updates a given Webhook subscription. Any parameters not provided are left unchanged.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: bearerAuth
-    $config = Yousign\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = Yousign\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Yousign\Client\Api\WebhookApi(
@@ -189,24 +214,23 @@ $apiInstance = new Yousign\Client\Api\WebhookApi(
     new GuzzleHttp\Client(),
     $config
 );
-$webhook_id = "webhook_id_example"; // string | Webhook Id
-$body = new \Yousign\Client\Model\UpdateWebhookSubscription(); // \Yousign\Client\Model\UpdateWebhookSubscription | 
+$webhook_id = 'webhook_id_example'; // string | Webhook Id
+$update_webhook_subscription = new \Yousign\Client\Model\UpdateWebhookSubscription(); // \Yousign\Client\Model\UpdateWebhookSubscription
 
 try {
-    $result = $apiInstance->patchWebhooksWebhookId($webhook_id, $body);
+    $result = $apiInstance->patchWebhooksWebhookId($webhook_id, $update_webhook_subscription);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WebhookApi->patchWebhooksWebhookId: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **webhook_id** | [**string**](../Model/.md)| Webhook Id |
- **body** | [**\Yousign\Client\Model\UpdateWebhookSubscription**](../Model/UpdateWebhookSubscription.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **webhook_id** | **string**| Webhook Id | |
+| **update_webhook_subscription** | [**\Yousign\Client\Model\UpdateWebhookSubscription**](../Model/UpdateWebhookSubscription.md)|  | [optional] |
 
 ### Return type
 
@@ -218,25 +242,32 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **postWebhooksSubscriptions**
-> \Yousign\Client\Model\WebhookSubscription postWebhooksSubscriptions($body)
+## `postWebhooksSubscriptions()`
+
+```php
+postWebhooksSubscriptions($create_webhook_subscription): \Yousign\Client\Model\WebhookSubscription
+```
 
 Create a Webhook subscription
 
 Creates a new Webhook subscription in your organization.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: bearerAuth
-    $config = Yousign\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = Yousign\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Yousign\Client\Api\WebhookApi(
@@ -245,22 +276,21 @@ $apiInstance = new Yousign\Client\Api\WebhookApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Yousign\Client\Model\CreateWebhookSubscription(); // \Yousign\Client\Model\CreateWebhookSubscription | 
+$create_webhook_subscription = new \Yousign\Client\Model\CreateWebhookSubscription(); // \Yousign\Client\Model\CreateWebhookSubscription
 
 try {
-    $result = $apiInstance->postWebhooksSubscriptions($body);
+    $result = $apiInstance->postWebhooksSubscriptions($create_webhook_subscription);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WebhookApi->postWebhooksSubscriptions: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Yousign\Client\Model\CreateWebhookSubscription**](../Model/CreateWebhookSubscription.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **create_webhook_subscription** | [**\Yousign\Client\Model\CreateWebhookSubscription**](../Model/CreateWebhookSubscription.md)|  | [optional] |
 
 ### Return type
 
@@ -272,7 +302,9 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)

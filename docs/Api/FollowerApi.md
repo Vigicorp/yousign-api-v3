@@ -1,26 +1,32 @@
 # Yousign\Client\FollowerApi
 
-All URIs are relative to *https://api-sandbox.yousign.app/v3*
+All URIs are relative to https://api-sandbox.yousign.app/v3, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getSignatureRequestsSignatureRequestIdFollowers**](FollowerApi.md#getsignaturerequestssignaturerequestidfollowers) | **GET** /signature_requests/{signatureRequestId}/followers | List the Signature Request&#x27;s Followers
-[**postSignatureRequestsSignatureRequestIdFollowers**](FollowerApi.md#postsignaturerequestssignaturerequestidfollowers) | **POST** /signature_requests/{signatureRequestId}/followers | Create new Followers
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**getSignatureRequestsSignatureRequestIdFollowers()**](FollowerApi.md#getSignatureRequestsSignatureRequestIdFollowers) | **GET** /signature_requests/{signatureRequestId}/followers | List the Signature Request&#39;s Followers |
+| [**postSignatureRequestsSignatureRequestIdFollowers()**](FollowerApi.md#postSignatureRequestsSignatureRequestIdFollowers) | **POST** /signature_requests/{signatureRequestId}/followers | Create new Followers |
 
-# **getSignatureRequestsSignatureRequestIdFollowers**
-> \Yousign\Client\Model\GetSignatureRequestsSignatureRequestIdFollowers200Response getSignatureRequestsSignatureRequestIdFollowers($signature_request_id)
+
+## `getSignatureRequestsSignatureRequestIdFollowers()`
+
+```php
+getSignatureRequestsSignatureRequestIdFollowers($signature_request_id): \Yousign\Client\Model\GetSignatureRequestsSignatureRequestIdFollowers200Response
+```
 
 List the Signature Request's Followers
 
 Returns a list of Followers for a given Signature Request.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: bearerAuth
-    $config = Yousign\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = Yousign\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Yousign\Client\Api\FollowerApi(
@@ -29,7 +35,7 @@ $apiInstance = new Yousign\Client\Api\FollowerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$signature_request_id = "signature_request_id_example"; // string | Signature Request Id
+$signature_request_id = 'signature_request_id_example'; // string | Signature Request Id
 
 try {
     $result = $apiInstance->getSignatureRequestsSignatureRequestIdFollowers($signature_request_id);
@@ -37,14 +43,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling FollowerApi->getSignatureRequestsSignatureRequestIdFollowers: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **signature_request_id** | [**string**](../Model/.md)| Signature Request Id |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **signature_request_id** | **string**| Signature Request Id | |
 
 ### Return type
 
@@ -56,25 +61,32 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **postSignatureRequestsSignatureRequestIdFollowers**
-> \Yousign\Client\Model\Follower[] postSignatureRequestsSignatureRequestIdFollowers($signature_request_id, $body)
+## `postSignatureRequestsSignatureRequestIdFollowers()`
+
+```php
+postSignatureRequestsSignatureRequestIdFollowers($signature_request_id, $create_followers_inner): \Yousign\Client\Model\Follower[]
+```
 
 Create new Followers
 
 Adds a Follower to a given Signature Request.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: bearerAuth
-    $config = Yousign\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = Yousign\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Yousign\Client\Api\FollowerApi(
@@ -83,24 +95,23 @@ $apiInstance = new Yousign\Client\Api\FollowerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$signature_request_id = "signature_request_id_example"; // string | Signature Request Id
-$body = array(new \Yousign\Client\Model\CreateFollowersInner()); // \Yousign\Client\Model\CreateFollowersInner[] | 
+$signature_request_id = 'signature_request_id_example'; // string | Signature Request Id
+$create_followers_inner = array(new \Yousign\Client\Model\CreateFollowersInner()); // \Yousign\Client\Model\CreateFollowersInner[]
 
 try {
-    $result = $apiInstance->postSignatureRequestsSignatureRequestIdFollowers($signature_request_id, $body);
+    $result = $apiInstance->postSignatureRequestsSignatureRequestIdFollowers($signature_request_id, $create_followers_inner);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FollowerApi->postSignatureRequestsSignatureRequestIdFollowers: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **signature_request_id** | [**string**](../Model/.md)| Signature Request Id |
- **body** | [**\Yousign\Client\Model\CreateFollowersInner[]**](../Model/CreateFollowersInner.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **signature_request_id** | **string**| Signature Request Id | |
+| **create_followers_inner** | [**\Yousign\Client\Model\CreateFollowersInner[]**](../Model/CreateFollowersInner.md)|  | [optional] |
 
 ### Return type
 
@@ -112,7 +123,9 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)

@@ -1,14 +1,14 @@
-# Template
+# # Template
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **string** |  | 
-**name** | **string** |  | 
-**description** | **string** |  | 
-**status** | **string** |  | 
-**created_at** | [**\DateTime**](\DateTime.md) |  | 
-**workspace_id** | **string** |  | [optional] 
+**id** | **string** |  | [readonly]
+**name** | **string** |  | [readonly]
+**description** | **string** |  | [readonly]
+**status** | **string** |  | [readonly]
+**created_at** | **\DateTime** |  | [readonly]
+**workspace_id** | **string** |  | [optional]
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

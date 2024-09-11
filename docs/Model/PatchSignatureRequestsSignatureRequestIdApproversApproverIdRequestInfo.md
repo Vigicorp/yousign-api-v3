@@ -1,12 +1,13 @@
-# PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequestInfo
+# # PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequestInfo
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**first_name** | **string** |  | [optional] 
-**last_name** | **string** |  | [optional] 
-**email** | **string** |  | [optional] 
-**phone_number** | **string** | E.164 format | [optional] 
-**locale** | [**\Yousign\Client\Model\Locale**](Locale.md) |  | [optional] 
+**first_name** | **string** |  | [optional]
+**last_name** | **string** |  | [optional]
+**email** | **string** |  | [optional]
+**phone_number** | **string** | E.164 format | [optional]
+**locale** | [**\Yousign\Client\Model\Locale**](Locale.md) |  | [optional]
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

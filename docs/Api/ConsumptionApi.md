@@ -1,26 +1,32 @@
 # Yousign\Client\ConsumptionApi
 
-All URIs are relative to *https://api-sandbox.yousign.app/v3*
+All URIs are relative to https://api-sandbox.yousign.app/v3, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getConsumptions**](ConsumptionApi.md#getconsumptions) | **GET** /consumptions | Get Consumptions
-[**getConsumptionsExport**](ConsumptionApi.md#getconsumptionsexport) | **GET** /consumptions/export | Export Consumption data
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**getConsumptions()**](ConsumptionApi.md#getConsumptions) | **GET** /consumptions | Get Consumptions |
+| [**getConsumptionsExport()**](ConsumptionApi.md#getConsumptionsExport) | **GET** /consumptions/export | Export Consumption data |
 
-# **getConsumptions**
-> \Yousign\Client\Model\Consumption getConsumptions($from, $to, $authentication_key)
+
+## `getConsumptions()`
+
+```php
+getConsumptions($from, $to, $authentication_key): \Yousign\Client\Model\Consumption
+```
 
 Get Consumptions
 
 Get signatures Consumption by source
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: bearerAuth
-    $config = Yousign\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = Yousign\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Yousign\Client\Api\ConsumptionApi(
@@ -29,9 +35,9 @@ $apiInstance = new Yousign\Client\Api\ConsumptionApi(
     new GuzzleHttp\Client(),
     $config
 );
-$from = new \Yousign\Client\Model\DateYMD(); // \Yousign\Client\Model\DateYMD | The \"from\" date must not be more than 1 year in the past
-$to = new \Yousign\Client\Model\DateYMD(); // \Yousign\Client\Model\DateYMD | The \"to\" date must be more recent than the \"from\" date
-$authentication_key = "authentication_key_example"; // string | 
+$from = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The \"from\" date must not be more than 1 year in the past
+$to = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The \"to\" date must be more recent than the \"from\" date
+$authentication_key = 'authentication_key_example'; // string
 
 try {
     $result = $apiInstance->getConsumptions($from, $to, $authentication_key);
@@ -39,16 +45,15 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ConsumptionApi->getConsumptions: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **from** | [**\Yousign\Client\Model\DateYMD**](../Model/.md)| The \&quot;from\&quot; date must not be more than 1 year in the past |
- **to** | [**\Yousign\Client\Model\DateYMD**](../Model/.md)| The \&quot;to\&quot; date must be more recent than the \&quot;from\&quot; date |
- **authentication_key** | [**string**](../Model/.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **from** | **\DateTime**| The \&quot;from\&quot; date must not be more than 1 year in the past | |
+| **to** | **\DateTime**| The \&quot;to\&quot; date must be more recent than the \&quot;from\&quot; date | |
+| **authentication_key** | **string**|  | [optional] |
 
 ### Return type
 
@@ -60,25 +65,32 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getConsumptionsExport**
-> string getConsumptionsExport($from, $to, $authentication_key)
+## `getConsumptionsExport()`
+
+```php
+getConsumptionsExport($from, $to, $authentication_key): string
+```
 
 Export Consumption data
 
 Get a binary .csv file containing all the Consumption data of the underlying signatures
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: bearerAuth
-    $config = Yousign\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = Yousign\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Yousign\Client\Api\ConsumptionApi(
@@ -87,9 +99,9 @@ $apiInstance = new Yousign\Client\Api\ConsumptionApi(
     new GuzzleHttp\Client(),
     $config
 );
-$from = new \Yousign\Client\Model\DateYMD(); // \Yousign\Client\Model\DateYMD | The \"from\" date must not be more than 1 year in the past
-$to = new \Yousign\Client\Model\DateYMD(); // \Yousign\Client\Model\DateYMD | The \"to\" date must be more recent than the \"from\" date
-$authentication_key = "authentication_key_example"; // string | 
+$from = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The \"from\" date must not be more than 1 year in the past
+$to = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The \"to\" date must be more recent than the \"from\" date
+$authentication_key = 'authentication_key_example'; // string
 
 try {
     $result = $apiInstance->getConsumptionsExport($from, $to, $authentication_key);
@@ -97,16 +109,15 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ConsumptionApi->getConsumptionsExport: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **from** | [**\Yousign\Client\Model\DateYMD**](../Model/.md)| The \&quot;from\&quot; date must not be more than 1 year in the past |
- **to** | [**\Yousign\Client\Model\DateYMD**](../Model/.md)| The \&quot;to\&quot; date must be more recent than the \&quot;from\&quot; date |
- **authentication_key** | [**string**](../Model/.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **from** | **\DateTime**| The \&quot;from\&quot; date must not be more than 1 year in the past | |
+| **to** | **\DateTime**| The \&quot;to\&quot; date must be more recent than the \&quot;from\&quot; date | |
+| **authentication_key** | **string**|  | [optional] |
 
 ### Return type
 
@@ -118,7 +129,9 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: text/csv, application/json
+- **Content-Type**: Not defined
+- **Accept**: `text/csv`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)

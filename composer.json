@@ -1,19 +1,21 @@
 {
     "name": "vigicorp/yousign-api-v3",
-    "description": "",
+    "description": "Build the best experience of digital signature through your own platform. Increase your conversion rates, leverage your data and reduce your costs with Yousign API.",
     "keywords": [
-        "swagger",
+        "openapitools",
+        "openapi-generator",
+        "openapi",
         "php",
         "sdk",
         "rest",
         "api"
     ],
-    "homepage": "https://github.com/Vigicorp/yousign-api-v3",
+    "homepage": "https://openapi-generator.tech",
     "license": "MIT",
     "authors": [
         {
-            "name": "PastisD",
-            "homepage": "https://github.com/PastisD"
+            "name": "Vigicorp",
+            "homepage": "https://www.vigicorp.fr"
         }
     ],
     "require": {
@@ -30,5 +32,8 @@
     },
     "autoload": {
         "psr-4": { "Yousign\\Client\\" : "lib/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Yousign\\Client\\Test\\" : "test/" }
     }
 }

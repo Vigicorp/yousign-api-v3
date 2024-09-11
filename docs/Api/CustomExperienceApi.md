@@ -1,31 +1,37 @@
 # Yousign\Client\CustomExperienceApi
 
-All URIs are relative to *https://api-sandbox.yousign.app/v3*
+All URIs are relative to https://api-sandbox.yousign.app/v3, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**deleteCustomExperience**](CustomExperienceApi.md#deletecustomexperience) | **DELETE** /custom_experiences/{customExperienceId} | Delete a Custom Experience
-[**deleteCustomExperienceLogo**](CustomExperienceApi.md#deletecustomexperiencelogo) | **DELETE** /custom_experiences/{customExperienceId}/logo | Delete a Custom Experience logo
-[**getCustomExperiences**](CustomExperienceApi.md#getcustomexperiences) | **GET** /custom_experiences | List Custom Experiences
-[**getCustomExperiencesCustomExperienceId**](CustomExperienceApi.md#getcustomexperiencescustomexperienceid) | **GET** /custom_experiences/{customExperienceId} | Get a Custom Experience
-[**patchCustomExperienceLogo**](CustomExperienceApi.md#patchcustomexperiencelogo) | **POST** /custom_experiences/{customExperienceId}/logo | Update a Custom Experience logo
-[**patchCustomExperiencesCustomExperienceId**](CustomExperienceApi.md#patchcustomexperiencescustomexperienceid) | **PATCH** /custom_experiences/{customExperienceId} | Update a Custom Experience
-[**postCustomExperience**](CustomExperienceApi.md#postcustomexperience) | **POST** /custom_experiences | Create a Custom Experience
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**deleteCustomExperience()**](CustomExperienceApi.md#deleteCustomExperience) | **DELETE** /custom_experiences/{customExperienceId} | Delete a Custom Experience |
+| [**deleteCustomExperienceLogo()**](CustomExperienceApi.md#deleteCustomExperienceLogo) | **DELETE** /custom_experiences/{customExperienceId}/logo | Delete a Custom Experience logo |
+| [**getCustomExperiences()**](CustomExperienceApi.md#getCustomExperiences) | **GET** /custom_experiences | List Custom Experiences |
+| [**getCustomExperiencesCustomExperienceId()**](CustomExperienceApi.md#getCustomExperiencesCustomExperienceId) | **GET** /custom_experiences/{customExperienceId} | Get a Custom Experience |
+| [**patchCustomExperienceLogo()**](CustomExperienceApi.md#patchCustomExperienceLogo) | **POST** /custom_experiences/{customExperienceId}/logo | Update a Custom Experience logo |
+| [**patchCustomExperiencesCustomExperienceId()**](CustomExperienceApi.md#patchCustomExperiencesCustomExperienceId) | **PATCH** /custom_experiences/{customExperienceId} | Update a Custom Experience |
+| [**postCustomExperience()**](CustomExperienceApi.md#postCustomExperience) | **POST** /custom_experiences | Create a Custom Experience |
 
-# **deleteCustomExperience**
-> deleteCustomExperience($custom_experience_id)
+
+## `deleteCustomExperience()`
+
+```php
+deleteCustomExperience($custom_experience_id)
+```
 
 Delete a Custom Experience
 
 Deletes a given Custom Experience.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: bearerAuth
-    $config = Yousign\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = Yousign\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Yousign\Client\Api\CustomExperienceApi(
@@ -34,21 +40,20 @@ $apiInstance = new Yousign\Client\Api\CustomExperienceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$custom_experience_id = "custom_experience_id_example"; // string | Custom Experience Id
+$custom_experience_id = 'custom_experience_id_example'; // string | Custom Experience Id
 
 try {
     $apiInstance->deleteCustomExperience($custom_experience_id);
 } catch (Exception $e) {
     echo 'Exception when calling CustomExperienceApi->deleteCustomExperience: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **custom_experience_id** | [**string**](../Model/.md)| Custom Experience Id |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **custom_experience_id** | **string**| Custom Experience Id | |
 
 ### Return type
 
@@ -60,25 +65,32 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **deleteCustomExperienceLogo**
-> deleteCustomExperienceLogo($custom_experience_id)
+## `deleteCustomExperienceLogo()`
+
+```php
+deleteCustomExperienceLogo($custom_experience_id)
+```
 
 Delete a Custom Experience logo
 
 Deletes the logo of a Custom Experience.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: bearerAuth
-    $config = Yousign\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = Yousign\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Yousign\Client\Api\CustomExperienceApi(
@@ -87,21 +99,20 @@ $apiInstance = new Yousign\Client\Api\CustomExperienceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$custom_experience_id = "custom_experience_id_example"; // string | Custom Experience Id
+$custom_experience_id = 'custom_experience_id_example'; // string | Custom Experience Id
 
 try {
     $apiInstance->deleteCustomExperienceLogo($custom_experience_id);
 } catch (Exception $e) {
     echo 'Exception when calling CustomExperienceApi->deleteCustomExperienceLogo: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **custom_experience_id** | [**string**](../Model/.md)| Custom Experience Id |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **custom_experience_id** | **string**| Custom Experience Id | |
 
 ### Return type
 
@@ -113,25 +124,32 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getCustomExperiences**
-> \Yousign\Client\Model\GetCustomExperiences200Response getCustomExperiences($after, $limit)
+## `getCustomExperiences()`
+
+```php
+getCustomExperiences($after, $limit): \Yousign\Client\Model\GetCustomExperiences200Response
+```
 
 List Custom Experiences
 
 Returns the list of all Custom Experiences in your Organization. You can limit the number of items returned by using pagination.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: bearerAuth
-    $config = Yousign\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = Yousign\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Yousign\Client\Api\CustomExperienceApi(
@@ -140,7 +158,7 @@ $apiInstance = new Yousign\Client\Api\CustomExperienceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$after = "after_example"; // string | After cursor (pagination)
+$after = 'after_example'; // string | After cursor (pagination)
 $limit = 100; // int | The limit of items count to retrieve.
 
 try {
@@ -149,15 +167,14 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling CustomExperienceApi->getCustomExperiences: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **after** | **string**| After cursor (pagination) | [optional]
- **limit** | **int**| The limit of items count to retrieve. | [optional] [default to 100]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **after** | **string**| After cursor (pagination) | [optional] |
+| **limit** | **int**| The limit of items count to retrieve. | [optional] [default to 100] |
 
 ### Return type
 
@@ -169,25 +186,32 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getCustomExperiencesCustomExperienceId**
-> \Yousign\Client\Model\CustomExperience getCustomExperiencesCustomExperienceId($custom_experience_id)
+## `getCustomExperiencesCustomExperienceId()`
+
+```php
+getCustomExperiencesCustomExperienceId($custom_experience_id): \Yousign\Client\Model\CustomExperience
+```
 
 Get a Custom Experience
 
 Retrieves a given Custom Experience.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: bearerAuth
-    $config = Yousign\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = Yousign\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Yousign\Client\Api\CustomExperienceApi(
@@ -196,7 +220,7 @@ $apiInstance = new Yousign\Client\Api\CustomExperienceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$custom_experience_id = "custom_experience_id_example"; // string | Custom Experience Id
+$custom_experience_id = 'custom_experience_id_example'; // string | Custom Experience Id
 
 try {
     $result = $apiInstance->getCustomExperiencesCustomExperienceId($custom_experience_id);
@@ -204,14 +228,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling CustomExperienceApi->getCustomExperiencesCustomExperienceId: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **custom_experience_id** | [**string**](../Model/.md)| Custom Experience Id |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **custom_experience_id** | **string**| Custom Experience Id | |
 
 ### Return type
 
@@ -223,25 +246,32 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **patchCustomExperienceLogo**
-> \Yousign\Client\Model\CustomExperience patchCustomExperienceLogo($custom_experience_id, $file)
+## `patchCustomExperienceLogo()`
+
+```php
+patchCustomExperienceLogo($custom_experience_id, $file): \Yousign\Client\Model\CustomExperience
+```
 
 Update a Custom Experience logo
 
 Updates the logo of a given Custom Experience by uploading the image of your choice.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: bearerAuth
-    $config = Yousign\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = Yousign\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Yousign\Client\Api\CustomExperienceApi(
@@ -250,8 +280,8 @@ $apiInstance = new Yousign\Client\Api\CustomExperienceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$custom_experience_id = "custom_experience_id_example"; // string | Custom Experience Id
-$file = "file_example"; // string | 
+$custom_experience_id = 'custom_experience_id_example'; // string | Custom Experience Id
+$file = "/path/to/file.txt"; // \SplFileObject
 
 try {
     $result = $apiInstance->patchCustomExperienceLogo($custom_experience_id, $file);
@@ -259,15 +289,14 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling CustomExperienceApi->patchCustomExperienceLogo: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **custom_experience_id** | [**string**](../Model/.md)| Custom Experience Id |
- **file** | **string****string**|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **custom_experience_id** | **string**| Custom Experience Id | |
+| **file** | **\SplFileObject****\SplFileObject**|  | |
 
 ### Return type
 
@@ -279,25 +308,32 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: multipart/form-data
- - **Accept**: application/json
+- **Content-Type**: `multipart/form-data`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **patchCustomExperiencesCustomExperienceId**
-> \Yousign\Client\Model\CustomExperience patchCustomExperiencesCustomExperienceId($custom_experience_id, $body)
+## `patchCustomExperiencesCustomExperienceId()`
+
+```php
+patchCustomExperiencesCustomExperienceId($custom_experience_id, $update_custom_experience): \Yousign\Client\Model\CustomExperience
+```
 
 Update a Custom Experience
 
 Updates a given Custom Experience. Any parameters not provided are left unchanged.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: bearerAuth
-    $config = Yousign\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = Yousign\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Yousign\Client\Api\CustomExperienceApi(
@@ -306,24 +342,23 @@ $apiInstance = new Yousign\Client\Api\CustomExperienceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$custom_experience_id = "custom_experience_id_example"; // string | Custom Experience Id
-$body = new \Yousign\Client\Model\UpdateCustomExperience(); // \Yousign\Client\Model\UpdateCustomExperience | 
+$custom_experience_id = 'custom_experience_id_example'; // string | Custom Experience Id
+$update_custom_experience = new \Yousign\Client\Model\UpdateCustomExperience(); // \Yousign\Client\Model\UpdateCustomExperience
 
 try {
-    $result = $apiInstance->patchCustomExperiencesCustomExperienceId($custom_experience_id, $body);
+    $result = $apiInstance->patchCustomExperiencesCustomExperienceId($custom_experience_id, $update_custom_experience);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomExperienceApi->patchCustomExperiencesCustomExperienceId: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **custom_experience_id** | [**string**](../Model/.md)| Custom Experience Id |
- **body** | [**\Yousign\Client\Model\UpdateCustomExperience**](../Model/UpdateCustomExperience.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **custom_experience_id** | **string**| Custom Experience Id | |
+| **update_custom_experience** | [**\Yousign\Client\Model\UpdateCustomExperience**](../Model/UpdateCustomExperience.md)|  | [optional] |
 
 ### Return type
 
@@ -335,25 +370,32 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **postCustomExperience**
-> \Yousign\Client\Model\CustomExperience postCustomExperience($body)
+## `postCustomExperience()`
+
+```php
+postCustomExperience($create_custom_experience): \Yousign\Client\Model\CustomExperience
+```
 
 Create a Custom Experience
 
 Creates a new Custom Experience.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: bearerAuth
-    $config = Yousign\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = Yousign\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Yousign\Client\Api\CustomExperienceApi(
@@ -362,22 +404,21 @@ $apiInstance = new Yousign\Client\Api\CustomExperienceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Yousign\Client\Model\CreateCustomExperience(); // \Yousign\Client\Model\CreateCustomExperience | 
+$create_custom_experience = new \Yousign\Client\Model\CreateCustomExperience(); // \Yousign\Client\Model\CreateCustomExperience
 
 try {
-    $result = $apiInstance->postCustomExperience($body);
+    $result = $apiInstance->postCustomExperience($create_custom_experience);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomExperienceApi->postCustomExperience: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Yousign\Client\Model\CreateCustomExperience**](../Model/CreateCustomExperience.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **create_custom_experience** | [**\Yousign\Client\Model\CreateCustomExperience**](../Model/CreateCustomExperience.md)|  | [optional] |
 
 ### Return type
 
@@ -389,7 +430,9 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
