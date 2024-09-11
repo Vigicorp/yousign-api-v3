@@ -1,6 +1,6 @@
 <?php
 /**
- * OtpMessageTest
+ * UploadArchivedFileTest
  *
  * PHP version 7.4
  *
@@ -32,15 +32,15 @@ namespace Yousign\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * OtpMessageTest Class Doc Comment
+ * UploadArchivedFileTest Class Doc Comment
  *
  * @category    Class
- * @description OtpMessage
+ * @description UploadArchivedFile
  * @package     Yousign\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class OtpMessageTest extends TestCase
+class UploadArchivedFileTest extends TestCase
 {
 
     /**
@@ -72,18 +72,54 @@ class OtpMessageTest extends TestCase
     }
 
     /**
-     * Test "OtpMessage"
+     * Test "UploadArchivedFile"
      */
-    public function testOtpMessage()
+    public function testUploadArchivedFile()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "custom_text"
+     * Test attribute "file"
      */
-    public function testPropertyCustomText()
+    public function testPropertyFile()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "workspace_id"
+     */
+    public function testPropertyWorkspaceId()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "archive_y"
+     */
+    public function testPropertyArchiveY()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "tags"
+     */
+    public function testPropertyTags()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "expired_at"
+     */
+    public function testPropertyExpiredAt()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

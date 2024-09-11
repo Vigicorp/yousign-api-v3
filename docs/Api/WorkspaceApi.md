@@ -16,7 +16,7 @@ All URIs are relative to https://api-sandbox.yousign.app/v3, except if the opera
 ## `deleteWorkspace()`
 
 ```php
-deleteWorkspace($workspace_id, $delete_workspace)
+deleteWorkspace($workspace_id)
 ```
 
 Delete a Workspace
@@ -41,10 +41,9 @@ $apiInstance = new Yousign\Client\Api\WorkspaceApi(
     $config
 );
 $workspace_id = 'workspace_id_example'; // string | Workspace Id
-$delete_workspace = new \Yousign\Client\Model\DeleteWorkspace(); // \Yousign\Client\Model\DeleteWorkspace
 
 try {
-    $apiInstance->deleteWorkspace($workspace_id, $delete_workspace);
+    $apiInstance->deleteWorkspace($workspace_id);
 } catch (Exception $e) {
     echo 'Exception when calling WorkspaceApi->deleteWorkspace: ', $e->getMessage(), PHP_EOL;
 }
@@ -55,7 +54,6 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **workspace_id** | **string**| Workspace Id | |
-| **delete_workspace** | [**\Yousign\Client\Model\DeleteWorkspace**](../Model/DeleteWorkspace.md)|  | [optional] |
 
 ### Return type
 
@@ -67,7 +65,7 @@ void (empty response body)
 
 ### HTTP request headers
 
-- **Content-Type**: `application/json`
+- **Content-Type**: Not defined
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)

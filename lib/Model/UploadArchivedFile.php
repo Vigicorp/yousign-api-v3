@@ -1,6 +1,6 @@
 <?php
 /**
- * SmsNotification1
+ * UploadArchivedFile
  *
  * PHP version 7.4
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \Yousign\Client\ObjectSerializer;
 
 /**
- * SmsNotification1 Class Doc Comment
+ * UploadArchivedFile Class Doc Comment
  *
  * @category Class
  * @package  Yousign\Client
@@ -41,7 +41,7 @@ use \Yousign\Client\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
+class UploadArchivedFile implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'SmsNotification_1';
+    protected static $openAPIModelName = 'UploadArchivedFile';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,7 +58,11 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'otp_message' => '\Yousign\Client\Model\OtpMessage'
+        'file' => '\SplFileObject',
+        'workspace_id' => 'string',
+        'archive_y' => 'string',
+        'tags' => 'string[]',
+        'expired_at' => 'string'
     ];
 
     /**
@@ -69,7 +73,11 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'otp_message' => null
+        'file' => 'binary',
+        'workspace_id' => 'uuid',
+        'archive_y' => null,
+        'tags' => null,
+        'expired_at' => null
     ];
 
     /**
@@ -78,7 +86,11 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'otp_message' => false
+        'file' => false,
+        'workspace_id' => true,
+        'archive_y' => true,
+        'tags' => true,
+        'expired_at' => true
     ];
 
     /**
@@ -167,7 +179,11 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'otp_message' => 'otp_message'
+        'file' => 'file',
+        'workspace_id' => 'workspace_id',
+        'archive_y' => 'archive_y',
+        'tags' => 'tags',
+        'expired_at' => 'expired_at'
     ];
 
     /**
@@ -176,7 +192,11 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'otp_message' => 'setOtpMessage'
+        'file' => 'setFile',
+        'workspace_id' => 'setWorkspaceId',
+        'archive_y' => 'setArchiveY',
+        'tags' => 'setTags',
+        'expired_at' => 'setExpiredAt'
     ];
 
     /**
@@ -185,7 +205,11 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'otp_message' => 'getOtpMessage'
+        'file' => 'getFile',
+        'workspace_id' => 'getWorkspaceId',
+        'archive_y' => 'getArchiveY',
+        'tags' => 'getTags',
+        'expired_at' => 'getExpiredAt'
     ];
 
     /**
@@ -245,7 +269,11 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('otp_message', $data ?? [], null);
+        $this->setIfExists('file', $data ?? [], null);
+        $this->setIfExists('workspace_id', $data ?? [], null);
+        $this->setIfExists('archive_y', $data ?? [], null);
+        $this->setIfExists('tags', $data ?? [], null);
+        $this->setIfExists('expired_at', $data ?? [], null);
     }
 
     /**
@@ -275,9 +303,21 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['otp_message'] === null) {
-            $invalidProperties[] = "'otp_message' can't be null";
+        if ($this->container['file'] === null) {
+            $invalidProperties[] = "'file' can't be null";
         }
+        if (!is_null($this->container['workspace_id']) && !preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/", $this->container['workspace_id'])) {
+            $invalidProperties[] = "invalid value for 'workspace_id', must be conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/.";
+        }
+
+        if (!is_null($this->container['archive_y']) && !preg_match("/^(true|false)?$/", $this->container['archive_y'])) {
+            $invalidProperties[] = "invalid value for 'archive_y', must be conform to the pattern /^(true|false)?$/.";
+        }
+
+        if (!is_null($this->container['expired_at']) && !preg_match("/^(\\d{4})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01]) ([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$/", $this->container['expired_at'])) {
+            $invalidProperties[] = "invalid value for 'expired_at', must be conform to the pattern /^(\\d{4})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01]) ([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$/.";
+        }
+
         return $invalidProperties;
     }
 
@@ -294,28 +334,179 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets otp_message
+     * Gets file
      *
-     * @return \Yousign\Client\Model\OtpMessage
+     * @return \SplFileObject
      */
-    public function getOtpMessage()
+    public function getFile()
     {
-        return $this->container['otp_message'];
+        return $this->container['file'];
     }
 
     /**
-     * Sets otp_message
+     * Sets file
      *
-     * @param \Yousign\Client\Model\OtpMessage $otp_message otp_message
+     * @param \SplFileObject $file File to be uploaded
      *
      * @return self
      */
-    public function setOtpMessage($otp_message)
+    public function setFile($file)
     {
-        if (is_null($otp_message)) {
-            throw new \InvalidArgumentException('non-nullable otp_message cannot be null');
+        if (is_null($file)) {
+            throw new \InvalidArgumentException('non-nullable file cannot be null');
         }
-        $this->container['otp_message'] = $otp_message;
+        $this->container['file'] = $file;
+
+        return $this;
+    }
+
+    /**
+     * Gets workspace_id
+     *
+     * @return string|null
+     */
+    public function getWorkspaceId()
+    {
+        return $this->container['workspace_id'];
+    }
+
+    /**
+     * Sets workspace_id
+     *
+     * @param string|null $workspace_id workspace_id
+     *
+     * @return self
+     */
+    public function setWorkspaceId($workspace_id)
+    {
+        if (is_null($workspace_id)) {
+            array_push($this->openAPINullablesSetToNull, 'workspace_id');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('workspace_id', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+
+        if (!is_null($workspace_id) && (!preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/", ObjectSerializer::toString($workspace_id)))) {
+            throw new \InvalidArgumentException("invalid value for \$workspace_id when calling UploadArchivedFile., must conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/.");
+        }
+
+        $this->container['workspace_id'] = $workspace_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets archive_y
+     *
+     * @return string|null
+     */
+    public function getArchiveY()
+    {
+        return $this->container['archive_y'];
+    }
+
+    /**
+     * Sets archive_y
+     *
+     * @param string|null $archive_y archive_y
+     *
+     * @return self
+     */
+    public function setArchiveY($archive_y)
+    {
+        if (is_null($archive_y)) {
+            array_push($this->openAPINullablesSetToNull, 'archive_y');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('archive_y', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+
+        if (!is_null($archive_y) && (!preg_match("/^(true|false)?$/", ObjectSerializer::toString($archive_y)))) {
+            throw new \InvalidArgumentException("invalid value for \$archive_y when calling UploadArchivedFile., must conform to the pattern /^(true|false)?$/.");
+        }
+
+        $this->container['archive_y'] = $archive_y;
+
+        return $this;
+    }
+
+    /**
+     * Gets tags
+     *
+     * @return string[]|null
+     */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+     * Sets tags
+     *
+     * @param string[]|null $tags Tags for the file
+     *
+     * @return self
+     */
+    public function setTags($tags)
+    {
+        if (is_null($tags)) {
+            array_push($this->openAPINullablesSetToNull, 'tags');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('tags', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['tags'] = $tags;
+
+        return $this;
+    }
+
+    /**
+     * Gets expired_at
+     *
+     * @return string|null
+     */
+    public function getExpiredAt()
+    {
+        return $this->container['expired_at'];
+    }
+
+    /**
+     * Sets expired_at
+     *
+     * @param string|null $expired_at Expiration date of the file
+     *
+     * @return self
+     */
+    public function setExpiredAt($expired_at)
+    {
+        if (is_null($expired_at)) {
+            array_push($this->openAPINullablesSetToNull, 'expired_at');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('expired_at', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+
+        if (!is_null($expired_at) && (!preg_match("/^(\\d{4})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01]) ([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$/", ObjectSerializer::toString($expired_at)))) {
+            throw new \InvalidArgumentException("invalid value for \$expired_at when calling UploadArchivedFile., must conform to the pattern /^(\\d{4})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01]) ([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$/.");
+        }
+
+        $this->container['expired_at'] = $expired_at;
 
         return $this;
     }

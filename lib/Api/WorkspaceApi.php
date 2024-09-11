@@ -147,16 +147,15 @@ class WorkspaceApi
      * Delete a Workspace
      *
      * @param  string $workspace_id Workspace Id (required)
-     * @param  \Yousign\Client\Model\DeleteWorkspace $delete_workspace delete_workspace (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteWorkspace'] to see the possible values for this operation
      *
      * @throws \Yousign\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function deleteWorkspace($workspace_id, $delete_workspace = null, string $contentType = self::contentTypes['deleteWorkspace'][0])
+    public function deleteWorkspace($workspace_id, string $contentType = self::contentTypes['deleteWorkspace'][0])
     {
-        $this->deleteWorkspaceWithHttpInfo($workspace_id, $delete_workspace, $contentType);
+        $this->deleteWorkspaceWithHttpInfo($workspace_id, $contentType);
     }
 
     /**
@@ -165,16 +164,15 @@ class WorkspaceApi
      * Delete a Workspace
      *
      * @param  string $workspace_id Workspace Id (required)
-     * @param  \Yousign\Client\Model\DeleteWorkspace $delete_workspace (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteWorkspace'] to see the possible values for this operation
      *
      * @throws \Yousign\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteWorkspaceWithHttpInfo($workspace_id, $delete_workspace = null, string $contentType = self::contentTypes['deleteWorkspace'][0])
+    public function deleteWorkspaceWithHttpInfo($workspace_id, string $contentType = self::contentTypes['deleteWorkspace'][0])
     {
-        $request = $this->deleteWorkspaceRequest($workspace_id, $delete_workspace, $contentType);
+        $request = $this->deleteWorkspaceRequest($workspace_id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -266,15 +264,14 @@ class WorkspaceApi
      * Delete a Workspace
      *
      * @param  string $workspace_id Workspace Id (required)
-     * @param  \Yousign\Client\Model\DeleteWorkspace $delete_workspace (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteWorkspace'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteWorkspaceAsync($workspace_id, $delete_workspace = null, string $contentType = self::contentTypes['deleteWorkspace'][0])
+    public function deleteWorkspaceAsync($workspace_id, string $contentType = self::contentTypes['deleteWorkspace'][0])
     {
-        return $this->deleteWorkspaceAsyncWithHttpInfo($workspace_id, $delete_workspace, $contentType)
+        return $this->deleteWorkspaceAsyncWithHttpInfo($workspace_id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -288,16 +285,15 @@ class WorkspaceApi
      * Delete a Workspace
      *
      * @param  string $workspace_id Workspace Id (required)
-     * @param  \Yousign\Client\Model\DeleteWorkspace $delete_workspace (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteWorkspace'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteWorkspaceAsyncWithHttpInfo($workspace_id, $delete_workspace = null, string $contentType = self::contentTypes['deleteWorkspace'][0])
+    public function deleteWorkspaceAsyncWithHttpInfo($workspace_id, string $contentType = self::contentTypes['deleteWorkspace'][0])
     {
         $returnType = '';
-        $request = $this->deleteWorkspaceRequest($workspace_id, $delete_workspace, $contentType);
+        $request = $this->deleteWorkspaceRequest($workspace_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -326,13 +322,12 @@ class WorkspaceApi
      * Create request for operation 'deleteWorkspace'
      *
      * @param  string $workspace_id Workspace Id (required)
-     * @param  \Yousign\Client\Model\DeleteWorkspace $delete_workspace (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteWorkspace'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function deleteWorkspaceRequest($workspace_id, $delete_workspace = null, string $contentType = self::contentTypes['deleteWorkspace'][0])
+    public function deleteWorkspaceRequest($workspace_id, string $contentType = self::contentTypes['deleteWorkspace'][0])
     {
 
         // verify the required parameter 'workspace_id' is set
@@ -345,7 +340,6 @@ class WorkspaceApi
             throw new \InvalidArgumentException("invalid value for \"workspace_id\" when calling WorkspaceApi.deleteWorkspace, must conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/.");
         }
         
-
 
         $resourcePath = '/workspaces/{workspaceId}';
         $formParams = [];
@@ -373,14 +367,7 @@ class WorkspaceApi
         );
 
         // for model (json/xml)
-        if (isset($delete_workspace)) {
-            if (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($delete_workspace));
-            } else {
-                $httpBody = $delete_workspace;
-            }
-        } elseif (count($formParams) > 0) {
+        if (count($formParams) > 0) {
             if ($multipart) {
                 $multipartContents = [];
                 foreach ($formParams as $formParamName => $formParamValue) {

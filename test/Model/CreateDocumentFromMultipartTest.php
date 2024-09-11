@@ -1,6 +1,6 @@
 <?php
 /**
- * OtpMessageTest
+ * CreateDocumentFromMultipartTest
  *
  * PHP version 7.4
  *
@@ -32,15 +32,15 @@ namespace Yousign\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * OtpMessageTest Class Doc Comment
+ * CreateDocumentFromMultipartTest Class Doc Comment
  *
  * @category    Class
- * @description OtpMessage
+ * @description CreateDocumentFromMultipart
  * @package     Yousign\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class OtpMessageTest extends TestCase
+class CreateDocumentFromMultipartTest extends TestCase
 {
 
     /**
@@ -72,18 +72,63 @@ class OtpMessageTest extends TestCase
     }
 
     /**
-     * Test "OtpMessage"
+     * Test "CreateDocumentFromMultipart"
      */
-    public function testOtpMessage()
+    public function testCreateDocumentFromMultipart()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "custom_text"
+     * Test attribute "file"
      */
-    public function testPropertyCustomText()
+    public function testPropertyFile()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "nature"
+     */
+    public function testPropertyNature()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "insert_after_id"
+     */
+    public function testPropertyInsertAfterId()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "password"
+     */
+    public function testPropertyPassword()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "initials"
+     */
+    public function testPropertyInitials()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "parse_anchors"
+     */
+    public function testPropertyParseAnchors()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

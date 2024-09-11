@@ -1,6 +1,6 @@
 <?php
 /**
- * DeleteWorkspaceTest
+ * PostSignatureRequestsSignatureRequestIdDocumentsDocumentIdReplaceRequestTest
  *
  * PHP version 7.4
  *
@@ -32,15 +32,15 @@ namespace Yousign\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * DeleteWorkspaceTest Class Doc Comment
+ * PostSignatureRequestsSignatureRequestIdDocumentsDocumentIdReplaceRequestTest Class Doc Comment
  *
  * @category    Class
- * @description DeleteWorkspace
+ * @description PostSignatureRequestsSignatureRequestIdDocumentsDocumentIdReplaceRequest
  * @package     Yousign\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class DeleteWorkspaceTest extends TestCase
+class PostSignatureRequestsSignatureRequestIdDocumentsDocumentIdReplaceRequestTest extends TestCase
 {
 
     /**
@@ -72,18 +72,18 @@ class DeleteWorkspaceTest extends TestCase
     }
 
     /**
-     * Test "DeleteWorkspace"
+     * Test "PostSignatureRequestsSignatureRequestIdDocumentsDocumentIdReplaceRequest"
      */
-    public function testDeleteWorkspace()
+    public function testPostSignatureRequestsSignatureRequestIdDocumentsDocumentIdReplaceRequest()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "workspace_id"
+     * Test attribute "file"
      */
-    public function testPropertyWorkspaceId()
+    public function testPropertyFile()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

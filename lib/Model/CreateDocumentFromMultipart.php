@@ -1,6 +1,6 @@
 <?php
 /**
- * SmsNotification1
+ * CreateDocumentFromMultipart
  *
  * PHP version 7.4
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \Yousign\Client\ObjectSerializer;
 
 /**
- * SmsNotification1 Class Doc Comment
+ * CreateDocumentFromMultipart Class Doc Comment
  *
  * @category Class
  * @package  Yousign\Client
@@ -41,7 +41,7 @@ use \Yousign\Client\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
+class CreateDocumentFromMultipart implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'SmsNotification_1';
+    protected static $openAPIModelName = 'CreateDocumentFromMultipart';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,7 +58,12 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'otp_message' => '\Yousign\Client\Model\OtpMessage'
+        'file' => '\SplFileObject',
+        'nature' => 'string',
+        'insert_after_id' => 'string',
+        'password' => 'string',
+        'initials' => '\Yousign\Client\Model\InitialsArea',
+        'parse_anchors' => 'bool'
     ];
 
     /**
@@ -69,7 +74,12 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'otp_message' => null
+        'file' => 'binary',
+        'nature' => null,
+        'insert_after_id' => 'uuid',
+        'password' => null,
+        'initials' => null,
+        'parse_anchors' => null
     ];
 
     /**
@@ -78,7 +88,12 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'otp_message' => false
+        'file' => false,
+        'nature' => false,
+        'insert_after_id' => false,
+        'password' => false,
+        'initials' => false,
+        'parse_anchors' => false
     ];
 
     /**
@@ -167,7 +182,12 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'otp_message' => 'otp_message'
+        'file' => 'file',
+        'nature' => 'nature',
+        'insert_after_id' => 'insert_after_id',
+        'password' => 'password',
+        'initials' => 'initials',
+        'parse_anchors' => 'parse_anchors'
     ];
 
     /**
@@ -176,7 +196,12 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'otp_message' => 'setOtpMessage'
+        'file' => 'setFile',
+        'nature' => 'setNature',
+        'insert_after_id' => 'setInsertAfterId',
+        'password' => 'setPassword',
+        'initials' => 'setInitials',
+        'parse_anchors' => 'setParseAnchors'
     ];
 
     /**
@@ -185,7 +210,12 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'otp_message' => 'getOtpMessage'
+        'file' => 'getFile',
+        'nature' => 'getNature',
+        'insert_after_id' => 'getInsertAfterId',
+        'password' => 'getPassword',
+        'initials' => 'getInitials',
+        'parse_anchors' => 'getParseAnchors'
     ];
 
     /**
@@ -229,6 +259,21 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
         return self::$openAPIModelName;
     }
 
+    public const NATURE_ATTACHMENT = 'attachment';
+    public const NATURE_SIGNABLE_DOCUMENT = 'signable_document';
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getNatureAllowableValues()
+    {
+        return [
+            self::NATURE_ATTACHMENT,
+            self::NATURE_SIGNABLE_DOCUMENT,
+        ];
+    }
 
     /**
      * Associative array for storing property values
@@ -245,7 +290,12 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('otp_message', $data ?? [], null);
+        $this->setIfExists('file', $data ?? [], null);
+        $this->setIfExists('nature', $data ?? [], null);
+        $this->setIfExists('insert_after_id', $data ?? [], null);
+        $this->setIfExists('password', $data ?? [], null);
+        $this->setIfExists('initials', $data ?? [], null);
+        $this->setIfExists('parse_anchors', $data ?? [], null);
     }
 
     /**
@@ -275,9 +325,25 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['otp_message'] === null) {
-            $invalidProperties[] = "'otp_message' can't be null";
+        if ($this->container['file'] === null) {
+            $invalidProperties[] = "'file' can't be null";
         }
+        if ($this->container['nature'] === null) {
+            $invalidProperties[] = "'nature' can't be null";
+        }
+        $allowedValues = $this->getNatureAllowableValues();
+        if (!is_null($this->container['nature']) && !in_array($this->container['nature'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value '%s' for 'nature', must be one of '%s'",
+                $this->container['nature'],
+                implode("', '", $allowedValues)
+            );
+        }
+
+        if (!is_null($this->container['insert_after_id']) && !preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/", $this->container['insert_after_id'])) {
+            $invalidProperties[] = "invalid value for 'insert_after_id', must be conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/.";
+        }
+
         return $invalidProperties;
     }
 
@@ -294,28 +360,178 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets otp_message
+     * Gets file
      *
-     * @return \Yousign\Client\Model\OtpMessage
+     * @return \SplFileObject
      */
-    public function getOtpMessage()
+    public function getFile()
     {
-        return $this->container['otp_message'];
+        return $this->container['file'];
     }
 
     /**
-     * Sets otp_message
+     * Sets file
      *
-     * @param \Yousign\Client\Model\OtpMessage $otp_message otp_message
+     * @param \SplFileObject $file Binary file
      *
      * @return self
      */
-    public function setOtpMessage($otp_message)
+    public function setFile($file)
     {
-        if (is_null($otp_message)) {
-            throw new \InvalidArgumentException('non-nullable otp_message cannot be null');
+        if (is_null($file)) {
+            throw new \InvalidArgumentException('non-nullable file cannot be null');
         }
-        $this->container['otp_message'] = $otp_message;
+        $this->container['file'] = $file;
+
+        return $this;
+    }
+
+    /**
+     * Gets nature
+     *
+     * @return string
+     */
+    public function getNature()
+    {
+        return $this->container['nature'];
+    }
+
+    /**
+     * Sets nature
+     *
+     * @param string $nature nature
+     *
+     * @return self
+     */
+    public function setNature($nature)
+    {
+        if (is_null($nature)) {
+            throw new \InvalidArgumentException('non-nullable nature cannot be null');
+        }
+        $allowedValues = $this->getNatureAllowableValues();
+        if (!in_array($nature, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'nature', must be one of '%s'",
+                    $nature,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['nature'] = $nature;
+
+        return $this;
+    }
+
+    /**
+     * Gets insert_after_id
+     *
+     * @return string|null
+     */
+    public function getInsertAfterId()
+    {
+        return $this->container['insert_after_id'];
+    }
+
+    /**
+     * Sets insert_after_id
+     *
+     * @param string|null $insert_after_id Insert just after the position of the specified document id
+     *
+     * @return self
+     */
+    public function setInsertAfterId($insert_after_id)
+    {
+        if (is_null($insert_after_id)) {
+            throw new \InvalidArgumentException('non-nullable insert_after_id cannot be null');
+        }
+
+        if ((!preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/", ObjectSerializer::toString($insert_after_id)))) {
+            throw new \InvalidArgumentException("invalid value for \$insert_after_id when calling CreateDocumentFromMultipart., must conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/.");
+        }
+
+        $this->container['insert_after_id'] = $insert_after_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets password
+     *
+     * @return string|null
+     */
+    public function getPassword()
+    {
+        return $this->container['password'];
+    }
+
+    /**
+     * Sets password
+     *
+     * @param string|null $password password
+     *
+     * @return self
+     */
+    public function setPassword($password)
+    {
+        if (is_null($password)) {
+            throw new \InvalidArgumentException('non-nullable password cannot be null');
+        }
+        $this->container['password'] = $password;
+
+        return $this;
+    }
+
+    /**
+     * Gets initials
+     *
+     * @return \Yousign\Client\Model\InitialsArea|null
+     */
+    public function getInitials()
+    {
+        return $this->container['initials'];
+    }
+
+    /**
+     * Sets initials
+     *
+     * @param \Yousign\Client\Model\InitialsArea|null $initials initials
+     *
+     * @return self
+     */
+    public function setInitials($initials)
+    {
+        if (is_null($initials)) {
+            throw new \InvalidArgumentException('non-nullable initials cannot be null');
+        }
+        $this->container['initials'] = $initials;
+
+        return $this;
+    }
+
+    /**
+     * Gets parse_anchors
+     *
+     * @return bool|null
+     */
+    public function getParseAnchors()
+    {
+        return $this->container['parse_anchors'];
+    }
+
+    /**
+     * Sets parse_anchors
+     *
+     * @param bool|null $parse_anchors parse_anchors
+     *
+     * @return self
+     */
+    public function setParseAnchors($parse_anchors)
+    {
+        if (is_null($parse_anchors)) {
+            throw new \InvalidArgumentException('non-nullable parse_anchors cannot be null');
+        }
+        $this->container['parse_anchors'] = $parse_anchors;
 
         return $this;
     }

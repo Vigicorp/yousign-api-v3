@@ -1,6 +1,6 @@
 <?php
 /**
- * SmsNotification1
+ * PostSignatureRequestsSignatureRequestIdDocumentsDocumentIdReplaceRequest
  *
  * PHP version 7.4
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \Yousign\Client\ObjectSerializer;
 
 /**
- * SmsNotification1 Class Doc Comment
+ * PostSignatureRequestsSignatureRequestIdDocumentsDocumentIdReplaceRequest Class Doc Comment
  *
  * @category Class
  * @package  Yousign\Client
@@ -41,7 +41,7 @@ use \Yousign\Client\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
+class PostSignatureRequestsSignatureRequestIdDocumentsDocumentIdReplaceRequest implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'SmsNotification_1';
+    protected static $openAPIModelName = 'post_signature_requests_signatureRequestId_documents_documentId_replace_request';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,7 +58,7 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'otp_message' => '\Yousign\Client\Model\OtpMessage'
+        'file' => '\SplFileObject'
     ];
 
     /**
@@ -69,7 +69,7 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'otp_message' => null
+        'file' => 'binary'
     ];
 
     /**
@@ -78,7 +78,7 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'otp_message' => false
+        'file' => false
     ];
 
     /**
@@ -167,7 +167,7 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'otp_message' => 'otp_message'
+        'file' => 'file'
     ];
 
     /**
@@ -176,7 +176,7 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'otp_message' => 'setOtpMessage'
+        'file' => 'setFile'
     ];
 
     /**
@@ -185,7 +185,7 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'otp_message' => 'getOtpMessage'
+        'file' => 'getFile'
     ];
 
     /**
@@ -245,7 +245,7 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('otp_message', $data ?? [], null);
+        $this->setIfExists('file', $data ?? [], null);
     }
 
     /**
@@ -275,8 +275,8 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['otp_message'] === null) {
-            $invalidProperties[] = "'otp_message' can't be null";
+        if ($this->container['file'] === null) {
+            $invalidProperties[] = "'file' can't be null";
         }
         return $invalidProperties;
     }
@@ -294,28 +294,28 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets otp_message
+     * Gets file
      *
-     * @return \Yousign\Client\Model\OtpMessage
+     * @return \SplFileObject
      */
-    public function getOtpMessage()
+    public function getFile()
     {
-        return $this->container['otp_message'];
+        return $this->container['file'];
     }
 
     /**
-     * Sets otp_message
+     * Sets file
      *
-     * @param \Yousign\Client\Model\OtpMessage $otp_message otp_message
+     * @param \SplFileObject $file file
      *
      * @return self
      */
-    public function setOtpMessage($otp_message)
+    public function setFile($file)
     {
-        if (is_null($otp_message)) {
-            throw new \InvalidArgumentException('non-nullable otp_message cannot be null');
+        if (is_null($file)) {
+            throw new \InvalidArgumentException('non-nullable file cannot be null');
         }
-        $this->container['otp_message'] = $otp_message;
+        $this->container['file'] = $file;
 
         return $this;
     }

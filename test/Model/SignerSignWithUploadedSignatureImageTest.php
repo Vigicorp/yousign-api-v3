@@ -1,6 +1,6 @@
 <?php
 /**
- * OtpMessageTest
+ * SignerSignWithUploadedSignatureImageTest
  *
  * PHP version 7.4
  *
@@ -32,15 +32,15 @@ namespace Yousign\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * OtpMessageTest Class Doc Comment
+ * SignerSignWithUploadedSignatureImageTest Class Doc Comment
  *
  * @category    Class
- * @description OtpMessage
+ * @description SignerSignWithUploadedSignatureImage
  * @package     Yousign\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class OtpMessageTest extends TestCase
+class SignerSignWithUploadedSignatureImageTest extends TestCase
 {
 
     /**
@@ -72,18 +72,45 @@ class OtpMessageTest extends TestCase
     }
 
     /**
-     * Test "OtpMessage"
+     * Test "SignerSignWithUploadedSignatureImage"
      */
-    public function testOtpMessage()
+    public function testSignerSignWithUploadedSignatureImage()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "custom_text"
+     * Test attribute "otp"
      */
-    public function testPropertyCustomText()
+    public function testPropertyOtp()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "ip_address"
+     */
+    public function testPropertyIpAddress()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "consent_given_at"
+     */
+    public function testPropertyConsentGivenAt()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "signature_image"
+     */
+    public function testPropertySignatureImage()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

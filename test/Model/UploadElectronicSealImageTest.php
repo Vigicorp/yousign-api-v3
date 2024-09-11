@@ -1,6 +1,6 @@
 <?php
 /**
- * OtpMessageTest
+ * UploadElectronicSealImageTest
  *
  * PHP version 7.4
  *
@@ -32,15 +32,15 @@ namespace Yousign\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * OtpMessageTest Class Doc Comment
+ * UploadElectronicSealImageTest Class Doc Comment
  *
  * @category    Class
- * @description OtpMessage
+ * @description UploadElectronicSealImage
  * @package     Yousign\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class OtpMessageTest extends TestCase
+class UploadElectronicSealImageTest extends TestCase
 {
 
     /**
@@ -72,18 +72,27 @@ class OtpMessageTest extends TestCase
     }
 
     /**
-     * Test "OtpMessage"
+     * Test "UploadElectronicSealImage"
      */
-    public function testOtpMessage()
+    public function testUploadElectronicSealImage()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "custom_text"
+     * Test attribute "file"
      */
-    public function testPropertyCustomText()
+    public function testPropertyFile()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "name"
+     */
+    public function testPropertyName()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

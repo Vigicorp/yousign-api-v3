@@ -1,6 +1,6 @@
 <?php
 /**
- * SmsNotification1
+ * SignerSignWithUploadedSignatureImage
  *
  * PHP version 7.4
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \Yousign\Client\ObjectSerializer;
 
 /**
- * SmsNotification1 Class Doc Comment
+ * SignerSignWithUploadedSignatureImage Class Doc Comment
  *
  * @category Class
  * @package  Yousign\Client
@@ -41,7 +41,7 @@ use \Yousign\Client\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
+class SignerSignWithUploadedSignatureImage implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'SmsNotification_1';
+    protected static $openAPIModelName = 'SignerSignWithUploadedSignatureImage';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,7 +58,10 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'otp_message' => '\Yousign\Client\Model\OtpMessage'
+        'otp' => 'string',
+        'ip_address' => '\Yousign\Client\Model\SignerSIPAddress',
+        'consent_given_at' => '\DateTime',
+        'signature_image' => '\SplFileObject'
     ];
 
     /**
@@ -69,7 +72,10 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'otp_message' => null
+        'otp' => null,
+        'ip_address' => null,
+        'consent_given_at' => 'date-time',
+        'signature_image' => 'binary'
     ];
 
     /**
@@ -78,7 +84,10 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'otp_message' => false
+        'otp' => false,
+        'ip_address' => false,
+        'consent_given_at' => false,
+        'signature_image' => false
     ];
 
     /**
@@ -167,7 +176,10 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'otp_message' => 'otp_message'
+        'otp' => 'otp',
+        'ip_address' => 'ip_address',
+        'consent_given_at' => 'consent_given_at',
+        'signature_image' => 'signature_image'
     ];
 
     /**
@@ -176,7 +188,10 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'otp_message' => 'setOtpMessage'
+        'otp' => 'setOtp',
+        'ip_address' => 'setIpAddress',
+        'consent_given_at' => 'setConsentGivenAt',
+        'signature_image' => 'setSignatureImage'
     ];
 
     /**
@@ -185,7 +200,10 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'otp_message' => 'getOtpMessage'
+        'otp' => 'getOtp',
+        'ip_address' => 'getIpAddress',
+        'consent_given_at' => 'getConsentGivenAt',
+        'signature_image' => 'getSignatureImage'
     ];
 
     /**
@@ -245,7 +263,10 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('otp_message', $data ?? [], null);
+        $this->setIfExists('otp', $data ?? [], null);
+        $this->setIfExists('ip_address', $data ?? [], null);
+        $this->setIfExists('consent_given_at', $data ?? [], null);
+        $this->setIfExists('signature_image', $data ?? [], null);
     }
 
     /**
@@ -275,8 +296,18 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['otp_message'] === null) {
-            $invalidProperties[] = "'otp_message' can't be null";
+        if (!is_null($this->container['otp']) && !preg_match("/^[0-9]{6}$/", $this->container['otp'])) {
+            $invalidProperties[] = "invalid value for 'otp', must be conform to the pattern /^[0-9]{6}$/.";
+        }
+
+        if ($this->container['ip_address'] === null) {
+            $invalidProperties[] = "'ip_address' can't be null";
+        }
+        if ($this->container['consent_given_at'] === null) {
+            $invalidProperties[] = "'consent_given_at' can't be null";
+        }
+        if ($this->container['signature_image'] === null) {
+            $invalidProperties[] = "'signature_image' can't be null";
         }
         return $invalidProperties;
     }
@@ -294,28 +325,114 @@ class SmsNotification1 implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets otp_message
+     * Gets otp
      *
-     * @return \Yousign\Client\Model\OtpMessage
+     * @return string|null
      */
-    public function getOtpMessage()
+    public function getOtp()
     {
-        return $this->container['otp_message'];
+        return $this->container['otp'];
     }
 
     /**
-     * Sets otp_message
+     * Sets otp
      *
-     * @param \Yousign\Client\Model\OtpMessage $otp_message otp_message
+     * @param string|null $otp otp
      *
      * @return self
      */
-    public function setOtpMessage($otp_message)
+    public function setOtp($otp)
     {
-        if (is_null($otp_message)) {
-            throw new \InvalidArgumentException('non-nullable otp_message cannot be null');
+        if (is_null($otp)) {
+            throw new \InvalidArgumentException('non-nullable otp cannot be null');
         }
-        $this->container['otp_message'] = $otp_message;
+
+        if ((!preg_match("/^[0-9]{6}$/", ObjectSerializer::toString($otp)))) {
+            throw new \InvalidArgumentException("invalid value for \$otp when calling SignerSignWithUploadedSignatureImage., must conform to the pattern /^[0-9]{6}$/.");
+        }
+
+        $this->container['otp'] = $otp;
+
+        return $this;
+    }
+
+    /**
+     * Gets ip_address
+     *
+     * @return \Yousign\Client\Model\SignerSIPAddress
+     */
+    public function getIpAddress()
+    {
+        return $this->container['ip_address'];
+    }
+
+    /**
+     * Sets ip_address
+     *
+     * @param \Yousign\Client\Model\SignerSIPAddress $ip_address ip_address
+     *
+     * @return self
+     */
+    public function setIpAddress($ip_address)
+    {
+        if (is_null($ip_address)) {
+            throw new \InvalidArgumentException('non-nullable ip_address cannot be null');
+        }
+        $this->container['ip_address'] = $ip_address;
+
+        return $this;
+    }
+
+    /**
+     * Gets consent_given_at
+     *
+     * @return \DateTime
+     */
+    public function getConsentGivenAt()
+    {
+        return $this->container['consent_given_at'];
+    }
+
+    /**
+     * Sets consent_given_at
+     *
+     * @param \DateTime $consent_given_at consent_given_at
+     *
+     * @return self
+     */
+    public function setConsentGivenAt($consent_given_at)
+    {
+        if (is_null($consent_given_at)) {
+            throw new \InvalidArgumentException('non-nullable consent_given_at cannot be null');
+        }
+        $this->container['consent_given_at'] = $consent_given_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets signature_image
+     *
+     * @return \SplFileObject
+     */
+    public function getSignatureImage()
+    {
+        return $this->container['signature_image'];
+    }
+
+    /**
+     * Sets signature_image
+     *
+     * @param \SplFileObject $signature_image signature_image
+     *
+     * @return self
+     */
+    public function setSignatureImage($signature_image)
+    {
+        if (is_null($signature_image)) {
+            throw new \InvalidArgumentException('non-nullable signature_image cannot be null');
+        }
+        $this->container['signature_image'] = $signature_image;
 
         return $this;
     }

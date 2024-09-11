@@ -1,9 +1,10 @@
-# # SmsNotification1
+# # UploadElectronicSealDocument
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**otp_message** | [**\Yousign\Client\Model\OtpMessage**](OtpMessage.md) |  |
+**file** | **\SplFileObject** | PDF file |
+**password** | **string** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

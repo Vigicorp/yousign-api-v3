@@ -1,6 +1,6 @@
 <?php
 /**
- * DeleteWorkspace
+ * PatchCustomExperienceLogoRequest
  *
  * PHP version 7.4
  *
@@ -33,15 +33,16 @@ use \ArrayAccess;
 use \Yousign\Client\ObjectSerializer;
 
 /**
- * DeleteWorkspace Class Doc Comment
+ * PatchCustomExperienceLogoRequest Class Doc Comment
  *
  * @category Class
+ * @description Upload a file
  * @package  Yousign\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class DeleteWorkspace implements ModelInterface, ArrayAccess, \JsonSerializable
+class PatchCustomExperienceLogoRequest implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +51,7 @@ class DeleteWorkspace implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'DeleteWorkspace';
+    protected static $openAPIModelName = 'patch_custom_experience_logo_request';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,7 +59,7 @@ class DeleteWorkspace implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'workspace_id' => 'string'
+        'file' => '\SplFileObject'
     ];
 
     /**
@@ -69,7 +70,7 @@ class DeleteWorkspace implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'workspace_id' => 'uuid'
+        'file' => 'binary'
     ];
 
     /**
@@ -78,7 +79,7 @@ class DeleteWorkspace implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'workspace_id' => false
+        'file' => false
     ];
 
     /**
@@ -167,7 +168,7 @@ class DeleteWorkspace implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'workspace_id' => 'workspace_id'
+        'file' => 'file'
     ];
 
     /**
@@ -176,7 +177,7 @@ class DeleteWorkspace implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'workspace_id' => 'setWorkspaceId'
+        'file' => 'setFile'
     ];
 
     /**
@@ -185,7 +186,7 @@ class DeleteWorkspace implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'workspace_id' => 'getWorkspaceId'
+        'file' => 'getFile'
     ];
 
     /**
@@ -245,7 +246,7 @@ class DeleteWorkspace implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('workspace_id', $data ?? [], null);
+        $this->setIfExists('file', $data ?? [], null);
     }
 
     /**
@@ -275,8 +276,8 @@ class DeleteWorkspace implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['workspace_id'] === null) {
-            $invalidProperties[] = "'workspace_id' can't be null";
+        if ($this->container['file'] === null) {
+            $invalidProperties[] = "'file' can't be null";
         }
         return $invalidProperties;
     }
@@ -294,28 +295,28 @@ class DeleteWorkspace implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets workspace_id
+     * Gets file
      *
-     * @return string
+     * @return \SplFileObject
      */
-    public function getWorkspaceId()
+    public function getFile()
     {
-        return $this->container['workspace_id'];
+        return $this->container['file'];
     }
 
     /**
-     * Sets workspace_id
+     * Sets file
      *
-     * @param string $workspace_id The target workspace where resources are migrated in.
+     * @param \SplFileObject $file file
      *
      * @return self
      */
-    public function setWorkspaceId($workspace_id)
+    public function setFile($file)
     {
-        if (is_null($workspace_id)) {
-            throw new \InvalidArgumentException('non-nullable workspace_id cannot be null');
+        if (is_null($file)) {
+            throw new \InvalidArgumentException('non-nullable file cannot be null');
         }
-        $this->container['workspace_id'] = $workspace_id;
+        $this->container['file'] = $file;
 
         return $this;
     }

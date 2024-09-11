@@ -40,6 +40,7 @@ docs/Model/Contact.md
 docs/Model/CreateContact.md
 docs/Model/CreateCustomExperience.md
 docs/Model/CreateCustomExperienceRedirectUrls.md
+docs/Model/CreateDocumentFromMultipart.md
 docs/Model/CreateElectronicSealFieldReadOnlyTextPayload.md
 docs/Model/CreateElectronicSealFieldSealPayload.md
 docs/Model/CreateElectronicSealPayload.md
@@ -64,7 +65,6 @@ docs/Model/CustomExperience.md
 docs/Model/CustomExperienceDisabledNotificationsType.md
 docs/Model/CustomExperienceRedirectUrls.md
 docs/Model/CustomExperienceSource.md
-docs/Model/DeleteWorkspace.md
 docs/Model/Document.md
 docs/Model/DocumentInitials.md
 docs/Model/ElectronicSeal.md
@@ -115,14 +115,15 @@ docs/Model/Mention1.md
 docs/Model/Mention2.md
 docs/Model/Metadata.md
 docs/Model/MetadataDataValue.md
-docs/Model/OTPMessage.md
 docs/Model/OtpMessage.md
 docs/Model/Pagination.md
+docs/Model/PatchCustomExperienceLogoRequest.md
 docs/Model/PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequest.md
 docs/Model/PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequestInfo.md
 docs/Model/PostArchives401Response.md
 docs/Model/PostSignatureRequestsSignatureRequestIdApproversRequest.md
 docs/Model/PostSignatureRequestsSignatureRequestIdCancelRequest.md
+docs/Model/PostSignatureRequestsSignatureRequestIdDocumentsDocumentIdReplaceRequest.md
 docs/Model/PostSignatureRequestsSignatureRequestIdReactivateRequest.md
 docs/Model/RadioGroup.md
 docs/Model/RadioGroup1.md
@@ -169,6 +170,7 @@ docs/Model/SignerInfo.md
 docs/Model/SignerRedirectUrls.md
 docs/Model/SignerSIPAddress.md
 docs/Model/SignerSign.md
+docs/Model/SignerSignWithUploadedSignatureImage.md
 docs/Model/SmsNotification.md
 docs/Model/SmsNotification1.md
 docs/Model/Template.md
@@ -189,6 +191,9 @@ docs/Model/UpdateSigner.md
 docs/Model/UpdateSignerInfo.md
 docs/Model/UpdateWebhookSubscription.md
 docs/Model/UpdateWorkspace.md
+docs/Model/UploadArchivedFile.md
+docs/Model/UploadElectronicSealDocument.md
+docs/Model/UploadElectronicSealImage.md
 docs/Model/User.md
 docs/Model/UserWorkspacesInner.md
 docs/Model/ViolationResponse.md
@@ -238,6 +243,7 @@ lib/Model/Contact.php
 lib/Model/CreateContact.php
 lib/Model/CreateCustomExperience.php
 lib/Model/CreateCustomExperienceRedirectUrls.php
+lib/Model/CreateDocumentFromMultipart.php
 lib/Model/CreateElectronicSealFieldReadOnlyTextPayload.php
 lib/Model/CreateElectronicSealFieldSealPayload.php
 lib/Model/CreateElectronicSealPayload.php
@@ -262,7 +268,6 @@ lib/Model/CustomExperience.php
 lib/Model/CustomExperienceDisabledNotificationsType.php
 lib/Model/CustomExperienceRedirectUrls.php
 lib/Model/CustomExperienceSource.php
-lib/Model/DeleteWorkspace.php
 lib/Model/Document.php
 lib/Model/DocumentInitials.php
 lib/Model/ElectronicSeal.php
@@ -314,14 +319,15 @@ lib/Model/Mention2.php
 lib/Model/Metadata.php
 lib/Model/MetadataDataValue.php
 lib/Model/ModelInterface.php
-lib/Model/OTPMessage.php
 lib/Model/OtpMessage.php
 lib/Model/Pagination.php
+lib/Model/PatchCustomExperienceLogoRequest.php
 lib/Model/PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequest.php
 lib/Model/PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequestInfo.php
 lib/Model/PostArchives401Response.php
 lib/Model/PostSignatureRequestsSignatureRequestIdApproversRequest.php
 lib/Model/PostSignatureRequestsSignatureRequestIdCancelRequest.php
+lib/Model/PostSignatureRequestsSignatureRequestIdDocumentsDocumentIdReplaceRequest.php
 lib/Model/PostSignatureRequestsSignatureRequestIdReactivateRequest.php
 lib/Model/RadioGroup.php
 lib/Model/RadioGroup1.php
@@ -368,6 +374,7 @@ lib/Model/SignerInfo.php
 lib/Model/SignerRedirectUrls.php
 lib/Model/SignerSIPAddress.php
 lib/Model/SignerSign.php
+lib/Model/SignerSignWithUploadedSignatureImage.php
 lib/Model/SmsNotification.php
 lib/Model/SmsNotification1.php
 lib/Model/Template.php
@@ -388,6 +395,9 @@ lib/Model/UpdateSigner.php
 lib/Model/UpdateSignerInfo.php
 lib/Model/UpdateWebhookSubscription.php
 lib/Model/UpdateWorkspace.php
+lib/Model/UploadArchivedFile.php
+lib/Model/UploadElectronicSealDocument.php
+lib/Model/UploadElectronicSealImage.php
 lib/Model/User.php
 lib/Model/UserWorkspacesInner.php
 lib/Model/ViolationResponse.php
@@ -435,6 +445,7 @@ test/Model/ContactTest.php
 test/Model/CreateContactTest.php
 test/Model/CreateCustomExperienceRedirectUrlsTest.php
 test/Model/CreateCustomExperienceTest.php
+test/Model/CreateDocumentFromMultipartTest.php
 test/Model/CreateElectronicSealFieldReadOnlyTextPayloadTest.php
 test/Model/CreateElectronicSealFieldSealPayloadTest.php
 test/Model/CreateElectronicSealPayloadFieldsInnerTest.php
@@ -459,7 +470,6 @@ test/Model/CustomExperienceDisabledNotificationsTypeTest.php
 test/Model/CustomExperienceRedirectUrlsTest.php
 test/Model/CustomExperienceSourceTest.php
 test/Model/CustomExperienceTest.php
-test/Model/DeleteWorkspaceTest.php
 test/Model/DocumentInitialsTest.php
 test/Model/DocumentTest.php
 test/Model/ElectronicSealAuditTrailTest.php
@@ -510,13 +520,15 @@ test/Model/Mention2Test.php
 test/Model/MentionTest.php
 test/Model/MetadataDataValueTest.php
 test/Model/MetadataTest.php
-test/Model/OTPMessageTest.php
+test/Model/OtpMessageTest.php
 test/Model/PaginationTest.php
+test/Model/PatchCustomExperienceLogoRequestTest.php
 test/Model/PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequestInfoTest.php
 test/Model/PatchSignatureRequestsSignatureRequestIdApproversApproverIdRequestTest.php
 test/Model/PostArchives401ResponseTest.php
 test/Model/PostSignatureRequestsSignatureRequestIdApproversRequestTest.php
 test/Model/PostSignatureRequestsSignatureRequestIdCancelRequestTest.php
+test/Model/PostSignatureRequestsSignatureRequestIdDocumentsDocumentIdReplaceRequestTest.php
 test/Model/PostSignatureRequestsSignatureRequestIdReactivateRequestTest.php
 test/Model/RadioGroup1RadiosInnerTest.php
 test/Model/RadioGroup1Test.php
@@ -562,6 +574,7 @@ test/Model/SignerInfoTest.php
 test/Model/SignerRedirectUrlsTest.php
 test/Model/SignerSIPAddressTest.php
 test/Model/SignerSignTest.php
+test/Model/SignerSignWithUploadedSignatureImageTest.php
 test/Model/SignerTest.php
 test/Model/SmsNotification1Test.php
 test/Model/SmsNotificationTest.php
@@ -583,6 +596,9 @@ test/Model/UpdateSignerInfoTest.php
 test/Model/UpdateSignerTest.php
 test/Model/UpdateWebhookSubscriptionTest.php
 test/Model/UpdateWorkspaceTest.php
+test/Model/UploadArchivedFileTest.php
+test/Model/UploadElectronicSealDocumentTest.php
+test/Model/UploadElectronicSealImageTest.php
 test/Model/UserTest.php
 test/Model/UserWorkspacesInnerTest.php
 test/Model/ViolationResponseTest.php
