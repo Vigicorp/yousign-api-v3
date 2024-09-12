@@ -704,8 +704,8 @@ class SignatureRequestActivated implements ModelInterface, ArrayAccess, \JsonSer
             throw new \InvalidArgumentException('non-nullable created_at cannot be null');
         }
 
-        if ((mb_strlen($created_at) < 1)) {
-            throw new \InvalidArgumentException('invalid length for $created_at when calling SignatureRequestActivated., must be bigger than or equal to 1.');
+        if (!($created_at instanceof \DateTime)) {
+            throw new \InvalidArgumentException('invalid type for $created_at when calling SignatureRequest., must be a \DateTime.');
         }
 
         $this->container['created_at'] = $created_at;
@@ -1187,5 +1187,3 @@ class SignatureRequestActivated implements ModelInterface, ArrayAccess, \JsonSer
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

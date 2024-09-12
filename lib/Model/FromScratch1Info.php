@@ -520,7 +520,7 @@ class FromScratch1Info implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets locale
      *
-     * @param \Yousign\Client\Model\Locale $locale locale
+     * @param string $locale locale from \Yousign\Client\Model\Locale
      *
      * @return self
      */
@@ -623,5 +623,3 @@ class FromScratch1Info implements ModelInterface, ArrayAccess, \JsonSerializable
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

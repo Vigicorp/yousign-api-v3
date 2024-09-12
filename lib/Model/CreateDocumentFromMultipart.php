@@ -58,7 +58,7 @@ class CreateDocumentFromMultipart implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'file' => '\SplFileObject',
+        'file' => '\CurlFile',
         'nature' => 'string',
         'insert_after_id' => 'string',
         'password' => 'string',
@@ -362,7 +362,7 @@ class CreateDocumentFromMultipart implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets file
      *
-     * @return \SplFileObject
+     * @return \CurlFile
      */
     public function getFile()
     {
@@ -372,7 +372,7 @@ class CreateDocumentFromMultipart implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets file
      *
-     * @param \SplFileObject $file Binary file
+     * @param \CurlFile $file Binary file
      *
      * @return self
      */
@@ -625,5 +625,3 @@ class CreateDocumentFromMultipart implements ModelInterface, ArrayAccess, \JsonS
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-
