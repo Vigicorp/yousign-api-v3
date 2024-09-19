@@ -327,7 +327,7 @@ class UpdateSigner implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->setIfExists('info', $data ?? [], null);
         $this->setIfExists('insert_after_id', $data ?? [], null);
-        $this->setIfExists('signature_level', $data ?? [], 'electronic_signature');
+        $this->setIfExists('signature_level', $data ?? [], null);
         $this->setIfExists('signature_authentication_mode', $data ?? [], null);
         $this->setIfExists('redirect_urls', $data ?? [], null);
         $this->setIfExists('custom_text', $data ?? [], null);
@@ -779,5 +779,3 @@ class UpdateSigner implements ModelInterface, ArrayAccess, \JsonSerializable
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

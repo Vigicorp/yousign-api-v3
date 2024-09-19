@@ -342,7 +342,7 @@ class DocumentApi
         if (!preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/", $signature_request_id)) {
             throw new \InvalidArgumentException("invalid value for \"signature_request_id\" when calling DocumentApi.deleteSignatureRequestsSignatureRequestIdDocumentsDocumentId, must conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/.");
         }
-        
+
         // verify the required parameter 'document_id' is set
         if ($document_id === null || (is_array($document_id) && count($document_id) === 0)) {
             throw new \InvalidArgumentException(
@@ -352,7 +352,7 @@ class DocumentApi
         if (!preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/", $document_id)) {
             throw new \InvalidArgumentException("invalid value for \"document_id\" when calling DocumentApi.deleteSignatureRequestsSignatureRequestIdDocumentsDocumentId, must conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/.");
         }
-        
+
 
         $resourcePath = '/signature_requests/{signatureRequestId}/documents/{documentId}';
         $formParams = [];
@@ -453,7 +453,7 @@ class DocumentApi
      */
     public function getSignatureRequestsSignatureRequestIdDocuments($signature_request_id, $nature = null, string $contentType = self::contentTypes['getSignatureRequestsSignatureRequestIdDocuments'][0])
     {
-        list($response) = $this->getSignatureRequestsSignatureRequestIdDocumentsWithHttpInfo($signature_request_id, $nature, $contentType);
+        [$response] = $this->getSignatureRequestsSignatureRequestIdDocumentsWithHttpInfo($signature_request_id, $nature, $contentType);
         return $response;
     }
 
@@ -819,7 +819,7 @@ class DocumentApi
         if (!preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/", $signature_request_id)) {
             throw new \InvalidArgumentException("invalid value for \"signature_request_id\" when calling DocumentApi.getSignatureRequestsSignatureRequestIdDocuments, must conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/.");
         }
-        
+
 
 
         $resourcePath = '/signature_requests/{signatureRequestId}/documents';
@@ -922,7 +922,7 @@ class DocumentApi
      */
     public function getSignatureRequestsSignatureRequestIdDocumentsDocumentId($signature_request_id, $document_id, string $contentType = self::contentTypes['getSignatureRequestsSignatureRequestIdDocumentsDocumentId'][0])
     {
-        list($response) = $this->getSignatureRequestsSignatureRequestIdDocumentsDocumentIdWithHttpInfo($signature_request_id, $document_id, $contentType);
+        [$response] = $this->getSignatureRequestsSignatureRequestIdDocumentsDocumentIdWithHttpInfo($signature_request_id, $document_id, $contentType);
         return $response;
     }
 
@@ -1253,7 +1253,7 @@ class DocumentApi
         if (!preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/", $signature_request_id)) {
             throw new \InvalidArgumentException("invalid value for \"signature_request_id\" when calling DocumentApi.getSignatureRequestsSignatureRequestIdDocumentsDocumentId, must conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/.");
         }
-        
+
         // verify the required parameter 'document_id' is set
         if ($document_id === null || (is_array($document_id) && count($document_id) === 0)) {
             throw new \InvalidArgumentException(
@@ -1263,7 +1263,7 @@ class DocumentApi
         if (!preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/", $document_id)) {
             throw new \InvalidArgumentException("invalid value for \"document_id\" when calling DocumentApi.getSignatureRequestsSignatureRequestIdDocumentsDocumentId, must conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/.");
         }
-        
+
 
         $resourcePath = '/signature_requests/{signatureRequestId}/documents/{documentId}';
         $formParams = [];
@@ -1364,7 +1364,7 @@ class DocumentApi
      */
     public function getSignatureRequestsSignatureRequestIdDocumentsDocumentsIdDownload($signature_request_id, $document_id, string $contentType = self::contentTypes['getSignatureRequestsSignatureRequestIdDocumentsDocumentsIdDownload'][0])
     {
-        list($response) = $this->getSignatureRequestsSignatureRequestIdDocumentsDocumentsIdDownloadWithHttpInfo($signature_request_id, $document_id, $contentType);
+        [$response] = $this->getSignatureRequestsSignatureRequestIdDocumentsDocumentsIdDownloadWithHttpInfo($signature_request_id, $document_id, $contentType);
         return $response;
     }
 
@@ -1730,7 +1730,7 @@ class DocumentApi
         if (!preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/", $signature_request_id)) {
             throw new \InvalidArgumentException("invalid value for \"signature_request_id\" when calling DocumentApi.getSignatureRequestsSignatureRequestIdDocumentsDocumentsIdDownload, must conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/.");
         }
-        
+
         // verify the required parameter 'document_id' is set
         if ($document_id === null || (is_array($document_id) && count($document_id) === 0)) {
             throw new \InvalidArgumentException(
@@ -1740,7 +1740,7 @@ class DocumentApi
         if (!preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/", $document_id)) {
             throw new \InvalidArgumentException("invalid value for \"document_id\" when calling DocumentApi.getSignatureRequestsSignatureRequestIdDocumentsDocumentsIdDownload, must conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/.");
         }
-        
+
 
         $resourcePath = '/signature_requests/{signatureRequestId}/documents/{documentId}/download';
         $formParams = [];
@@ -1842,7 +1842,7 @@ class DocumentApi
      */
     public function getSignatureRequestsSignatureRequestIdDocumentsDownload($signature_request_id, $version = null, $archive = null, string $contentType = self::contentTypes['getSignatureRequestsSignatureRequestIdDocumentsDownload'][0])
     {
-        list($response) = $this->getSignatureRequestsSignatureRequestIdDocumentsDownloadWithHttpInfo($signature_request_id, $version, $archive, $contentType);
+        [$response] = $this->getSignatureRequestsSignatureRequestIdDocumentsDownloadWithHttpInfo($signature_request_id, $version, $archive, $contentType);
         return $response;
     }
 
@@ -2177,7 +2177,7 @@ class DocumentApi
         if (!preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/", $signature_request_id)) {
             throw new \InvalidArgumentException("invalid value for \"signature_request_id\" when calling DocumentApi.getSignatureRequestsSignatureRequestIdDocumentsDownload, must conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/.");
         }
-        
+
 
 
 
@@ -2291,7 +2291,7 @@ class DocumentApi
      */
     public function patchSignatureRequestsSignatureRequestIdDocumentsDocumentId($signature_request_id, $document_id, $update_document = null, string $contentType = self::contentTypes['patchSignatureRequestsSignatureRequestIdDocumentsDocumentId'][0])
     {
-        list($response) = $this->patchSignatureRequestsSignatureRequestIdDocumentsDocumentIdWithHttpInfo($signature_request_id, $document_id, $update_document, $contentType);
+        [$response] = $this->patchSignatureRequestsSignatureRequestIdDocumentsDocumentIdWithHttpInfo($signature_request_id, $document_id, $update_document, $contentType);
         return $response;
     }
 
@@ -2696,7 +2696,7 @@ class DocumentApi
         if (!preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/", $signature_request_id)) {
             throw new \InvalidArgumentException("invalid value for \"signature_request_id\" when calling DocumentApi.patchSignatureRequestsSignatureRequestIdDocumentsDocumentId, must conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/.");
         }
-        
+
         // verify the required parameter 'document_id' is set
         if ($document_id === null || (is_array($document_id) && count($document_id) === 0)) {
             throw new \InvalidArgumentException(
@@ -2706,7 +2706,7 @@ class DocumentApi
         if (!preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/", $document_id)) {
             throw new \InvalidArgumentException("invalid value for \"document_id\" when calling DocumentApi.patchSignatureRequestsSignatureRequestIdDocumentsDocumentId, must conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/.");
         }
-        
+
 
 
         $resourcePath = '/signature_requests/{signatureRequestId}/documents/{documentId}';
@@ -2820,7 +2820,7 @@ class DocumentApi
      */
     public function postDocuments($file, $nature, $insert_after_id = null, $password = null, $initials = null, $parse_anchors = null, string $contentType = self::contentTypes['postDocuments'][0])
     {
-        list($response) = $this->postDocumentsWithHttpInfo($file, $nature, $insert_after_id, $password, $initials, $parse_anchors, $contentType);
+        [$response] = $this->postDocumentsWithHttpInfo($file, $nature, $insert_after_id, $password, $initials, $parse_anchors, $contentType);
         return $response;
     }
 
@@ -3214,7 +3214,7 @@ class DocumentApi
         if ($insert_after_id !== null && !preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/", $insert_after_id)) {
             throw new \InvalidArgumentException("invalid value for \"insert_after_id\" when calling DocumentApi.postDocuments, must conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/.");
         }
-        
+
 
 
 
@@ -3339,7 +3339,7 @@ class DocumentApi
      */
     public function postSignatureRequestsSignatureRequestIdDocuments($signature_request_id, $file, $nature, $insert_after_id = null, $password = null, $initials = null, $parse_anchors = null, string $contentType = self::contentTypes['postSignatureRequestsSignatureRequestIdDocuments'][0])
     {
-        list($response) = $this->postSignatureRequestsSignatureRequestIdDocumentsWithHttpInfo($signature_request_id, $file, $nature, $insert_after_id, $password, $initials, $parse_anchors, $contentType);
+        [$response] = $this->postSignatureRequestsSignatureRequestIdDocumentsWithHttpInfo($signature_request_id, $file, $nature, $insert_after_id, $password, $initials, $parse_anchors, $contentType);
         return $response;
     }
 
@@ -3760,7 +3760,7 @@ class DocumentApi
         if (!preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/", $signature_request_id)) {
             throw new \InvalidArgumentException("invalid value for \"signature_request_id\" when calling DocumentApi.postSignatureRequestsSignatureRequestIdDocuments, must conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/.");
         }
-        
+
         // verify the required parameter 'file' is set
         if ($file === null || (is_array($file) && count($file) === 0)) {
             throw new \InvalidArgumentException(
@@ -3778,7 +3778,7 @@ class DocumentApi
         if ($insert_after_id !== null && !preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/", $insert_after_id)) {
             throw new \InvalidArgumentException("invalid value for \"insert_after_id\" when calling DocumentApi.postSignatureRequestsSignatureRequestIdDocuments, must conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/.");
         }
-        
+
 
 
 
@@ -3807,10 +3807,7 @@ class DocumentApi
             $formParams['file'] = [];
             $paramFiles = is_array($file) ? $file : [$file];
             foreach ($paramFiles as $paramFile) {
-                $formParams['file'][] = \GuzzleHttp\Psr7\Utils::tryFopen(
-                    ObjectSerializer::toFormValue($paramFile),
-                    'rb'
-                );
+                $formParams['file'][] = $paramFile;
             }
         }
         // form params
@@ -3847,10 +3844,21 @@ class DocumentApi
                 foreach ($formParams as $formParamName => $formParamValue) {
                     $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
                     foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
+                        if ($formParamValueItem instanceof \CURLFile) {
+                            $multipartContents[] = [
+                                'name'     => $formParamName,
+                                'contents' => \GuzzleHttp\Psr7\Utils::tryFopen(
+                                    ObjectSerializer::toFormValue($formParamValueItem->getFilename()),
+                                    'rb'
+                                ),
+                                'filename' => $formParamValueItem->getPostFilename()
+                            ];
+                        } else {
+                            $multipartContents[] = [
+                                'name'     => $formParamName,
+                                'contents' => $formParamValueItem
+                            ];
+                        }
                     }
                 }
                 // for HTTP post (form)
@@ -3907,7 +3915,7 @@ class DocumentApi
      */
     public function postSignatureRequestsSignatureRequestIdDocumentsDocumentIdReplace($signature_request_id, $document_id, $file, string $contentType = self::contentTypes['postSignatureRequestsSignatureRequestIdDocumentsDocumentIdReplace'][0])
     {
-        list($response) = $this->postSignatureRequestsSignatureRequestIdDocumentsDocumentIdReplaceWithHttpInfo($signature_request_id, $document_id, $file, $contentType);
+        [$response] = $this->postSignatureRequestsSignatureRequestIdDocumentsDocumentIdReplaceWithHttpInfo($signature_request_id, $document_id, $file, $contentType);
         return $response;
     }
 
@@ -4312,7 +4320,7 @@ class DocumentApi
         if (!preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/", $signature_request_id)) {
             throw new \InvalidArgumentException("invalid value for \"signature_request_id\" when calling DocumentApi.postSignatureRequestsSignatureRequestIdDocumentsDocumentIdReplace, must conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/.");
         }
-        
+
         // verify the required parameter 'document_id' is set
         if ($document_id === null || (is_array($document_id) && count($document_id) === 0)) {
             throw new \InvalidArgumentException(
@@ -4322,7 +4330,7 @@ class DocumentApi
         if (!preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/", $document_id)) {
             throw new \InvalidArgumentException("invalid value for \"document_id\" when calling DocumentApi.postSignatureRequestsSignatureRequestIdDocumentsDocumentIdReplace, must conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/.");
         }
-        
+
         // verify the required parameter 'file' is set
         if ($file === null || (is_array($file) && count($file) === 0)) {
             throw new \InvalidArgumentException(
