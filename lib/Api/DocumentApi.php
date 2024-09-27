@@ -3325,7 +3325,7 @@ class DocumentApi
      * Add Document to a Signature Request
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \SplFileObject $file Binary file (required)
+     * @param  \CURLFile $file Binary file (required)
      * @param  string $nature nature (required)
      * @param  string $insert_after_id Insert just after the position of the specified document id (optional)
      * @param  string $password password (optional)
@@ -3349,7 +3349,7 @@ class DocumentApi
      * Add Document to a Signature Request
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \SplFileObject $file Binary file (required)
+     * @param  \CURLFile $file Binary file (required)
      * @param  string $nature (required)
      * @param  string $insert_after_id Insert just after the position of the specified document id (optional)
      * @param  string $password (optional)
@@ -3737,7 +3737,7 @@ class DocumentApi
      * Create request for operation 'postSignatureRequestsSignatureRequestIdDocuments'
      *
      * @param  string $signature_request_id Signature Request Id (required)
-     * @param  \SplFileObject $file Binary file (required)
+     * @param  \CURLFile $file Binary file (required)
      * @param  string $nature (required)
      * @param  string $insert_after_id Insert just after the position of the specified document id (optional)
      * @param  string $password (optional)
