@@ -493,7 +493,7 @@ class Text implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function getType()
     {
-        return $this->container['type'];
+        return $this->container['type'] ?? self::TYPE_TEXT;
     }
 
     /**
@@ -939,5 +939,3 @@ class Text implements ModelInterface, ArrayAccess, \JsonSerializable
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

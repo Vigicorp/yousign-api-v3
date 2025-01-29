@@ -450,7 +450,7 @@ class Mention2 implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function getType()
     {
-        return $this->container['type'];
+        return $this->container['type'] ?? self::TYPE_MENTION;
     }
 
     /**
@@ -769,5 +769,3 @@ class Mention2 implements ModelInterface, ArrayAccess, \JsonSerializable
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-
