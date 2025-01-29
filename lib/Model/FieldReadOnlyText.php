@@ -516,7 +516,7 @@ class FieldReadOnlyText implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     public function getType()
     {
-        return $this->container['type'];
+        return $this->container['type'] ?? self::TYPE_READ_ONLY_TEXT;
     }
 
     /**
@@ -859,5 +859,3 @@ class FieldReadOnlyText implements ModelInterface, ArrayAccess, \JsonSerializabl
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

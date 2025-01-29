@@ -512,7 +512,7 @@ class FieldRadioButtonGroup implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function getType()
     {
-        return $this->container['type'];
+        return $this->container['type'] ?? self::TYPE_RADIO_GROUP;
     }
 
     /**
@@ -758,5 +758,3 @@ class FieldRadioButtonGroup implements ModelInterface, ArrayAccess, \JsonSeriali
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-
